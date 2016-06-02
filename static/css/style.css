@@ -953,6 +953,7 @@ form.variations_form .select-label-wrap {
 }
 /* WOOCOMMERCE PAGINATION
 ----------------------------------------- */
+.woocommerce-pagination,
 #shop .woocommerce-pagination {
     border-top: 1px solid #ccc;
     clear: both;
@@ -964,6 +965,7 @@ form.variations_form .select-label-wrap {
 .blog-front-entry + .woocommerce-pagination {
     border-top: none;
 }
+.woocommerce-pagination ul,
 #shop nav.woocommerce-pagination ul {
     border: none;
     clear: both;
@@ -973,6 +975,7 @@ form.variations_form .select-label-wrap {
     padding: 0;
     margin: 1px; 
 }
+.woocommerce-pagination ul li,
 #shop nav.woocommerce-pagination ul li {
     padding: 0;
     margin: 0;
@@ -983,6 +986,8 @@ form.variations_form .select-label-wrap {
     display: inline-block;
     overflow: hidden;
 }
+.woocommerce-pagination ul li a,
+.woocommerce-pagination ul li span,
 #shop nav.woocommerce-pagination ul li a,
 #shop nav.woocommerce-pagination ul li span {
     margin: 0;
@@ -995,9 +1000,12 @@ form.variations_form .select-label-wrap {
     color: #666;
     display: block;
 }
+.woocommerce-pagination ul li span.current,
 #shop nav.woocommerce-pagination ul li span.current {
     color: #333;
 }
+.woocommerce-pagination .pagination-previous,
+.woocommerce-pagination .pagination-next,
 #shop nav.woocommerce-pagination .pagination-previous,
 #shop nav.woocommerce-pagination .pagination-next {
     align-items: center;
@@ -1014,11 +1022,13 @@ form.variations_form .select-label-wrap {
     padding: 0 15px;
     text-align: center;
 }
+.woocommerce-pagination .pagination-next,
 #shop nav.woocommerce-pagination .pagination-next {
     display: flex;
     margin-left: auto;
     order: 3;
 }
+.woocommerce-pagination .pagination-previous,
 #shop nav.woocommerce-pagination .pagination-previous {
     display: flex;
     float: left;
@@ -1026,29 +1036,36 @@ form.variations_form .select-label-wrap {
     margin-right: auto;
     order: 1;
 }
+.woocommerce-pagination .current,
 #shop nav.woocommerce-pagination .current {
     background: transparent;
     font-weight: bold;
 }
+.blog-front .pagination-previous,
 #shop .blog-front .pagination-previous {
     margin-left: 0;
     padding: 0 15px;
     width: auto;
 }
+.blog-front .pagination-next,
 #shop .blog-front .pagination-next {
     margin-right: 0;
     padding: 0 15px;
     width: auto;
 }
+.pagination-previous a,
+.pagination-next a,
 #shop .pagination-previous a,
 #shop .pagination-next a {
     text-decoration: none;
 }
+.pagination-previous a:before,
 #shop .pagination-previous a:before {
     content: '\f0d9';
     font-family: 'FontAwesome';
     padding-right: 5px;
 }
+.pagination-next a:after,
 #shop .pagination-next a:after {
     content: '\f0da';
     font-family: 'FontAwesome';
