@@ -1,3 +1,22 @@
+//TOGGLE SHARE TOOLS
+var DropTools = function() {
+    var self = this;
+	var $ = jQuery.noConflict();
+	this.init = function() {
+		$('#popshare').on('click', self.toggleTools);
+		$('html').on('click', self.closeall);
+	};
+	this.toggleTools = function(e) {
+        var target = $(e.target);
+        e.stopPropagation();
+        
+			$('#popupBasic').slideToggle('slow');
+		}
+   
+    this.closeall = function() {
+        $('#popupBasic').hide();
+    };
+};
 // DROPDOWN MENU
 var DropMenu = function() {
     var self = this;
@@ -49,9 +68,12 @@ var DropMenu = function() {
 		$('.menu-second > td').removeClass('active');
 	};
 };
+
 jQuery(document).ready(function($) {
 	var drop_menu = new DropMenu();
 	drop_menu.init();
+	var drop_tools = new DropTools();
+	drop_tools.init();
 });
 
 // COUNTDOWN

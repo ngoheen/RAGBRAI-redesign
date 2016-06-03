@@ -3,29 +3,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop/Tablet Blog Front</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/desk-menu.css"><!-- this is for the desk/tablet menu -->
+    <title>Desktop/Tablet Menu/Footer</title>
+    <link rel="stylesheet" href="static/css/fonts.css">
+    <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="static/css/style.css">    
 </head>    
 <body class="tablet">
     <div id="fb-root"></div>
     <script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=198722363481114";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=198722363481114";
+                fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div role="navigation" class="site-navigation main-navigation">
         <div class="menu-primary-container">
             <ul id="menu-primary" class="menu">
 			    <li id="menu-item-logo" class="menu-item">
 				    <a href="http://ragbrai.com/" title="RAGBRAI.com">
-				        <img src="img/ClassicRAGBRAI.png" alt="RAGBRAI logo">
+				        <img src="static/img/ClassicRAGBRAI.png" alt="RAGBRAI logo">
 				    </a>
 			    </li>
                 <li class="menu-item menu-item-ride menu-item-has-children">
@@ -151,7 +152,7 @@
             </ul> 
             <ul class="menu-second">
                 <li id="menu-item-search" class="menu-item menu-item-has-children">
-                    <img src="img/search.png" class="nav-icon">
+                    <img src="static/img/search.png" class="nav-icon">
                     <div class="dropdown search-dropdown">
                         <form class="search-container" action="http://ragbrai.com/" method="get">
                             <fieldset>
@@ -164,10 +165,10 @@
                     </div>
                 </li>
                 <li id="menu-item-cart" class="menu-item">
-                    <a href="http://ragbrai.com/cart/"><img src="img/cart_icon.png" class="nav-icon"></a>
+                    <a href="http://ragbrai.com/cart/"><img src="static/img/cart_icon.png" class="nav-icon"></a>
                 </li>
                 <li id="menu-item-login" class="menu-item menu-item-has-children" data-menu-item-id="login">
-                    <img src="img/profile_icon.png" class="nav-icon">
+                    <img src="static/img/profile_icon.png" class="nav-icon">
                      <div class="dropdown">
                         <div class="lwa lwa-default">
                             <form class="lwa-form" action="https://ragbrai.com/wp-login.php" method="post">
@@ -406,28 +407,28 @@
         
  <!-- =========================================================== -->        
         <div class="leader-ad">
-                <img src="img/leader-ad.png">
-            </div>
+            <img src="images/leader-ad.png">
+        </div>
         <div class="blog-front">
-                    <div class="blog-header">
-                        <h1>blog</h1>
+            <div class="blog-header">
+                <h1>blog</h1>
+            </div>
+            <div class="blog-front-entry">
+                <div class="blog-front-img">
+                    <img src="http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-250x250.jpg">
+                </div>
+                <div class="blog-front-text">
+                    <div class="blog-front-title">
+                        Online Registration Closes June 1
                     </div>
-                    <div class="blog-front-entry">
-                        <div class="blog-front-img">
-                            <img src="http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-250x250.jpg">
-                        </div>
-                        <div class="blog-front-text">
-                            <div class="blog-front-title">
-                                Online Registration Closes June 1
-                            </div>
-                            <div class="teaser-text">
-                                <span class="truncate-teaser">
-                                    In order to receive your wristband, your registration must be complete, paid, and finalized by June 1.  For a registration to be finalized, it must be submitted with waiver and payment
-                                </span>
-                            </div>
-                        </div>
+                    <div class="teaser-text">
+                        <span class="truncate-teaser">
+                            In order to receive your wristband, your registration must be complete, paid, and finalized by June 1.  For a registration to be finalized, it must be submitted with waiver and payment
+                        </span>
                     </div>
-                    <div class="blog-front-entry">
+                </div>
+            </div>
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2016/05/Video-Preview-250x250.jpg">
                         </div>
@@ -440,7 +441,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-front-entry">
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2015/07/des.m0725RAGBRAIfriday.bh-573-335x217.jpg">
                         </div>
@@ -455,7 +456,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-front-entry">
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2016/03/Charron-MG_4373-188x250.jpg">
                         </div>
@@ -470,7 +471,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-front-entry">
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2016/05/expo2-335x153.jpg">
                         </div>
@@ -485,7 +486,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-front-entry">
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2016/05/Variety-180x250.jpg">
                         </div>
@@ -500,7 +501,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-front-entry">
+            <div class="blog-front-entry">
                         <div class="blog-front-img">
                             <img src="http://ragbrai.com/wp-content/uploads/2016/05/010.jpg">
                         </div>
@@ -516,26 +517,26 @@
                         </div>
                     </div>
                     
-                    <nav class="woocommerce-pagination">
-	                    <div class="pagination-previous"><a href="">Back</a></div>
-	                    <div class="pagination-next"><a href="">Next</a></div>
-	                </nav>
-                </div>
+            <nav class="woocommerce-pagination">
+                <div class="pagination-previous"><a href="">Back</a></div>
+                <div class="pagination-next"><a href="">Next</a></div>
+            </nav>
+        </div>
         <div class="blog-front-aside">
-                    <div class="poster-ad">
-                        <img src="img/poster-ad.png">
-                    </div>
-                    <div class="aside-box">
-                        <h2>Latest Videos</h2>
-                        <img src="http://bcdownload.gannett.edgesuite.net/desmoines/35546125001/201605/3715/35546125001_4908153823001_4908126427001-vs.jpg?pubId=35546125001" alt="RAGBRAI 2016 Jersey">
-                        <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
-                    </div>
-                    <div class="aside-box">
+            <div class="poster-ad">
+                <img src="images/poster-ad.png">
+            </div>
+            <div class="aside-box">
+                <h2>Latest Videos</h2>
+                <img src="http://bcdownload.gannett.edgesuite.net/desmoines/35546125001/201605/3715/35546125001_4908153823001_4908126427001-vs.jpg?pubId=35546125001" alt="RAGBRAI 2016 Jersey">
+                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
+            </div>
+            <div class="aside-box">
                         <h2>Latest Galleries</h2>
                         <img src="http://ragbrai.com/wp-content/uploads/2015/07/des.m0725RAGBRAIfriday.bh-573-335x217.jpg">
                         <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
                     </div>
-                    <div class="aside-box">
+            <div class="aside-box">
                         <h2>Email Signup</h2>
                         <div style="clear:both;">
 				            <div class="widget_wysija_cont php_wysija">
@@ -561,93 +562,94 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+        </div>  
  <!-- =========================================================== -->             
        
+         <!-- bottom FRIENDS carousel -->
         <div class="sponsor-bottom">
+            <div class="list_carousel2">
                 <h2 class="subhead4">Friends of RAGBRAI</h2>
-                <div class="clearfix white_back">
-                    <ul id="gci_sponsors-3" class="ticker">
-                            <li>
-						        <a href="http://www.iowaeconomicdevelopment.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2013/05/dev.gif" alt="Iowa Economic Development">
-						        </a>
-					        </li>
-                            <li>
-						        <a href="http://www.davidsfamous.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/03/Davids-Smallest2-bowtie-logo.png" alt="David\\\'s Famous">
-						        </a>
-					        </li>
-                            <li>
-						        <a href="http://www.michelobultra.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2015/05/michelobultraweb.png" alt="Michelob Ultra">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.primalwear.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2015/10/primalnewsmaller.png" alt="Primal">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.scheels.com">
-							        <img src="http://ragbrai.com/wp-content/uploads/2014/01/Scheels-use1.gif" alt="Sheels">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="https://nuun.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/01/web-nuun-makeyourwatercount_logo.png" alt="nuun">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.bikelaw.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/02/BikeLawLogosmaller.jpg" alt="BikeLaw">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.macqueeneq.com/trans-iowa-equipment-llc/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/03/TI_Horizontal-smaller.png" alt="TransIowa">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.peopleforbikes.org/ ">
-							        <img src="http://ragbrai.com/wp-content/uploads/2014/04/peoplebikes1.png" alt="People for Bikes">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.gdit.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/02/HealthSolutions-logo2col-smaller.png" alt="General Dynamics">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.heartlandexpress.com/">
-							        <img src="http://ragbrai.com/wp-content/uploads/2013/05/heart.gif" alt="Heartland Express">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.bestwesterniowa.com/ragbrai">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/03/BW-Smallest2-Master-Brand_Vert_SocialMedia_800x800-1.png" alt="Best Western">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.desmoinesregister.com">
-							        <img src="http://ragbrai.com/wp-content/uploads/2016/01/RM_USATNendorsed_secondary-13-150x45.png" alt="The Des Moines Register">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://www.elitecartography.com/2014-ragbraireg-xlii.html">
-							        <img src="http://ragbrai.com/wp-content/uploads/2015/05/elitecartographylogo.png" alt="Elite Cartography">
-						        </a>
-					        </li>
-					        <li>
-						        <a href="http://feedbacksports.com">
-							        <img src="http://ragbrai.com/wp-content/uploads/2014/01/feedback.jpg" alt="Feedback Sports">
-						        </a>
-					        </li>
-					    </ul>
-                </div>
-           </div>
+                <ul id="gci_sponsors-3">
+                    <li>
+                        <a href="http://www.michelobultra.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/05/michelobultraweb.png" alt="Michelob Ultra" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.primalwear.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/10/primalnewsmaller.png" alt="Primal" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.scheels.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/01/Scheels-use1.gif" alt="Sheels" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://nuun.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/01/web-nuun-makeyourwatercount_logo.png" alt="nuun" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.bikelaw.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/02/BikeLawLogosmaller.jpg" alt="BikeLaw" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.macqueeneq.com/trans-iowa-equipment-llc/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/TI_Horizontal-smaller.png" alt="TransIowa" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.peopleforbikes.org/ ">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/04/peoplebikes1.png" alt="People for Bikes" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.gdit.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/02/HealthSolutions-logo2col-smaller.png" alt="General Dynamics" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.heartlandexpress.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2013/05/heart.gif" alt="Heartland Express" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.bestwesterniowa.com/ragbrai">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/BW-Smallest2-Master-Brand_Vert_SocialMedia_800x800-1.png" alt="Best Western" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.desmoinesregister.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/01/RM_USATNendorsed_secondary-13-150x45.png" alt="The Des Moines Register" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elitecartography.com/2014-ragbraireg-xlii.html">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/05/elitecartographylogo.png" alt="Elite Cartography" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://feedbacksports.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/01/feedback.jpg" alt="Feedback Sports" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.iowaeconomicdevelopment.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2013/05/dev.gif" alt="Iowa Economic Development" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.davidsfamous.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/Davids-Smallest2-bowtie-logo.png" alt="David\\\'s Famous" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="full-footer">
-            <div class="leaderboard"><img src="img/leader.jpg"></div>
+            <div class="leaderboard"><img src="images/leader-ad.png"></div>
             <div class="site-map clearfix"><!-- this div is deleted programmatically -->
                 <div class="sitemap_container">
                     <ul id="menu-sitemap" class="menu">
@@ -768,12 +770,14 @@
     </div>
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
-    <script src="js/jquery.carouFredSel-6.0.0.js"></script>
-    <script src="js/jquery.matchHeight.js"></script>
-    <script src="js/trunk8.js"></script>
-    <script src="js/ragbrai-new.js"></script>
+    <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
+    <script src="static/js/jquery.matchHeight.js"></script>
+    <script src="static/js/trunk8.js"></script>
+    <script src="static/js/ragbrai-new.js"></script>
     
+
 	<script>
 	    jQuery(document).ready(function($) {
             $('.truncate-teaser').each(function() {
