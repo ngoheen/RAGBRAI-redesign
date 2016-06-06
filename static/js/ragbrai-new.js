@@ -74,6 +74,17 @@ jQuery(document).ready(function($) {
 	drop_menu.init();
 	var drop_tools = new DropTools();
 	drop_tools.init();
+	
+// Making product boxes resize, responsively
+    window.addEventListener("load", function(event){
+        console.log("loaded");
+        jQuery(".fp-shop-img").height(jQuery(".fp-shop-img").width());
+    }, true);
+        
+    window.addEventListener("resize", function(event){
+        console.log("resized");
+        jQuery(".fp-shop-img").height(jQuery(".fp-shop-img").width());
+    }, true);
 });
 
 // COUNTDOWN

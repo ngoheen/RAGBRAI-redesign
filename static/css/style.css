@@ -63,6 +63,7 @@ a:focus {
         flex-direction: row;
         height: 85px;
     }
+    
     .top-left-content {
         background:#cc592c;
         display: -webkit-box;
@@ -77,6 +78,7 @@ a:focus {
         flex-grow: 1.5; 
         justify-content: center;
         align-items: center;  
+        text-align: center;
     }
     .top-right-content {
         background:#fff;
@@ -94,13 +96,23 @@ a:focus {
         flex-grow: 1;
         margin: 0;
         padding: 0;
+        text-align: center;
+    }
+    :root .top-content {display: table;}
+    :root .top-left-content,
+    :root .top-right-content {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
     }
     .countdown-wrap {
         flex: 1;
         font-size: 17px;
-        height: auto;     
+        height: auto;
+        margin: 15px auto;
     }
 }
+
 #gci_countdown-2 {
     font-family: 'Futura Today Light', helvetica, arial, sans-serif;
     color: #fff;
@@ -271,6 +283,7 @@ li.main > div > a {
 /* MAIN HOMEPAGE SECTIONS
 /* -------------------------------------- */
 
+
 /* -------------------------------------- */
 /* SHOP HOMEPAGE SECTIONS
 /* -------------------------------------- */
@@ -296,14 +309,13 @@ li.main > div > a {
     z-index: 4000;
 }
 .main-container {
-   margin: 50px 0 0;
+    margin: 50px 0 0;
 }
 
 /* -------------------------------------- */
 /* SHOP CAROUSEL
 /* -------------------------------------- */
 .callbacks_container {
-    /*height: 350px;*/
     margin: 0;
     max-width: 100%;
     overflow: hidden;
@@ -330,37 +342,43 @@ li.main > div > a {
     float: left;
     position: relative;
 }
-.rslides img {
+
+#shop .rslides img {
     border: 0;
     display: block;
     float: left;
     width: 100%;
     height: auto;
 }
-
+      
 /* -------------------------------------- */
 /* SHOP CAROUSEL > NAVIGATION
 /* -------------------------------------- */
 
 .callbacks_tabs {
-    height: 20px;
+    background: #333;
+    box-sizing: border-box;
+    height: 50px;
     list-style: none;
-    margin: 10px 0;
-    padding: 0;
+    margin: 0;
+    padding: 12px 0 20px;
     position: relative;
     text-align: center;
-    top: 0;
     width: 100%;
 }
+#shop .callbacks_tabs {
+    background: #fff;
+}
 .callbacks_tabs li {
-    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    height: 10px;
+    box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.5);
+    height: 15px;
     margin: 5px 5px 5px 0;
     position: relative;
-    width: 10px;
+    width: 15px;
 }
 .callbacks_tabs li.callbacks_here,
 .callbacks_tabs li:hover {
@@ -382,6 +400,7 @@ li.main > div > a {
 /* -------------------------------------- */
 /* SHOP CAROUSEL > SLIDES > CONTENT
 /* -------------------------------------- */
+
 .slider_msg {
     float: left;
     height: auto;
@@ -439,11 +458,11 @@ li.main > div > a {
     color: #333;
     font-family: 'Futura Today', helvetica, arial, sans-serif;
     font-size: 11px;
-    margin: 0;
+    margin: 8px auto 4px;
     padding: 0;
 }
 .list_carousel {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
     width: 200px;
@@ -569,13 +588,13 @@ h2.subhead4 {
 }
 .text h3 {
     color: #333;
-    font: bold 14px/16px Helvetica Neue;
+    font: bold 14px/16px helvetica, arial, sans-serif;
     margin: 5px 0;
     padding: 0;
 }
 .text h4 {
     color: #333;
-    font: normal 14px/14px Helvetica Neue;
+    font: normal 14px/14px helvetica, arial, sans-serif;
     margin: 5px 0;
     padding: 0;
 }
@@ -648,8 +667,11 @@ h2.subhead4 {
         width: calc( 100% - 20px );
     }
 }
-/* SHOP PRODUCT PAGE 
--------------------- */
+
+/* ---------------------------------------------------- */
+/* SHOP PRODUCT PAGE                                    */
+/* ---------------------------------------------------- */
+
 .breadcrumbs {
     color: #333;
     font: 12px/14px Helvetica, arial, sans-serif;
@@ -739,7 +761,6 @@ h2.subhead4 {
     margin: 0 0 10px;
     padding: 0;
 }
-
 p.stock {
     font-size: 15px;
     color: #c63;
@@ -814,7 +835,6 @@ h2.subhead3 {
     text-transform: uppercase;
     text-align: left;
 }
-
 span.onsale {
     background: #cc592c !important;
     top: 5px !important;
@@ -953,7 +973,7 @@ form.variations_form .select-label-wrap {
     width: 4.5em;
 }
 .woocommerce p.stars a.star-5 {
-    width: 5em;
+    width: 6em;
 }
 .woocommerce p.stars a.star-1:after, 
 .woocommerce p.stars a.star-2:after, 
@@ -963,6 +983,7 @@ form.variations_form .select-label-wrap {
     color: #cc5926;
     font-size: 12px;
 }
+
 /* WOOCOMMERCE PAGINATION
 ----------------------------------------- */
 .woocommerce-pagination,
@@ -1034,6 +1055,23 @@ form.variations_form .select-label-wrap {
     padding: 0 15px;
     text-align: center;
 }
+
+@media screen and (min-width:0\0) {
+    /* IE9 and IE10 rule sets go here */
+    .woocommerce-pagination .pagination-previous,
+    .woocommerce-pagination .pagination-next,
+    #shop nav.woocommerce-pagination .pagination-previous,
+    #shop nav.woocommerce-pagination .pagination-next {
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+    .woocommerce-pagination .pagination-next a,
+    .woocommerce-pagination .pagination-previous a {
+        display: inline-block;
+        margin-top: 8px;
+    }
+}
+
 .woocommerce-pagination .pagination-next,
 #shop nav.woocommerce-pagination .pagination-next {
     display: flex;
@@ -1138,6 +1176,7 @@ form.variations_form .select-label-wrap {
 /* -------------------------------------- */
 /* SITEMAP
 /* -------------------------------------- */
+
 .myClass a,
 .my2Class a,
 .my3Class a,
@@ -1209,7 +1248,8 @@ form.variations_form .select-label-wrap {
     }
 }
 
-/* SIDE MENU SEARCH ---------- */
+/* MOBILE SIDE MENU SEARCH 
+------------------------------------ */
 .mobile-search div {
     padding: 15px;
 }
@@ -1222,7 +1262,7 @@ form.variations_form .select-label-wrap {
 }
 
 /* LOGIN DROPDOWN
- ----------------------------- */
+ ----------------------------------- */
 #login div.dropdown {
 	background: rgb(51,51,51);
     color: #ccc;
@@ -1474,6 +1514,12 @@ input[type=submit]:focus {
 /* SECTION FRONTS
 ------------------------------------- */
 
+.blog-front {
+    float: left;
+    margin: 20px 20px 0;
+    width: calc( 100% - 40px);
+    width: 748px \0;
+}
 .blog-front-aside {
     float: left;
     margin: 0 20px 20px;
@@ -1485,28 +1531,25 @@ input[type=submit]:focus {
     background: #666;
     color: #ccc;
     display: none;
-    justify-content: center;
     margin-bottom: 20px;
     padding: 10px 20px;
     text-transform: uppercase;
     width: calc( 100% - 40px); 
 }
-
 .blog-post-comments {
     margin-top: 25px;
 }
-
 .blog-post-comments h1,
 .blog-header h1 {
     flex: 1;
     font-size: 14px;
     font-weight: bold;
+    padding: 10px 10px 10px 0;
     text-transform: uppercase;
 }
-.blog-front {
-    float: left;
-    margin: 20px 20px 0;
-    width: calc( 100% - 40px);
+.blog-header h1 span {
+    float: right;
+    text-transform: capitalize;
 }
 .blog-front-entry {
     border-bottom: 1px solid #ccc;
@@ -1540,8 +1583,7 @@ input[type=submit]:focus {
 .blog-front-title {
     font: bold 18px/20px helvetica, arial, sans-serif;
     margin-bottom: 10px;
-}
-   
+}   
 .poster-ad {
     margin: 20px 0;
     text-align: center;
@@ -1579,7 +1621,19 @@ input[type=submit]:focus {
 p.wysija-paragraph {
     margin: 0 0 10px;
 }
-
+.search-results {
+    background:#eee;
+    border-bottom: 1px solid #ddd;
+    box-sizing:border-box;
+    float: left;
+    margin-bottom: 15px;
+    overflow:hidden;
+    padding: 15px 20px;
+    width: 100%;
+}
+.blog-header + .search-results {
+    margin-top: -20px;
+}
 @media screen and (max-width: 320px) {
      .poster-ad {
         margin: 20px -20px;
@@ -1609,6 +1663,9 @@ p.wysija-paragraph {
     }
     .blog-header {
         display: flex;
+    }
+    :root .blog-header {
+        display: block;
     }
     .leader-ad {
         display: block;
@@ -1643,8 +1700,8 @@ p.wysija-paragraph {
     .rslides img {
         border: 0;
         display: block;
-        height: auto;
-        width: 100%;
+        height: 100%;
+        width: auto;
     }
     .rslides .overlay {  
         background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 25%, rgba(0,0,0,.75) 100%); /* FF3.6-15 */
@@ -1718,55 +1775,9 @@ p.wysija-paragraph {
 .tablet .top-content + .callbacks_container {
     border-bottom: none;
 }
-/* TOOLTIP
------------------------------------------ */
-/*html, body {
-  height: 100%;
-  width: 100%;
-  background: #ecf0f1;
-  overflow-x: hidden;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-h1, h2, p {
-  font-family: Roboto, sans-serif;
-}
-
-h1 {
-  font-size: 26px;
-  background: #e91e63;
-  color: #efefef;
-  padding: 40px 0 40px 20%;
-  margin-bottom: 50px;
-}
-
-body > div {
-  width: 60%;
-  margin-left: 20%;
-  margin-bottom: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
-}
-body > div:last-of-type {
-  margin-bottom: 100px;
-}
-
-h2 {
-  color: #e91e63;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-p {
-  display: inline;
-  margin-right: 50px;
-}
-*/
+/* SHARE POPUP
+------------------------------------- */
 .tablet #popupBasic {
     background: #fff;
     display: none;
@@ -1811,48 +1822,49 @@ p {
 	border-width:11px;
 	margin-top: -11px;
 }
-@media screen and (max-width: 767px) {
-/* MOBILE SHARE
----------------------------------------- */
- #popupBasic {
-    background: #fff;
-    display: none;
-    position: absolute;
-    top: -320%;
-    left: -80px;
-    padding: 20px;
-    width: 240px;
-    height: auto;
-    z-index: 40;
-}
-.arrow_box {
-	position: relative;
-	background: #ffffff;
-	border: 1px solid #ddd;
-}
-.arrow_box:after, .arrow_box:before {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
 
-.arrow_box:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-top-color: #ffffff;
-	border-width: 10px;
-	margin-left: -10px;
-}
-.arrow_box:before {
-	border-color: rgba(221, 221, 221, 0);
-	border-top-color: #ddd;
-	border-width: 11px;
-	margin-left: -11px;
-}
+@media screen and (max-width: 767px) {
+
+    /* MOBILE SHARE POPUP
+    ---------------------------------------- */
+    #popupBasic {
+        background: #fff;
+        display: none;
+        position: absolute;
+        top: -320%;
+        left: -80px;
+        padding: 20px;
+        width: 240px;
+        height: auto;
+        z-index: 40;
+    }
+    .arrow_box {
+	    background: #fff;
+	    border: 1px solid #ddd;
+	    position: relative;
+    }
+    .arrow_box:after, .arrow_box:before {
+	    border: solid transparent;
+	    content: " ";
+	    height: 0;
+	    left: 50%;
+	    position: absolute;
+	    pointer-events: none;
+	    top: 100%;
+	    width: 0;
+    }
+    .arrow_box:after {
+	    border-color: rgba(255, 255, 255, 0);
+	    border-top-color: #ffffff;
+	    border-width: 10px;
+	    margin-left: -10px;
+    }
+    .arrow_box:before {
+        border-color: rgba(221, 221, 221, 0);
+        border-top-color: #ddd;
+        border-width: 11px;
+        margin-left: -11px;
+    }
 }
 .sharing-wrapper {
     margin: 20px 0 20px -10px;
@@ -1908,7 +1920,6 @@ p {
     width: 25px;
     height: auto;  
 }
-
 .blog-post-title h1 {
     font: 36px/42px 'Futura Today DemiBold';
     margin: 0 0 25px;
@@ -1925,6 +1936,7 @@ p {
 .blog-post-text p {
     margin: 0 0 25px;
 }
+strong,
 .blog-post-text p strong {
     font-weight: bold;
 }
@@ -2007,84 +2019,4 @@ p {
 }
 .comments-body .time {
     color: #999;
-}
-[class^="tooltip"] {
-    position: relative;
-}
-[class^="tooltip"]:after {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  content: attr(data-tooltip);
-  padding: 6px 10px;
-  top: 1.4em;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-2px);
-          transform: translateX(-50%) translateY(-2px);
-  background: grey;
-  color: white;
-  white-space: nowrap;
-  z-index: 2;
-  border-radius: 2px;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-}
-[class^="tooltip"]:hover:after {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(-50%) translateY(0);
-          transform: translateX(-50%) translateY(0);
-}
-
-.tooltip--left:after {
-  top: -4px;
-  left: 0;
-  -webkit-transform: translateX(-112%) translateY(0);
-          transform: translateX(-112%) translateY(0);
-}
-.tooltip--left:hover:after {
-  -webkit-transform: translateX(-110%) translateY(0);
-          transform: translateX(-110%) translateY(0);
-}
-
-.tooltip--right:after {
-  top: -4px;
-  left: 100%;
-  -webkit-transform: translateX(12%) translateY(0);
-          transform: translateX(12%) translateY(0);
-}
-.tooltip--right:hover:after {
-  -webkit-transform: translateX(10%) translateY(0);
-          transform: translateX(10%) translateY(0);
-}
-
-.tooltip--triangle:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: solid 5px transparent;
-  border-right: solid 5px transparent;
-  border-bottom: solid 5px grey;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  -webkit-transform: translateX(-50%) translateY(-2px);
-          transform: translateX(-50%) translateY(-2px);
-  top: 1.1em;
-  left: 50%;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  z-index: 3;
-}
-.tooltip--triangle:hover:before {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(-50%) translateY(0);
-          transform: translateX(-50%) translateY(0);
 }

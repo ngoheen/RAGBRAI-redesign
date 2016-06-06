@@ -125,6 +125,9 @@
 	top: 40px;
 	width: 100%;
 }
+.menu-second div.dropdown {
+    padding: 1.5% !important;
+}
 #menu-primary .dropdown ul.sub-menu,
 #menu-primary .dropdown ul.sub-menu li a {
     font-family: helvetica, sans-serif;
@@ -222,5 +225,5 @@ input#search {
 }
 .lwa-form a {
     text-transform: none;
-    font: 14px/16px Helvetica,sans-serif
+    font: 14px/16px helvetica, arial, sans-serif;
 }
