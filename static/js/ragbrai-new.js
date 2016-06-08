@@ -25,7 +25,7 @@ var DropMenu = function() {
 		$('#menu-primary').on('click.menudrop', '.menu-item-has-children', self.toggleMenu);
         $('#login').on('click.menudrop', self.toggleMenu);
 		$('html').on('click.menudrop', self.closeall);
-		$('.menu-second').on('click.menudrop', '.menu-item-has-children', self.toggleMenu);
+		$('#menu-second').on('click.menudrop', '.menu-item-has-children', self.toggleMenu);
 		$('#menu-item-search .dropdown .search-close').on('click.menudrop', self.closeall);
 	};
 
@@ -60,12 +60,12 @@ var DropMenu = function() {
 	};
 
 	this.closeall = function() {
-	    $('.menu-second .dropdown').hide();
+	    $('#menu-second .dropdown').hide();
 		$('#menu-primary .dropdown').hide();
         $('#login .dropdown').hide();
 		$('#menu-primary > li').removeClass('active');
-		$('.menu-second > li').removeClass('active');
-		$('.menu-second > td').removeClass('active');
+		$('#menu-second > li').removeClass('active');
+		$('#menu-second > td').removeClass('active');
 	};
 };
 
@@ -150,8 +150,9 @@ jQuery('#gci_sponsors-2').carouFredSel({
     }
 });
 
-// BOTTOM SPONSORS
+
 jQuery(document).ready(function($) {
+    // BOTTOM SPONSORS
     var _scroll = {
         delay: 1000,
         easing: 'linear',

@@ -8,7 +8,7 @@
     left: 0;
     position: fixed;   
     top: 0;
-    width:  100%;
+    width: 100%;
     z-index: 999;
 }
 .menu-primary-container {
@@ -20,7 +20,7 @@
     float: left;
     width: auto;
 }
-.menu-second { 
+#menu-second { 
     float: right;
     width: auto;
 }
@@ -28,9 +28,9 @@
 #menu-primary.menu > .menu-item {
     background: #000;
 }
-.menu-second > .menu-item a,
-.menu-second > .menu-item h3,
-.menu-second > .menu-item h3 a,
+#menu-second > .menu-item a,
+#menu-second > .menu-item h3,
+#menu-second > .menu-item h3 a,
 #menu-primary.menu > .menu-item > a,
 #menu-primary.menu > .menu-item > h3,
 #menu-primary.menu > .menu-item > h3 a {
@@ -43,13 +43,13 @@
     font-family: 'Futura Today Bold', helvetica, sans-serif;
     font-size: 11px;
 }
-.menu-second,
+#menu-second,
 #menu-primary {
     display: table;
     list-style: none;
     table-layout: fixed;
 }
-.menu-second > li,
+#menu-second > li,
 #menu-primary > li {
     color: #fff;
     display: table-cell;
@@ -62,23 +62,23 @@
     text-decoration: none;
     vertical-align: middle;
 }
-.menu-second > .menu-item a:hover,
-.menu-second > .menu-item h3:hover,
-.menu-second > .menu-item h3 a:hover,
+#menu-second > .menu-item a:hover,
+#menu-second > .menu-item h3:hover,
+#menu-second > .menu-item h3 a:hover,
 #menu-primary.menu > .menu-item > a:hover,
 #menu-primary.menu > .menu-item > h3:hover,
 #menu-primary.menu > .menu-item > h3 a:hover,
-.menu-second > li:hover,
+#menu-second > li:hover,
 #menu-primary > li:hover {
     color: #ccc;
 }
 #menu-primary > li {
     text-transform: uppercase;
 }
-.menu-second > li {
+#menu-second > li {
     height: 40px;
 }
-.menu-second > li.active,
+#menu-second > li.active,
 #menu-primary > li.active {
     background: #333;
     color: #ccc;
@@ -114,8 +114,8 @@
 
 /* MAIN MENU DROPDOWN FOR DESKTOP/TABLET 
 --------------------------------------- */
-.menu-second div.dropdown,
-#menu-primary div.dropdown {
+#menu-second .dropdown,
+#menu-primary .dropdown {
 	background: rgb(51,51,51);
 	display: none;
 	left: 0;
@@ -125,7 +125,7 @@
 	top: 40px;
 	width: 100%;
 }
-.menu-second div.dropdown {
+#menu-second div.dropdown {
     padding: 1.5% !important;
 }
 #menu-primary .dropdown ul.sub-menu,

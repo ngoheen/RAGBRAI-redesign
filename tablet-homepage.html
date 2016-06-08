@@ -20,7 +20,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div role="navigation" class="site-navigation main-navigation">
+    <div role="navigation" class="site-navigation">
         <div class="menu-primary-container">
             <ul id="menu-primary" class="menu">
 			    <li id="menu-item-logo" class="menu-item">
@@ -149,8 +149,8 @@
                     <h3><a href="http://ragbrai.com/contact-us/">Contact</a></h3>
                 </li>
             </ul> 
-            <ul class="menu-second">
-                <li id="menu-item-search" class="menu-item menu-item-has-children">
+            <ul id="menu-second">
+                <li id="menu-item-search" class="menu-item">
                     <img src="static/img/search.png" class="nav-icon">
                     <div class="dropdown search-dropdown">
                         <form class="search-container" action="http://ragbrai.com/" method="get">
@@ -438,6 +438,27 @@
                 </li>
             </ul>
         </div>
+         <section class="section1">
+            <div class="left-one">
+                <div class="fp-blogs">
+                    <img src="images/photo-gal.jpg" class="fp-gal-img">
+                    <div class="fp-gal-teaser">
+                        <h2 class="subhead">photo galleries</h2>
+                        <p class="gallery-p"><span class="truncate-caption">Check out photos from the 2016 RAGBRAI route announcement party in Des Moines on Saturday, Jan.23, 2016.</span></p>
+                    </div>
+                </div>
+                <div class="fp-blogs">
+                    <img src="images/vid-gal.jpg" class="fp-gal-img">
+                    <div class="fp-gal-teaser">
+                        <h2 class="subhead">video galleries</h2>
+                        <p class="gallery-p"><span class="truncate-caption">Register reporters talk with RAGBRAI founder John Karras about the announcement that RAGBRAI and the Des Moines Register were working to create a statue of Karras and fellow founder Don Kaul.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-one">
+                <img src="images/poster-ad.png">
+            </div>
+        </section>
  <!-- =========================================================== -->    
       
         <!-- bottom FRIENDS carousel -->
@@ -646,10 +667,45 @@
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
     <script src='static/js/jquery.carouFredSel-6.0.0.js'></script>
     <script src="static/js/responsive_slides.js"></script>
     <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/trunk8.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+    // TRUNCATION
+            jQuery('.truncate-caption').each(function($) {
+                jQuery(this).trunk8({
+                    lines: 3,
+                    fill: '&hellip;'
+                });
+            });
+            jQuery('.truncate-teaser').each(function($) {
+                 $(this).trunk8({
+                        lines: 5,
+                        fill: '&hellip;'
+                  });
+            });
+            jQuery('.truncate-caption').resizable({
+                resize: function (event, ui) {
+                /* trunk8 on resize. */
+                    jQuery('.truncate-caption').trunk8();
+                }
+            });
+            jQuery('.truncate-caption').resizable({
+                resize: function (event, ui) {
+                /* trunk8 on resize. */
+                    jQuery('.truncate-teaser').trunk8();
+                }
+            });
+            jQuery(window).resize(function (event) {
+                jQuery('.truncate-caption').trunk8();
+                jQuery('.truncate-teaser').trunk8();
+            });
+        });
+            //end truncation
+    </script>
 </body>
 </html>

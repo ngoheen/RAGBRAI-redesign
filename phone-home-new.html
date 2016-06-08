@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Menu/Footer</title>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes' />
+   
+    <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
+    <link rel="stylesheet" href="static/css/fly.css">
+    <link rel="stylesheet" href="static/css/fonts.css">
+    <link rel="stylesheet" href="static/css/style.css">
+<style>
+
+.splash-menu-btn {
+    display: table-cell;
+    float: left;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+} 
+.splash-menu-btn span {
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    top: 55%;
+}
+.top-pic {
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+.top-pic img {   
+    height: auto;
+    width: 100%;
+}
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7,
+.tile8 {
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+}
+@media screen and (max-width: 320px) {
+    .tile1,
+    .tile2,
+    .tile3,
+    .tile4,
+    .tile5,
+    .tile6,
+    .tile7,
+    .tile8 {
+        background-size: 40px 40px;
+    }
+    .splash-menu-btn span {
+        font-size: 14px;
+    }
+}
+@media screen and (max-height: 480px) {
+     .splash-menu-btn span {
+        top: 60%;
+     }
+}
+.tile1 {
+    background-color: #cc5d00;
+    background-image: url('static/img/btns/btn_routes.png');
+}
+.tile2 {
+    background-color: #ca3c19;
+    background-image: url('static/img/btns/btn_host.png');
+}
+.tile3 {
+    background-color: #ca8f19;
+    background-image: url('static/img/btns/btn_photos.png');
+}
+.tile4 {
+    background-color: #8b3b18;
+    background-image: url('static/img/btns/btn_video.png');
+}
+.tile5 {
+    background-color: #a15f03;
+    background-image: url('static/img/btns/btn_blog.png');
+}
+.tile6 {
+    background-color: #ca5e19;
+    background-image: url('static/img/btns/btn_connect.png');
+}
+.tile7 {
+    background-color: #c93018;
+    background-image: url('static/img/btns/btn_shop.png');
+}
+.tile8 {
+    background-color: #8b3b18;
+    background-image: url('static/img/btns/btn_friends.png');
+}
+</style>
+</head>
+<body>
+    
+    <div class="flypanels-main">
+        <div class="flypanels-content">
+            <div class="top-pic"><img src="static/img/mobile-topper.jpg"></div>
+ <!-- =========================================================== -->                  
+            <a href=""><div class="splash-menu-btn tile1"><span>Routes & Maps</span></div></a>
+            <a href=""><div class="splash-menu-btn tile2"><span>Host Towns</span></div></a>
+            <a href=""><div class="splash-menu-btn tile3"><span>Photos</span></div></a>
+            <a href=""><div class="splash-menu-btn tile4"><span>Videos</span></div></a>
+            <a href=""><div class="splash-menu-btn tile5"><span>News</span></div></a>
+            <a href=""><div class="splash-menu-btn tile6"><span>Connect</span></div></a>
+            <a href=""><div class="splash-menu-btn tile7"><span>Shop</span></div></a>
+            <a href=""><div class="splash-menu-btn tile8"><span>Friends of RAGBRAI</span></div></a>
+ <!-- =========================================================== -->               
+        
+            <div class="mobile-ad-wrap">
+                <img src="images/mobile-ad.png">
+            </div>
+        </div>
+    </div>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
+    <script src="static/js/kitUtils.js"></script>
+    <script src="static/js/jquery.flypanels.js"></script>
+    <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
+    <script src="static/js/ragbrai-new.js"></script>
+    <script src="static/js/jquery.matchHeight.js"></script>
+
+   
+   
+    <script>
+        var touchJS = jQuery.noConflict();
+     
+        touchJS(document).ready(menuBtnResize);
+
+        touchJS(window).resize(menuBtnResize);
+
+        function menuBtnResize(){
+            var wh = touchJS(window).height();
+            var pich = touchJS('.top-pic').height();
+            var constants = 50 + pich;
+            var btnh = ( wh - constants) / 4; 
+            var finalh = btnh + 'px';
+            touchJS('.splash-menu-btn').each( function() {
+                touchJS(this).css('height', finalh);
+            });
+        }
+  </script> 
+</body>
+</html>
