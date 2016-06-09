@@ -25,7 +25,7 @@ var DropMenu = function() {
 		$('#menu-primary').on('click.menudrop', '.menu-item-has-children', self.toggleMenu);
         $('#login').on('click.menudrop', self.toggleMenu);
 		$('html').on('click.menudrop', self.closeall);
-		$('#menu-second').on('click.menudrop', '.menu-item-has-children', self.toggleMenu);
+		$('#menu-second').on('click.menudrop', '.menu-item', self.toggleMenu);
 		$('#menu-item-search .dropdown .search-close').on('click.menudrop', self.closeall);
 	};
 
