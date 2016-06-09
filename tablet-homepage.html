@@ -312,7 +312,7 @@
         </div>
     </div>  
     <div class="main-container">
-        <div class="top-content">
+        <div class="top-content" style="border-bottom: none;">
             <div class="top-left-content">
                 <div class="countdown-wrap">
                     RAGBRAI XLIV COUNTDOWN – July 24-30, 2016
@@ -439,7 +439,7 @@
             </ul>
         </div>
         <section class="section1">
-            <div class="left-one">
+            <div class="section1a">
                 <div class="fp-blogs">
                     <img src="images/photo-gal.jpg" class="fp-gal-img">
                     <div class="fp-gal-teaser">
@@ -455,7 +455,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-one">
+            <div class="section1b">
                 <img src="images/poster-ad.png">
             </div>
         </section>
@@ -552,19 +552,51 @@
         </section>
         <section class="section4">
             <div class="email-signup">
-                <h2 class="subhead3">Email Signup</h2>
+                <h2 class="subhead5">Email Signup</h2>
                 <p>Sign up for the latest RAGBRAI news and notes (if there is no news in a day, you won’t get an e-mail).</p>
-                <input style="width:235px;height:30px;padding-left:10px;display:inline-block;" placeholder="Email address">
-                <div class="subscribe-btn">Sign up</div>
+                <input class="email-subscribe-input" placeholder="Email address">
+                <div class="email-subscribe-btn">Sign up</div>
             </div>
                     
             <div class="fp-events">
-                <h2 class="subhead3" style="margin-bottom: 15px">Upcoming Events</h2>
+                <h2 class="subhead5">Upcoming Events</h2>
                 <ul class="red_arrow">
                     <li>June 18, 2016 - BACooN RIDE</li>
                     <li>July 23, 2016 - RAGBRAI Expo 2016</li>
                     <li>July 24 - 30, 2016 - RAGBRAI XLIV</li>
                 </ul>
+            </div>
+        </section>
+        <section class="section5">
+            <h2 class="subhead4">related products</h2>
+            <div class="fp-shop-wrap">
+                <div class="item1">
+                    <div class="fp-shop-img"><img src="images/cap.png"></div>
+                    <div class="item-desc">2016 XLIV Logo Cap
+                        <div class="price">$20.00</div>
+                    </div>
+                </div>
+                    
+                <div class="item2">
+                    <div class="fp-shop-img"><img src="images/rag-t.jpg"></div>
+                    <div class="item-desc">2016 XLIV Long Sleeve Logo Tee
+                        <div class="price">$20.00</div>
+                    </div>
+                </div>
+                    
+                <div class="item3">
+                    <div class="fp-shop-img"><img src="images/2011pin.jpeg"></div>
+                    <div class="item-desc">2011 XXXIX Pin
+                        <div class="price">$5.50</div>
+                    </div>
+                </div>
+                    
+                <div class="item4">
+                    <div class="fp-shop-img"><img src="images/mug.png"></div>
+                    <div class="item-desc">2016 Mug
+                        <div class="price">$10.00</div>
+                    </div>
+                </div>
             </div>
         </section>
  <!-- =========================================================== -->    
@@ -781,39 +813,6 @@
     <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/trunk8.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
-    <script>
-    jQuery(document).ready(function($) {
-    // TRUNCATION
-        jQuery('.truncate-caption').each(function($) {
-            jQuery(this).trunk8({
-                lines: 3,
-                fill: '&hellip;'
-            });
-        });
-        jQuery('.truncate-teaser').each(function($) {
-            jQuery(this).trunk8({
-                lines: 6,
-                fill: '&hellip;'
-            });
-        });
-        jQuery('.truncate-caption').resizable({
-            resize: function (event, ui) {
-            /* trunk8 on resize. */
-                jQuery('.truncate-caption').trunk8();
-            }
-        });
-        jQuery('.truncate-teaser').resizable({
-            resize: function (event, ui) {
-            /* trunk8 on resize. */
-                jQuery('.truncate-teaser').trunk8();
-            }
-        });
-        jQuery(window).resize(function (event) {
-            jQuery('.truncate-caption').trunk8();
-            jQuery('.truncate-teaser').trunk8();
-        });
-    });
-            //end truncation
-    </script>
+   
 </body>
 </html>

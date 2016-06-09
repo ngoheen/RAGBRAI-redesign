@@ -358,8 +358,8 @@ li.main > div > a {
     margin-left: 0;
 }
 .section4 {
-    background: #e4e4e4;
-    display: flex;
+    background: #e4e4e4; 
+    overflow: hidden;
     padding: 25px 20px;
 }
 .section4 p {
@@ -368,44 +368,60 @@ li.main > div > a {
     margin: 10px 10px 15px 0;
 }
 .email-signup {
-    flex: 1;
-    order: 1;
-    flex-grow: 3;
+    float: left;
+    width: calc(100% - 320px);
 }
 .fp-events {
-    flex: 1
-   /* width: calc( ((100% - 40px)/3) - 20px );float: left;margin-left:20px;margin-top:-1px;*/
-   order: 2;
-   flex-grow: 1;
+    float: left;
+    padding-right: 20px;
+    width: 300px;
 }
-.subscribe-btn {
+.email-subscribe-btn {
     background: #cc6633;
     border-radius: 5px;
     color: #fff;
     display: inline-block;
+    font-family: helvetica, arial, sans-serif;
     font-size: 12px;
     margin-left: 10px;
-    padding: 7px 10px;
+    padding: 9px 10px;
 }
-.left-one {
+   
+.email-subscribe-input {
+    border-radius: 3px;
+    border: 1px solid #d5d8d5;
+    box-shadow: none;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 36px;
+    padding: 9px 10px;
+    width: 235px;
+}
+
+.section1a {
     float: left;
     width: calc(100% - 320px);
 }
-.right-one {
-    width: 300px;
-    padding-right: 20px;
+.section1b {
     float: left;
+    padding-right: 20px;
+    width: 300px;
 }
-h2.subhead3,
-h2.subhead2,
-h2.subhead {
+.subhead5,
+.subhead3,
+.subhead2,
+.subhead {
     color: #999;
     font: normal 12px/12px Helvetica;
     margin: 0;
     padding; 0;
     text-transform: uppercase;
 }
-h2.subhead2 {
+.subhead5 {
+    color: #000;
+    font-weight: bold;
+}
+.subhead2 {
     background: #ccc;
     color: #000;
     float: left;
@@ -415,12 +431,12 @@ h2.subhead2 {
     text-transform: uppercase;
     width: 100%;
 }
-h2.subhead3 {
+.subhead3 {
     color: #333;
     font-weight: bold;
     text-align: left;
 }
-h2.subhead4 {
+.subhead4 {
     clear: both;
     color: #333;
     font: bold 12px/12px Helvetica;
@@ -502,7 +518,7 @@ h3.fp-social-head {
 }
 ul.red_arrow {
     list-style: none;
-    margin: 0;
+    margin: 15px 0 0;
     padding: 0;
 }
 
@@ -530,7 +546,43 @@ ul.red_arrow li a,
     margin-top: 40px;
 }
 
-
+/* SHOP PRODUCTS SECTION */
+.fp-shop-wrap {
+    background:#fff;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.fp-shop-wrap .item1,
+.fp-shop-wrap .item2,
+.fp-shop-wrap .item3,
+.fp-shop-wrap .item4 {
+    float: left;
+    margin: 20px 10px 20px 10px;
+    width: calc(( 100% - 100px ) / 4);
+}
+.fp-shop-wrap .item-desc {
+    font: bold 12px/14px Helvetica, snas-serif;
+    margin: 10px 0 0;
+}
+.fp-shop-wrap .item-desc .price {
+    font-weight: normal;
+}
+.fp-shop-wrap > div > div:first-child {
+    border: 1px solid #ccc;
+    height: 165px;
+}
+.fp-shop-wrap .item1 {
+    margin-left: 20px;
+}
+.fp-shop-wrap .item4 {
+    margin-right: 20px;
+}
+.fp-shop-img img {
+    height: calc(100% - 10px);
+    margin: 5px;
+    width: auto;
+}
 /* -------------------------------------- */
 /* SHOP HOMEPAGE SECTIONS
 /* -------------------------------------- */
@@ -1070,7 +1122,7 @@ input-text.qty.text {
     text-transform: uppercase;
     text-align: left;
 }
-.product-review-header h2.subhead2 {
+.product-review-header h1.subhead {
      font: bold 14px/14px Helvetica, arial, sans-serif;
 }
 h2.subhead3 {
@@ -1749,7 +1801,7 @@ input[type=submit]:focus {
 
 /* SECTION FRONTS
 ------------------------------------- */
-
+.photo-front,
 .blog-front {
     float: left;
     margin: 20px 20px 0;
@@ -1763,7 +1815,8 @@ input[type=submit]:focus {
 }
 
 .blog-post-comments,
-.blog-header {
+.blog-header,
+.photo-header {
     background: #666;
     color: #ccc;
     display: none;
@@ -1775,9 +1828,10 @@ input[type=submit]:focus {
 .blog-post-comments {
     margin-top: 25px;
 }
+.product-review-header h1,
 .blog-post-comments h1,
-.blog-header h1 {
-    flex: 1;
+.blog-header h1,
+.photo-header h1 {
     font-size: 14px;
     font-weight: bold;
     padding: 10px 10px 10px 0;
@@ -1819,7 +1873,11 @@ input[type=submit]:focus {
 .blog-front-title {
     font: bold 18px/20px helvetica, arial, sans-serif;
     margin-bottom: 10px;
-}   
+}  
+.photo-front-title {
+    font: bold 15px/21px helvetica, arial, sans-serif;
+    margin: 10px 0;
+} 
 .poster-ad {
     margin: 20px 0;
     text-align: center;
@@ -1884,9 +1942,12 @@ p.wysija-paragraph {
     }
 }
  @media screen and (min-width: 768px) {
+    .photo-front,
     .blog-front {
+        float: left;
         width: calc( 100% - 360px );
     }
+    .photo-front-aside,
     .blog-front-aside {
         float: right;
         margin-left: 0;
@@ -1897,8 +1958,9 @@ p.wysija-paragraph {
     .blog-post-comments {
         display: block;
     }
+    .photo-header,
     .blog-header {
-        display: flex;
+        display: block;
     }
     :root .blog-header {
         display: block;

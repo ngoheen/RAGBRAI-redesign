@@ -17,6 +17,7 @@ var DropTools = function() {
         $('#popupBasic').hide();
     };
 };
+
 // DROPDOWN MENU
 var DropMenu = function() {
     var self = this;
@@ -215,6 +216,37 @@ jQuery(document).ready(function($) {
             namespace: "callbacks"
         });
     }
+    
+    // TRUNCATION
+        jQuery('.truncate-caption').each(function($) {
+            jQuery(this).trunk8({
+                lines: 3,
+                fill: '&hellip;'
+            });
+        });
+        jQuery('.truncate-teaser').each(function($) {
+            jQuery(this).trunk8({
+                lines: 5,
+                fill: '&hellip;'
+            });
+        });
+        jQuery('.truncate-caption').resizable({
+            resize: function (event, ui) {
+            /* trunk8 on resize. */
+                jQuery('.truncate-caption').trunk8();
+            }
+        });
+        jQuery('.truncate-teaser').resizable({
+            resize: function (event, ui) {
+            /* trunk8 on resize. */
+                jQuery('.truncate-teaser').trunk8();
+            }
+        });
+        jQuery(window).resize(function (event) {
+            jQuery('.truncate-caption').trunk8();
+            jQuery('.truncate-teaser').trunk8();
+        });
+        //end truncation
 });
 
 
