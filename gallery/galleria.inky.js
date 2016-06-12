@@ -18,9 +18,6 @@ Galleria.addTheme({
     defaults: {
         transition: 'slide',
         thumbCrop:  'height',
-        imagePosition: 'top left',
-
-        // set this to false if you want to show the caption all the time:
         _toggleInfo: true
     },
     init: function(options) {
@@ -43,9 +40,9 @@ Galleria.addTheme({
 
         // some stuff for non-touch browsers
         if (! touch ) {
-            this.addIdleState( this.get('image-nav-left'), { left:-35 });
-            this.addIdleState( this.get('image-nav-right'), { right:-35 });
-            this.addIdleState( this.get('counter'), { opacity:0 });
+            this.addIdleState( this.get('galleria-image-nav-left'), { left:35 });
+            this.addIdleState( this.get('galleria-image-nav-right'), { right:35 });
+            this.addIdleState( this.get('counter'), { opacity:1 });
         }
 
         // toggle info
@@ -83,7 +80,6 @@ Galleria.addTheme({
             }
 
             this.$('info').toggle( this.hasInfo() );
-
             $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity', 0.6);
         });
 
@@ -92,79 +88,55 @@ Galleria.addTheme({
         });
     }
 });
+Galleria.configure({
+    showImagenav: true,
+    imagePosition: 'top',
+    idleMode: false,
+    imageMargin: '37',
+    preload: 2
+});
 Galleria.ready(function() {
-
-	/*var gallery = this;
-    this.addElement('lightboxbutton');
-    this.appendChild('gallery-tools','lightboxbutton');
-    this.$('lightboxbutton').click(function() {
-            gallery.openLightbox();
-            console.log('lightbox');
-   });*/
-
 	jQuery('.galleria-stage').after('<div class="gallery-tools"></div>');
 	jQuery('.gallery-tools').append(jQuery('<div class="galleria-play"></div><div class="galleria-s1"></div>'));
-	jQuery('.gallery-tools').append(jQuery('.galleria-info-link'));
-	jQuery('.gallery-tools').append(jQuery('.galleria-info-close'));
-	//jQuery('.gallery-tools').append('<div class="ody-pgviewthumbs">View Thumbs<div class="ody-pgthumbsIcon"></div></div>');
-	
+	jQuery('.gallery-tools').append(jQuery('.galleria-info-link').text("Show caption"));
+	jQuery('.gallery-tools').append(jQuery('.galleria-info-close').text("Hide caption"));	
 	jQuery('.gallery-tools').append(jQuery('.galleria-info-title'));
 	jQuery('.gallery-tools').append(jQuery('.galleria-counter'));
 	jQuery('.gallery-tools').append(jQuery('<div class="galleria-s2"></div>'));
-	jQuery('.gallery-tools').append(jQuery('<div class="galleria-lightboxbutton"></div>'));
-	//jQuery('.gallery-tools').append(jQuery('<div class="galleria-fullscreen"></div>'));
+	jQuery('.gallery-tools').append(jQuery('<div class="fa fa-clone fa-rotate-270"></div>'));
+	jQuery('.gallery-tools').append(jQuery('<div class="galleria-s3"></div>'));
 	
-	//jQuery('.galleria-thumbnails-container .galleria-image').click(function() {
-		//console.log('clicked');
-		//});
-	/*jQuery('.ody-pgviewthumbs,.galleria-thumbnails-container .galleria-image').click(function() {
-		var clicker = jQuery('.ody-pgviewthumbs');
-  		var mylayer = jQuery('.galleria-thumbnails-container');
-		var open = mylayer.data('open');
-		if (open) {
-			mylayer.css({'position' : 'absolute','top' : '440px'});
-    		clicker.html('View Thumbs<div class="ody-pgthumbsIcon"></div>');
-        	mylayer.data('open', false);
-    	} else {
-    		mylayer.show().css({'position' : 'absolute','top' : '0'});
-    		clicker.html('Hide Thumbs<div class="ody-pgthumbsIcon"></div>');
-        	mylayer.data('open', true);
-    	}
-	});*/
+	
 	var gallery = this; // "this" is the gallery instance
 	var btn = $('.galleria-play');
-	$('.galleria-lightboxbutton').click(function() {
+	$('.fa-clone').click(function() {
             gallery.openLightbox();
    });
-  /* $('.galleria-fullscreen').click(function() {
-   		gallery.toggleFullscreen();
-   		});*/
-   	 $('.galleria-play').click(function() {
-   	 	gallery.playToggle();
-   		});
-   		this.bind('play', function() {
-			btn.addClass('playing');
-		}).bind('pause', function() {
-			btn.removeClass('playing');
-		});
-	//$('.galleria-fullscreen').click( this.proxy(function() { this.enterFullscreen(); }) )
+ 
+    $('.galleria-play').click(function() {
+        gallery.playToggle();
+    });
+    this.bind('play', function() {
+        btn.addClass('playing');
+	}).bind('pause', function() {
+        btn.removeClass('playing');
+    });
+	
 	this.bind(Galleria.IMAGE, function(e) {
-		var current = gallery.getData(gallery.getIndex());
-		var buy = current.title;
+        var current = gallery.getData(gallery.getIndex());
+        var buy = current.title;
                 						
 		if(buy !="") {
 			jQuery('.galleria-info-title').css({'display':'block'});
 		} else {
 			jQuery('.galleria-info-title').css({'display':'none'});
 		}
-	/* determines height of caption */
-	var trueHeight = ( this.$('info-text').height() );
-	var stageHeight = -21;
-	var infoTop = stageHeight - trueHeight;
-	jQuery('.galleria-info').css({'top' : infoTop});
+	    /* determines height of caption */
+	    var trueHeight = ( this.$('info-text').height() );
+	    var stageHeight = -140;
+	    var infoTop = stageHeight - trueHeight;
+	    jQuery('.galleria-info').css({'top' : infoTop});
+    });
 });
-});
-/*Galleria.run('.galleria', {
-	height: 0.5635;
-});*/
+
 }(jQuery));
