@@ -446,6 +446,15 @@ li.main > div > a {
     text-transform: uppercase;
     width: 100%;
 }
+.subhead6 {
+    clear: both;
+    color: #333;
+    float: left;
+    font: bold 12px/12px helvetica, arial, sans-serif;
+    margin: 20px 20px 20px 0;
+    padding; 0;
+    text-transform: uppercase;
+}
 .gallery-p {
     color: #000;
     float: left;
@@ -610,6 +619,7 @@ ul.red_arrow li a,
 }
 .main-container {
     margin: 50px 0 0;
+    overflow: hidden;
 }
 
 /* -------------------------------------- */
@@ -865,20 +875,60 @@ h2.subhead4 {
     position: relative;
     width: 100%;
 }
+#gallery-page .square {
+    border: none;
+}
+#gallery-page .photo-left-wrap {
+    clear: both;
+    float: left;
+    margin: 0;
+    width: calc(100% - 320px);
+}
+#gallery-page .content {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
+#gallery-page .backgroundDiv {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
 .wrapper {
     box-sizing: border-box;
     float: left;
     margin: 1.16666666%;
     width: 23.25%;
 }
+.photo-left-wrap {
+    margin: 0;
+    width: 100%;
+}
+#gallery-page .wrapper {
+    margin: 0 0 20px;
+    width: calc(50% - 10px);
+}
+#gallery-page .wrapper:first-child,
+#gallery-page .wrapper:nth-child(4n + 1),
 .wrapper:first-child,
 .wrapper:nth-child(4n + 1) {
     margin-left: 0;
+    margin-right: 0;
 }
+#gallery-page .wrapper:first-child,
+#gallery-page .wrapper:nth-child(odd) {
+    margin-right: 20px;
+}
+#gallery-page .wrapper:nth-child(5n-1),
 .wrapper:nth-child(5n-1) {
     float: left;
     margin-right: 0;
 }
+#gallery-page .wrapper:last-child,
 .wrapper:last-child {
     margin-right: 0;
 }
@@ -1784,7 +1834,7 @@ input[type=submit]:focus {
     }   
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .sitemap_container,
     .leaderboard {
         display: block;
@@ -1954,7 +2004,12 @@ p.wysija-paragraph {
         margin-right: 20px;
         width: 300px;
     }
-
+ .photo-front-aside {
+    margin-right: 0;
+}
+.photo-front-aside .poster-ad {
+    margin-top: 0;
+}
     .blog-post-comments {
         display: block;
     }
@@ -1984,6 +2039,9 @@ p.wysija-paragraph {
 /* TABLETS AND UP
 ---------------------------------------- */
 @media screen and (min-width: 768px) {
+    .main-container {
+        margin-top: 40px;
+    }
     .rslides li {
         height: 450px;
         overflow: hidden;
@@ -2310,4 +2368,17 @@ strong,
 }
 .comments-body .time {
     color: #999;
+}
+
+/* POSSIBLE DESKTOP */
+
+@media screen and (min-width: 1025px) {
+    body {
+        background: #efefef;
+    }
+    .main-container {
+        background: #fff;
+        margin: 40px auto 20px;
+        width: 1080px;
+    }
 }

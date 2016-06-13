@@ -1,4 +1,4 @@
-//TOGGLE SHARE TOOLS
+//TOGGLE SHARE TOOLS on POSTS
 var DropTools = function() {
     var self = this;
 	var $ = jQuery.noConflict();
@@ -75,28 +75,29 @@ jQuery(document).ready(function($) {
 	drop_menu.init();
 	var drop_tools = new DropTools();
 	drop_tools.init();
-	
-// Making product boxes resize, responsively
-    window.addEventListener("load", function(event){
-        console.log("loaded");
-        jQuery(".fp-shop-img").height(jQuery(".fp-shop-img").width());
-    }, true);
-        
-    window.addEventListener("resize", function(event){
-        console.log("resized");
-        jQuery(".fp-shop-img").height(jQuery(".fp-shop-img").width());
-    }, true);
-});
 
 // COUNTDOWN
-jQuery(document).ready(function($) {
-    $("#gci_countdown-2").countdown({
+ $("#gci_countdown-2").countdown({
         date : "July 24, 2016 06:00:00",
         onComplete : function() {
             $('#gci_countdown-2').html('Bike on!');
         }
     });
+
+// TOP SPONSORS
+    jQuery('#gci_sponsors-2').carouFredSel({
+    responsive: true,
+    width: '140',
+    scroll: 1,
+    align: 'center',
+    scroll: {
+    fx: 'crossfade',
+        pauseOnHover: true,
+        duration: 1000
+    }
 });
+});   
+
             
 // RESTRUCTURE Sitemap
 jQuery(function($){  
@@ -138,18 +139,6 @@ jQuery(function($){
     item1.slice(35,43).wrapAll($div4);
 });
 
-// TOP SPONSORS
-jQuery('#gci_sponsors-2').carouFredSel({
-    responsive: true,
-    width: '140',
-    scroll: 1,
-    align: 'center',
-    scroll: {
-    fx: 'crossfade',
-        pauseOnHover: true,
-        duration: 1000
-    }
-});
 
 
 jQuery(document).ready(function($) {
@@ -246,8 +235,17 @@ jQuery(document).ready(function($) {
             jQuery('.truncate-caption').trunk8();
             jQuery('.truncate-teaser').trunk8();
         });
-        //end truncation
+    //end TRUNCATION
 });
 
-
+  // Trying to make TWITTER responsive
+jQuery(window).on('load', function ($) {
+    jQuery('iframe[id^=twitter-widget-]').each(function () {
+        var head = jQuery(this).contents().find('head');
+        if (head.length) {
+            head.append('<style>.timeline { max-width: 100% !important;max-height:100% !important } .timeline .stream { max-width: none !important; max-height:100% !important; }</style>');
+        }
+        jQuery('#twitter-widget-0').append(jQuery('<div class=timeline>'));
+    })
+});
  

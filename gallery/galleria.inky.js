@@ -93,6 +93,7 @@ Galleria.configure({
     imagePosition: 'top',
     idleMode: false,
     imageMargin: '37',
+    maxScaleRatio: '3',
     preload: 2
 });
 Galleria.ready(function() {
