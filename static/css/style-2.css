@@ -814,6 +814,7 @@ ul.red_arrow li a,
 /* -------------------------------------- */
 
 .sponsor-bottom {
+    background: #fff;
     border-top: 1px solid #ccc;
     clear: both;
     float: left;
@@ -856,6 +857,9 @@ h2.subhead4 {
     position: relative;
     width: calc( 100% - 30px );
 }
+
+
+
 .backgroundDiv {
     background-position: center center;
     background-repeat: no-repeat;
@@ -901,9 +905,15 @@ h2.subhead4 {
 .wrapper {
     box-sizing: border-box;
     float: left;
-    margin: 1.16666666%;
-    width: 23.25%;
+    margin: 1%;
+    width: 23.5%;
 }
+.wrapper:nth-child(4n+1),
+.wrapper:first-child {
+    margin-left: 0;
+    margin-right: 1%;
+}
+
 .photo-left-wrap {
     margin: 0;
     width: 100%;
@@ -913,9 +923,7 @@ h2.subhead4 {
     width: calc(50% - 10px);
 }
 #gallery-page .wrapper:first-child,
-#gallery-page .wrapper:nth-child(4n + 1),
-.wrapper:first-child,
-.wrapper:nth-child(4n + 1) {
+#gallery-page .wrapper:nth-child(4n + 1) {
     margin-left: 0;
     margin-right: 0;
 }
@@ -923,8 +931,8 @@ h2.subhead4 {
 #gallery-page .wrapper:nth-child(odd) {
     margin-right: 20px;
 }
-#gallery-page .wrapper:nth-child(5n-1),
-.wrapper:nth-child(5n-1) {
+#gallery-page .wrapper:nth-child(4n+4),
+.wrapper:nth-child(4n+4) {
     float: left;
     margin-right: 0;
 }
@@ -936,6 +944,7 @@ h2.subhead4 {
     clear: both;
     float: left;
 }
+
 .text h3 {
     color: #333;
     font: bold 14px/16px helvetica, arial, sans-serif;
@@ -1165,7 +1174,7 @@ input-text.qty.text {
 .product-review-header {
     background: #666;
     clear: both;
-    color: #ccc;
+    color: #fff;
     display: block;
     margin: 0 0 10px;
     padding: 10px 20px;
@@ -1489,6 +1498,12 @@ form.variations_form .select-label-wrap {
         width: 100%;
     }
 }
+.section-front-main .pagination-previous {
+    margin-left: 0;
+}
+.section-front-main .pagination-next {
+    margin-right: 0;
+}  
 /* -------------------------------------- */
 /* FOOTER
 /* -------------------------------------- */
@@ -1582,6 +1597,9 @@ form.variations_form .select-label-wrap {
 .sitemap_container {
     float: left;
     width: 100%;
+}
+.sitemap_container a:hover {
+    color: #000;
 }
 .leaderboard {
     display: none;
@@ -1827,14 +1845,16 @@ input[type=submit]:focus {
         width: calc( 50% - 15px );
     }
     .product-right {
-        margin-left: 15px;
+        margin-left: 30px;
     }
     .select_wrapper:after {
         z-index: 2;
     }   
 }
-
-@media screen and (min-width: 769px) {
+#shop {
+    background: #fff;
+}
+@media screen and (min-width: 768px) {
     .sitemap_container,
     .leaderboard {
         display: block;
@@ -1851,8 +1871,7 @@ input[type=submit]:focus {
 
 /* SECTION FRONTS
 ------------------------------------- */
-.photo-front,
-.blog-front {
+.section-front-main {
     float: left;
     margin: 20px 20px 0;
     width: calc( 100% - 40px);
@@ -1863,7 +1882,7 @@ input[type=submit]:focus {
     margin: 0 20px 20px;
     width: calc( 100% - 40px );
 }
-
+.section-header,
 .blog-post-comments,
 .blog-header,
 .photo-header {
@@ -1878,9 +1897,9 @@ input[type=submit]:focus {
 .blog-post-comments {
     margin-top: 25px;
 }
+.section-header-h1,
 .product-review-header h1,
 .blog-post-comments h1,
-.blog-header h1,
 .photo-header h1 {
     font-size: 14px;
     font-weight: bold;
@@ -1992,12 +2011,12 @@ p.wysija-paragraph {
     }
 }
  @media screen and (min-width: 768px) {
-    .photo-front,
+    .section-front-main,
     .blog-front {
         float: left;
         width: calc( 100% - 360px );
     }
-    .photo-front-aside,
+    .section-front-aside,
     .blog-front-aside {
         float: right;
         margin-left: 0;
@@ -2006,12 +2025,13 @@ p.wysija-paragraph {
         width: 300px;
     }
 
-    .photo-front-aside .poster-ad {
+    .section-front-aside .poster-ad {
         margin-top: 0;
     }
     .blog-post-comments {
         display: block;
     }
+    .section-header,
     .photo-header,
     .blog-header {
         display: block;
@@ -2269,6 +2289,10 @@ p.wysija-paragraph {
     width: 25px;
     height: auto;  
 }
+
+
+
+
 .blog-post-title h1 {
     font: 36px/42px 'Futura Today DemiBold';
     margin: 0 0 25px;

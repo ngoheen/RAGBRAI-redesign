@@ -7,18 +7,73 @@
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
-    <link rel="stylesheet" href="static/css/style.css">    
+    <link rel="stylesheet" href="static/css/style-2.css">
+    <style>
+    .top-gallery {
+        height: auto;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .top-gallery img {
+        height: auto;
+        width: 100%;
+    }
+    .gallery-wrap {
+        overflow: hidden;
+    }
+   
+    .gallery-wrap .square {
+        border: none;
+     }
+    .gallery-wrap .wrapper {
+        margin: 0 0 15px;
+        width: 48%;
+    }
+    .gallery-wrap .wrapper:nth-child(even) {
+        float: right;
+}
+ .gallery-wrap .content {
+    height: 100%;
+    padding: 0%;
+    position: absolute;
+    text-align: center;
+    width: 100%;  
+}
+ .gallery-wrap .content .rs {
+    height: auto;
+    margin: auto auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+ .gallery-wrap .backgroundDiv {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+.top-gallery-title,
+.gallery-wrap .text h3 {
+    font: bold 15px/21px helvetica, arial, sans-serif;
+    margin: 5px 0;
+}
+
+  
+    </style>
 </head>    
 <body class="tablet">
     <div id="fb-root"></div>
     <script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=198722363481114";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=198722363481114";
+                fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div role="navigation" class="site-navigation main-navigation">
         <div class="menu-primary-container">
@@ -404,229 +459,119 @@
             </div>
         </div>
         
- <!-- =========================================================== --> 
-         
-        <div id="shop" class="woocommerce">
-            <div class="breadcrumbs">
-                <a href="">Home</a> / <a href="">Shop</a> / <a href="">Accessories</a> / 2016 XLIV Logo Cap
+ <!-- =========================================================== -->        
+        <div class="leader-ad">
+            <img src="images/leader-ad.png">
+        </div>
+        <div class="section-front-main">
+            <div class="section-header">
+                <h1 class="section-header-h1">photo galleries &ndash; 2015</h1>
             </div>
-            <div class="product-page-wrapper">
-                <div class="product-left">
-                    <div class="product-wrapper">
-                        <img src="images/2016-Bibs-300x300.jpg" />
-                    </div>
-                    <div class="product-thumbs">
-                        <div class="product-view">
-                            <img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/03/XLIV_CoffeeMugFront.png" />
-                        </div>
-                        <div class="product-view">
-                            <img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/03/XLIV_CoffeeMugBack.png" />
-                        </div>
-                    </div>
-                </div>
-                <div class="product-right">
-                        <div class="product-title">
-                            2016 RAGBRAI XLIV Men’s Bibs
-                            <div class="product-price">
-                            $75.00
-                        </div>
-                    </div>
-                    <div class="product-desc">
-                                <p>Complete your 2016 jersey kit with this Cool Max cycling cap by Pace Sportswear! It features the XLIV logo and continues the pattern from our official 2016 jersey.</p>
-                                <p>Transports moisture away from your head, keeping you cool and dry. Can be worn alone or under a helmet. One size fits all.</p>
-                                <p>Designed, made,&nbsp;and printed in America by Pace Sportswear.</p>
-                            </div>
-                    <form class="variations_form" method="post" enctype="multipart/form-data" data-product_id="1123825">
-	
-                            <div class="select-label">Size</div>
-                            <div class="select-label-wrap">
-                                <div class="select_wrapper">
-                                    <select id="pa_size" class="featured-products" name="attribute_pa_size" data-attribute_name="attribute_pa_size">
-                                        <option value="">Choose an option</option>
-                                        <option value="small" class="attached enabled">Small</option>
-                                        <option value="medium" class="attached enabled">Medium</option>
-                                        <option value="large" class="attached enabled">Large</option>
-                                        <option value="x-large" class="attached enabled">X Large</option>
-                                        <option value="2x-large" class="attached enabled">2X Large</option>
-                                        <option value="3x-large" class="attached enabled">3X Large</option>
-                                    </select>
-                                </div>
-                            </div>  		
-                    
-                            <div class="single_variation_wrap">
-                                <div class="single_variation">
-                                    <p class="stock in-stock">10 in stock</p>
-                                </div>
-                                <div class="variations_button">
-                                    <div class="quantity">
-                                        <input type="number" step="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" min="1">
-                                    </div>
-                                    <button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
-                                    <input type="hidden" name="add-to-cart" value="1123825">
-                                    <input type="hidden" name="product_id" value="1123825">
-                                    <input type="hidden" name="variation_id" class="variation_id" value="">
-                                </div>
-                            </div>
-                        </form>
-                    <div class="product-review">
-                        <div class="product-review-header">
-                            <h1>REVIEWS</h1>
-                        </div>
-                        <div class="woocommerce-tabs wc-tabs-wrapper">
-                            <ul class="tabs wc-tabs">
-                                <li class="reviews_tab">
-                                    <a href="#tab-reviews">Reviews (3)</a>
-                                </li>
-                            </ul>
-                            <div class="panel entry-content wc-tab" id="tab-reviews">
-                                <div id="reviews">
-                                        <div id="comments">
-                                            <h2>3 reviews for 2016 RAGBRAI XLIV Jersey</h2>		
-                                            <ol class="commentlist">
-                                                <li itemprop="review" itemscope itemtype="http://schema.org/Review" class="comment byuser comment-author-aminton even thread-even depth-1" id="li-comment-724738">
-	                                                <div id="comment-724738" class="comment_container">
-		                                                <img src="http://www.gravatar.com/avatar/1a5035526910d8e25a8e092e7aa5ceb7?s=60&#038;r=pg&#038;d=mm" class="avatar user-404907-avatar avatar-60 photo" width="60" height="60" alt="Profile photo of Anne" />
-		                                                <div class="comment-text">
-                                                            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="Rated 5 out of 5">
-					                                            <span style="width:100%"><strong itemprop="ratingValue">5</strong> out of 5</span>
-				                                            </div>
-                                                            <p class="meta">
-					                                            <strong itemprop="author">Anne</strong> 
-					                                            <time itemprop="datePublished" datetime="2015-12-01T10:48:52+00:00">December 1, 2015</time>
-				                                            </p>
-                                                            <div itemprop="description" class="description">
-                                                                <p>thank you</p>
-                                                            </div>
-		                                                </div>
-	                                                </div>
-                                                </li>
-                                                
-                                                <li itemprop="review" itemscope itemtype="http://schema.org/Review" class="comment byuser comment-author-mshow1323 odd alt thread-odd thread-alt depth-1" id="li-comment-770138">
-                                                    <div id="comment-770138" class="comment_container">
-                                                        <img src="http://ragbrai.com/wp-content/uploads/avatars/415110/ec628547a89f10bd807c7e2a64bd301b-bpfull.jpg" class="avatar user-415110-avatar avatar-60 photo" width="60" height="60" alt="Profile photo of Michael" />
-                                                        <div class="comment-text">
-                                                            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="Rated 5 out of 5">
-                                                                <span style="width:100%"><strong itemprop="ratingValue">5</strong> out of 5</span>
-                                                            </div>
-                                                            <p class="meta">
-					                                            <strong itemprop="author">Michael</strong> <em class="verified">(verified owner)</em>
-					                                            <time itemprop="datePublished" datetime="2016-03-30T06:04:22+00:00">March 30, 2016</time>
-                                                            </p>
-                                                            <div itemprop="description" class="description"><p>When do these babies get released?  I&#8217;m super excited to break them in</p>
-                                                        </div>
-		</div>
-                                                </div>
-                                                </li><!-- #comment-## -->
-
-                                                <li itemprop="review" itemscope itemtype="http://schema.org/Review" class="comment byuser comment-author-aparrott bypostauthor even thread-even depth-1" id="li-comment-777448">
-                                                    <div id="comment-777448" class="comment_container">
-                                                        <img src="http://ragbrai.com/wp-content/uploads/avatars/10633/76a75a0caa53dab74043670241201304-bpfull.jpg" class="avatar user-10633-avatar avatar-60 photo" width="60" height="60" alt="Profile photo of Andrea" />
-                                                        <div class="comment-text">
-                                                            <p class="meta">
-                                                                <strong itemprop="author">Andrea</strong>
-                                                                <time itemprop="datePublished" datetime="2016-04-14T11:01:15+00:00">April 14, 2016</time>
-                                                            </p>
-                                                            <div itemprop="description" class="description">
-                                                                <p>They are now in stock! If you&#8217;ve ordered one and haven&#8217;t received it yet, it&#8217;s on its way!</p>
-                                                            </div>
-                                                        </div>
-	                                                </div>
-                                                </li><!-- #comment-## -->
-                                                
-                                                <li itemprop="review" itemscope itemtype="http://schema.org/Review" class="comment byuser comment-author-higdonx5 odd alt thread-odd thread-alt depth-1" id="li-comment-771900">
-	                                                <div id="comment-771900" class="comment_container">
-		                                                <img src="http://www.gravatar.com/avatar/a54ddebdbd8e060d47a1a1dd45f59858?s=60&#038;r=pg&#038;d=mm" class="avatar user-419749-avatar avatar-60 photo" width="60" height="60" alt="Profile photo of Dale" />
-		                                                <div class="comment-text">
-                                                            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="Rated 3 out of 5">
-					                                            <span style="width:60%"><strong itemprop="ratingValue">3</strong> out of 5</span>
-				                                            </div>
-                                                            <p class="meta">
-					                                            <strong itemprop="author">Dale</strong>
-					                                            <time itemprop="datePublished" datetime="2016-04-02T17:17:43+00:00">April 2, 2016</time>
-				                                            </p>
-                                                            <div itemprop="description" class="description"><p>thank you</p>
-                                                        </div>
-		                                            </div>
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                        
-		                            <div id="review_form_wrapper">
-			                            <div id="review_form">
-                                            <div id="respond" class="comment-respond">
-                                                <h3 id="reply-title" class="comment-reply-title">Add a review <small><a rel="nofollow" id="cancel-comment-reply-link" href="/shop/cycling-apparel/2016-ragbrai-xliv-jersey-preorder/#respond" style="display:none;">Cancel reply</a></small></h3>
-                                                <p class="must-log-in">You must be <a href="http://ragbrai.com/my-account/">logged in</a> to post a review.</p>		
-                                            </div><!-- #respond -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="top-gallery">
+                <img src="http://ragbrai.com/wp-content/uploads/2016/06/20160608_bp_PreRide_25.jpg">
+                <div class="top-gallery-title">
+                    20 RAGBRAI photos: Blue skies and countrysides 
                 </div>
             </div>
-            <h2 class="subhead3">related products</h2>
-            <div class="products">
-                <div class="wrapper">
+            <div class="gallery-wrap">   
+                <div class="wrapper">        
                     <div class="square">
                         <div class="content backgroundDiv">
                             <div class="imageDiv">
-                                <img src="images/mug.png" class="rs">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Costumes_001-150x150.jpg" class="rs">
                             </div>
-                        </div>  
+                        </div>
                     </div>
                     <div class="text">
-                        <h3>2016 RMug</h3>
-                        <h4>$10</h4>
+                        <h3>15 RAGBRAI photos: The food</h3>
                     </div>
                 </div>
-                <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <span class="onsale">Sale!</span>
-                                <div class="imageDiv">
-                                    <img src="images/ss-tee.jpg" class="rs">      
-                                </div>
-                            </div>
-                        </div>
-                         <div class="text">
-                            <h3>2016 XLIV men's Logo Tee</h3>
-                            <h4>$25</h4>
-                        </div>
-                    </div>
-                <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img src="images/cap.png" class="rs">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <h3>2016 XLIV Logo Cap</h3>
-                            <h4>$20</h4>
-                        </div>
-                    </div>
-                <div class="wrapper">
-                        <div class="square">
+                <div class="wrapper"> 
+                    <div class="square">
                         <div class="content backgroundDiv">
                             <div class="imageDiv">
-                                <img src="images/ls-tee.jpg" class="rs">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_TheBikes_001-150x150.jpg" class="rs">
                             </div>
                         </div>
                     </div>
                     <div class="text">
-                        <h3>2016 XLIV Long Sleeve Logo Tee</h3>
-                        <h4>$20</h4>
+                        <h3>12 RAGBRAI photos: Wet and wild on the route</h3>
                     </div>
                 </div>
-            </div>
+                <div class="wrapper">        
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_DanceMoves_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>12 RAGBRAI photos: Dance it out</h3>
+                    </div>
+                </div>
+                <div class="wrapper">        
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Sunrise_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>15 RAGBRAI photos: Catching the sunrise</h3>
+                    </div>
+                </div>
+            </div>       
+            <nav class="woocommerce-pagination">
+                <div class="pagination-previous"><a href="">2014</a></div>
+                <div class="pagination-next"><a href="">2016</a></div>
+            </nav>
         </div>
-        
- <!-- =========================================================== --> 
-         
-        <!-- bottom FRIENDS carousel -->
+        <div class="section-front-aside">
+            <div class="poster-ad">
+                <img src="images/poster-ad.png">
+            </div>
+            <div class="aside-box">
+                <h2>Latest Videos</h2>
+                <img src="http://bcdownload.gannett.edgesuite.net/desmoines/35546125001/201605/3715/35546125001_4908153823001_4908126427001-vs.jpg?pubId=35546125001" alt="RAGBRAI 2016 Jersey">
+                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
+            </div>
+            <div class="aside-box">
+                        <h2>Latest Galleries</h2>
+                        <img src="http://ragbrai.com/wp-content/uploads/2015/07/des.m0725RAGBRAIfriday.bh-573-335x217.jpg">
+                        <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
+                    </div>
+            <div class="aside-box">
+                        <h2>Email Signup</h2>
+                        <div style="clear:both;">
+				            <div class="widget_wysija_cont php_wysija">
+				                <div id="msg-form-wysija-php574b88dac6dc1-1" class="wysija-msg ajax"></div>
+				                <form id="form-wysija-php574b88dac6dc1-1" method="post" action="#wysija" class="widget_wysija php_wysija">
+				                <p>Sign up for the latest RAGBRAI news and notes (if there is no news in a day, you won’t get an e-mail).</p>
+                                <p class="wysija-paragraph">
+                                    <label style="display:none;">Email <span class="wysija-required">*</span></label>
+                                    <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email" value="" placeholder="Email signup">
+                                    <span class="abs-req" style="display:none;">
+                                        <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="">
+                                    </span>
+                                </p>
+                                <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
+                                <input type="hidden" name="form_id" value="1">
+                                <input type="hidden" name="action" value="save">
+                                <input type="hidden" name="controller" value="subscribers">
+                                <input type="hidden" value="1" name="wysija-page">
+
+                                <input type="hidden" name="wysija[user_list][list_ids]" value="3">
+    
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+        </div>  
+ <!-- =========================================================== -->             
+       
+         <!-- bottom FRIENDS carousel -->
         <div class="sponsor-bottom">
             <div class="list_carousel2">
                 <h2 class="subhead4">Friends of RAGBRAI</h2>
@@ -720,11 +665,11 @@
                                 <li id="menu-item-503402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-503402">
                                     <a href="#">General</a>
                                     <ul class="sub-menu">
-                                        <li id="menu-item-503412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503412"><a href="http://ragbrai.com/about/general-information/">General Information</a></li>
-                                        <li id="menu-item-503413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503413"><a href="http://ragbrai.com/about/faqs/">FAQs</a></li>
-                                        <li id="menu-item-503414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503414"><a href="http://ragbrai.com/about/ragbrai-history/">RAGBRAI history</a></li>
-                                        <li id="menu-item-503415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503415"><a href="http://ragbrai.com/expo-2/">RAGBRAI Expo</a></li>
-                                        <li id="menu-item-503416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503416"><a href="http://ragbrai.com/contact-us/">Contact us</a></li>
+                                        <li class="menu-item"><a href="http://ragbrai.com/about/general-information/">General Information</a></li>
+                                        <li class="menu-item"><a href="http://ragbrai.com/about/faqs/">FAQs</a></li>
+                                        <li class="menu-item"><a href="http://ragbrai.com/about/ragbrai-history/">RAGBRAI history</a></li>
+                                        <li class="menu-item"><a href="http://ragbrai.com/expo-2/">RAGBRAI Expo</a></li>
+                                        <li class="menu-item"><a href="http://ragbrai.com/contact-us/">Contact us</a></li>
                                     </ul>
                                 </li>
                                 <li id="menu-item-503403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-503403">
@@ -831,13 +776,29 @@
     </div>
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
-    <script src="static/js/jquery.matchHeight.js"></script>
-    <script src="static/js/kitUtils.js"></script>
-    <script src="static/js/jquery.flypanels.js"></script>
-    <script src="static/js/responsive_slides.js"></script>
     <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
+    <script src="static/js/jquery.matchHeight.js"></script>
+    <script src="static/js/trunk8.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
     
+
+	<script>
+	    jQuery(document).ready(function($) {
+            $('.truncate-teaser').each(function() {
+                $(this).trunk8({
+                    lines: 3,
+                    fill: '&hellip;'
+                });
+            });
+            $(".blog-front-text").each(function() {
+                var title = $(this).children(".blog-front-title").detach();
+                var sibling = $(this).siblings('.blog-front-img');
+                title.insertBefore(sibling);
+            });
+        });
+    </script>
+
 </body>
 </html>

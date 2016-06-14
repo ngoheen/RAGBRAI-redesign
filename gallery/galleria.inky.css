@@ -89,7 +89,7 @@ and (orientation : portrait) {
 }
 
 
-#galleria-loader{height:1px !important}
+#galleria-loader { height:1px !important }
 
 .galleria-container {
     position: relative;

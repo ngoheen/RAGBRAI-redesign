@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
-    <link rel="stylesheet" href="static/css/style.css">    
+    <link rel="stylesheet" href="static/css/style-2.css">  
+    <style>
+.products {
+        width: calc(100% - 30px);
+        margin: 0 0 0 15px;
+    }
+.wrapper {
+    box-sizing: border-box;
+    float: left;
+    margin: 1%;
+    width: 23.5%;
+}
+
+.wrapper:nth-child(4n+4) {
+    float: left;
+    margin-right: 0;
+}
+
+.wrapper:last-child {
+    margin-right: 0;
+}
+.wrapper:nth-child(4n+1),
+.wrapper:first-child {
+    margin-left: 0;
+    margin-right: 1%;
+}
+
+</style>  
 </head>    
 <body class="tablet">
     <div id="fb-root"></div>
@@ -149,7 +176,7 @@
                     <h3><a href="http://ragbrai.com/contact-us/">Contact</a></h3>
                 </li>
             </ul> 
-            <ul class="menu-second">
+            <ul id="menu-second">
                 <li id="menu-item-search" class="menu-item menu-item-has-children">
                     <img src="static/img/search.png" class="nav-icon">
                     <div class="dropdown search-dropdown">
@@ -504,18 +531,18 @@
             </div>
             <div class="products">
                 <div class="wrapper">
-                <div class="square">
-                    <div class="content backgroundDiv">
-                        <div class="imageDiv">
-                                    <img src="images/mug.png" class="rs">
-                                </div>
-                            </div>  
-                        </div>
-                        <div class="text">
-                            <h3>2016 RMug</h3>
-                            <h4>$10</h4>
-                        </div>
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="images/mug.png" class="rs">
+                            </div>
+                        </div>  
                     </div>
+                    <div class="text">
+                        <h3>2016 RMug</h3>
+                        <h4>$10</h4>
+                    </div>
+                </div>
                 <div class="wrapper">
                         <div class="square">
                             <div class="content backgroundDiv">
@@ -611,19 +638,19 @@
                     </div>
             </div>
             <nav class="woocommerce-pagination">
-	                <div class="pagination-previous"><a href="">Previous</a></div>
-	                <ul class="page-numbers">
-	                    <li><span class="page-numbers current">1</span></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/2/">2</a></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/3/">3</a></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/4/">4</a></li>
-	                    <li><span class="page-numbers dots">…</span></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/18/">18</a></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/19/">19</a></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/20/">20</a></li>
-                    </ul>
-                    <div class="pagination-next"><a href="">Next</a></div>
-                </nav>
+                <div class="pagination-previous"><a href="">Previous</a></div>
+                <ul class="page-numbers">
+                    <li><span class="page-numbers current">1</span></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/2/">2</a></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/3/">3</a></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/4/">4</a></li>
+                    <li><span class="page-numbers dots">…</span></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/18/">18</a></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/19/">19</a></li>
+                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/20/">20</a></li>
+                </ul>
+                <div class="pagination-next"><a href="">Next</a></div>
+            </nav>
         </div>
  <!-- =========================================================== -->    
       
@@ -832,6 +859,7 @@
     </div>
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
     <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/kitUtils.js"></script>
