@@ -92,8 +92,8 @@ and (orientation : portrait) {
 #galleria-loader { height:1px !important }
 
 .galleria-container {
-    position: relative;
     background: #fff;
+    position: relative;
 }
 .galleria-container img {
     -moz-user-select: none;
@@ -102,7 +102,6 @@ and (orientation : portrait) {
     top: 0 !important;
     z-index: 0;
 }
-
 .galleria-thumbnails-container {
     height: 50px;
     bottom: 0;

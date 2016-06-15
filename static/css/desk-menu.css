@@ -72,6 +72,9 @@
 #menu-primary > li:hover {
     color: #ccc;
 }
+#menu-primary > li > h3,
+#menu-primary > li > h3 a,
+#menu-primary > li > a,
 #menu-primary > li {
     text-transform: uppercase;
 }

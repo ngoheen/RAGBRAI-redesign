@@ -7,7 +7,24 @@
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
-    <link rel="stylesheet" href="static/css/style-2.css">    
+    <link rel="stylesheet" href="static/css/style-2.css">
+    <script type="text/javascript">
+	  (function() {
+	    var cx = '009237343847593634205:4am7s8lhr-8';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = 'http://cse.google.com/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<style>
+	#___gcse_0 {
+    width: 80%;
+    margin: 0 auto;
+	}
+	</style> 
 </head>    
 <body class="tablet">
     <div id="fb-root"></div>
@@ -154,13 +171,14 @@
                 <li id="menu-item-search" class="menu-item menu-item-has-children">
                     <img src="static/img/search.png" class="nav-icon">
                     <div class="dropdown search-dropdown">
-                        <form class="search-container" action="http://ragbrai.com/" method="get">
+                        <!--<form class="search-container" action="http://ragbrai.com/" method="get">
                             <fieldset>
                                 <label for="search">
                                     <input type="text" name="s" id="search" value=""><span class="fa fa-search"></span>
                                 </label>
                             </fieldset>
-                        </form>
+                        </form>-->
+                        <gcse:searchbox-only resultsUrl="http://ragbrai.com/search-results/"></gcse:searchbox-only>
                         <div class="search-close">x</div>
                     </div>
                 </li>
