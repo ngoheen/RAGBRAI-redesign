@@ -920,19 +920,43 @@ h2.subhead4 {
     margin: 1%;
     width: 23.5%;
 }
+.top-video-gallery,
 .top-gallery {
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
     width: 100%;
+}
+.top-video-gallery {
+    margin-bottom: 20px;
 }
 .top-gallery img {
     height: auto;
     width: 100%;
 }
+.latest-video-left {
+    float: left;
+    margin: 0;
+    width: 48%;
+}
+.latest-video-right {
+    float: right;
+    margin: 0;
+    width: 48%;
+}
+.bottom-video-wrap {
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.top-video-title,
 .top-gallery-title,
 .gallery-wrap .text h3 {
     font: bold 15px/21px helvetica, arial, sans-serif;
     margin: 5px 0;
+}
+.top-video-title {
+    margin-top: 10px;
 }
 .gallery-wrap {
     overflow: hidden;
@@ -2446,9 +2470,6 @@ strong,
 .comments-body .time {
     color: #999;
 }
-  body {
-        background: #efefef;
-    }
 /* POSSIBLE DESKTOP 
 
 @media screen and (min-width: 1025px) {

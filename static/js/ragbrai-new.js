@@ -76,15 +76,15 @@ jQuery(document).ready(function($) {
 	var drop_tools = new DropTools();
 	drop_tools.init();
 
-// COUNTDOWN
- $("#gci_countdown-2").countdown({
+    // COUNTDOWN
+     $("#gci_countdown-2").countdown({
         date : "July 24, 2016 06:00:00",
         onComplete : function() {
             $('#gci_countdown-2').html('Bike on!');
         }
     });
 
-// TOP SPONSORS
+    // TOP SPONSORS
     jQuery('#gci_sponsors-2').carouFredSel({
     responsive: true,
     width: '140',
@@ -239,7 +239,7 @@ jQuery(document).ready(function($) {
 });
 
   // Trying to make TWITTER responsive
-jQuery(window).on('load', function ($) {
+    jQuery(window).on('load', function ($) {
     jQuery('iframe[id^=twitter-widget-]').each(function () {
         var head = jQuery(this).contents().find('head');
         if (head.length) {

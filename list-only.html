@@ -43,6 +43,8 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 </script>
     <script src='http://ragbrai.com/wp-content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.5'></script>
     <script src='http://admin.brightcove.com/js/BrightcoveExperiences.js?ver=4.5.2'></script>
+    <meta property="og:video:url" content="http://c.brightcove.com/services/viewer/federated_f9/?isVid=1&amp;isUI=1&amp;playerID=3449237176001&amp;autoStart=true&amp;videoId=4941279913001">
+   
 	<script>
 		var bcvidid = "";
 		if (window.location.hash!=0) {
@@ -106,6 +108,67 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
     <link rel="stylesheet" href="static/css/style-2.css">
+    
+    <script>
+		var bcvidid = "";
+		if (window.location.hash!=0) {
+			var url = window.location.hash;
+			bcvidid = url.match(/videoid=([^&]+)/)[1];
+
+		}
+
+		function my_function(id) {
+			bcvidid = id;
+			var IE = /*@cc_on!@*/false;
+			var FF = !(window.mozInnerScreenX == null);
+			if (FF || IE) {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
+				vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
+				vidplayerHTML += '<param name="width" value="600" />\n';
+				vidplayerHTML += '<param name="height" value="620" />\n';
+				vidplayerHTML += '<param name="playerID" value="2338369759001" />\n';
+				vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw" />\n';
+				vidplayerHTML += '<param name="isVid" value="true" />\n';
+				vidplayerHTML += '<param name="isUI" value="true" />\n';
+				vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
+				vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
+				vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
+				vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
+				vidplayerHTML += '<\/object>\n';
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+				brightcove.createExperiences();
+			} else {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<iframe id="myExperience" width="600" height="620" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=2338369759001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+			}
+		}
+
+	</script>
+	<script>
+		var BCSetting={};
+		BCSetting.token="MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..";
+		BCSetting.navigationXMLFile="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/navigationragbrai.xml";
+		BCSetting.customPlaylistIDForTab=52759093001;
+		BCSetting.nextUpPlaylistIDForOverride=52759093001;
+		BCSetting.nextUpAutoAdvanceDelay=10;
+		BCSetting.descriptionOverlayDelay=10;
+		BCSetting.gridEnabled=false;
+		BCSetting.numberOfGridVideosToLoad=36;
+		BCSetting.staticsrcurl="static.gcion.net/video/latest";
+		BCSetting.trainingOn =true;
+		BCSetting.trainingTime = 10;
+		BCSetting.adsiteid="ia-desmoines.desmoinesregister.com/";
+		BCSetting.debug=false;
+	</script>
+	<script src='http://admin.brightcove.com/js/BrightcoveExperiences.js?ver=4.5.2'></script>
+	<script src="http://static.gcion.net/video/latest/gs/vorpal.js"></script>
+	<script src="http://admin.brightcove.com/js/APIModules_all.js"></script>
+	<script src="http://static.gcion.net/video/latest/gs/sizzle.js"></script>
+	<!--<script src="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/js/bcplayer.js"></script>-->
+	
+	<link rel="stylesheet" href="http://static.gcion.net/video/latest/gc/brightcove.css" type="text/css" media="all">
     <script>
 	  (function() {
 	    var cx = '009237343847593634205:4am7s8lhr-8';
@@ -117,6 +180,8 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 	    s.parentNode.insertBefore(gcse, s);
 	  })();
 	</script>
+	<script src="http://api.brightcove.com/services/library?command=find_playlist_by_id&amp;callback=BCGannett.onEditorialPlaylistRetrieved&amp;playlist_id=52759093001&amp;token=MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..&amp;" type="text/javascript"></script>
+	<script src="http://api.brightcove.com/services/library?callback=BCGannett.createTopLevelTopics&amp;command=find_playlists_for_player_id&amp;playlist_fields=id,name,videos&amp;video_fields=id,name,shortDescription,length,tags,thumbnailURL&amp;player_id=2330618502001&amp;token=MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..&amp;" type="text/javascript"></script>
 <style>
 .top-gallery iframe {
     width: 100%;
@@ -149,7 +214,7 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
     width: 100%
 }
 .vjs-big-play-button {
-    height: 96px;
+ height: 96px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -158,20 +223,6 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 }
 .top-content {
     border-bottom: 1px solid #ddd;
-}
-#rightColumn #related ul.tabs li.selected span.topLeft,
-#rightColumn #related ul.tabs li.selected span.topRight {
-    background-image: none;
-}
-#pushDownContainer,
-#rightColumn #expandedBanner,
-#bcHeader,
-#bcImmersivePlayerContainer img.navigationBarBottom,
-#bcHeader #navigationTop span.rightArrow,
-#bcHeader #navigationTop span.leftArrow,
-#bcHeader #navigationTop span.left_deactivated,
-#leftColumn #player {
-    display: none !important;
 }
 #rightColumn #related ul.tabs li h3 {
     text-transform: uppercase;
@@ -201,33 +252,6 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 #rightColumn #related #editorial {
     margin: 2px 0 0 0;
 }
-#bcImmersivePlayerContainer,
-#playback {
-    height: 300px;
-    top: 0;
-    width: 300px;
-}
-#bcImmersivePlayerContainer {
-    display: block;
-    top: 0;
-    left: 0;
-}
-#rightColumn {
-    left: 0;
-    width: 270px !important;
-}
-#rightColumn #related {
-    margin-top: 0;
-}
-#rightColumn #related #nextUp,
-#rightColumn #related #relatedVideos,
-#rightColumn #related #editorial {
-    height: 270px;
-}
-#immersivePlayer {
-    margin-top: -5px;
-}
-
 </style>
 </head>
 
@@ -646,125 +670,33 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
                 <div class="responsive-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Nu9MDqGhIak" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <h2 class="top-video-title">Yo Yo Ma on the BBC</h2>
+                <h2 class="top-gallery-title" style="margin-top:15px;">Yo Yo Ma on the BBC</h2>
                 <p style="float:left;clear:both;font:14px/20px helvetica, sans-serif;margin: 0 0 10px 0;">Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
-            </div>
-               <div class="bottom-video-wrap">
-                    <div class="latest-video-left">
-                        <div class="responsive-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-fmVeYHKGIo" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <h2 class="top-video-title">Inside Ragbrai</h2>
-                        <!-- <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
-                    </div>
-                    <div class="latest-video-right">
-                        <div class="responsive-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DXlABYoFbdQ" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <h2 class="top-video-title">Small Town Big Deal "RAGBRAI" with host Rodney Miller and Jann Carl</h2>
-                        <!--   <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
-                    </div>
+                <div style="float: left;width:49%;margin-top:20px;">
+                    <div class="responsive-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-fmVeYHKGIo" frameborder="0" allowfullscreen></iframe>
+                   </div>
+                    <h2 class="top-gallery-title">Inside Ragbrai</h2>
+                   <!-- <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
                 </div>
-                <div class="bottom-video-wrap">
-                    <div class="latest-video-left">
-                        <div class="responsive-container">
-                            <iframe width="420" height="315" src="https://www.youtube.com/embed/9kYJZoDrFeQ" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                         <h2 class="top-video-title">Beethoven, Triple Concierto y Fantasía Coral. Yo-Yo Ma, Perlman, Barenboim</h2>
-                    </div>
-                    <div class="latest-video-right">
-                        <div class="responsive-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/i_7feGF9TA8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <h2 class="top-video-title">Mark Knopfler Showing his magic on an acoustic guitar</h2>
-                    </div>
+                <div style="float: right;width: 49%;margin-top:20px;">
+                <div class="responsive-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DXlABYoFbdQ" frameborder="0" allowfullscreen></iframe>
                 </div>
+                 <h2 class="top-gallery-title">Small Town Big Deal "RAGBRAI" with host Rodney Miller and Jann Carl</h2>
+                 <!--   <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
+                </div>
+            </div> 
          </div>     
         <div class="section-front-aside">
             <div class="poster-ad">
                 <img src="images/poster-ad.png">
             </div>
             <div class="aside-box">
-               
-                <div id="immersivePlayer">
-				<div id="bcImmersivePlayerContainer">
-					<div id="bcHeader">
-						<div id="navigationTop">
-							<span class="leftArrow left_deactivated"></span>
-							<span class="leftEdge"></span>
-							<div id="navigationItems"></div>
-							<span class="rightEdge"></span>
-							<span class="rightArrow"></span>
-						</div>
-						<div id="search">
-							<form>
-								<input id="searchInputBox" type="text" value="Search Videos" />
-							</form>
-							<div id="searchSubmit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						</div>
-					</div>
-
-					<div id="pushDownContainer" class="searched">
-						<div id="close">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div id="searchResults">
-
-							<div class="close">Clear Search Results<span class="button"></span></div>
-						</div>
-						<span class="numberOfResults"></span>
-						<div id="left" class="left"></div>
-						<div id="right" class="right"></div>
-
-						<div id="navigationLeft"></div>
-						<div id="slideContainer">
-							<div class="videos"></div>
-						</div>
-					</div>
-					<img class="navigationBarBottom" src="http://static.gcion.net/video/latest/gg/navigation-bar-bottom.png" />
-					<div id="playback">
-						<div id="leftColumn">
-							<div id="player">
-
-								<div id="bcplayercode" style="height:490px;overflow:hidden;">
-									
-								</div>
-								<script>
-									var IE = /*@cc_on!@*/false;
-									var FF = !(window.mozInnerScreenX == null);
-									if (FF || IE) {
-										var vidplayerHTML = "";
-										vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
-										vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
-										vidplayerHTML += '<param name="width" value="600" />\n';
-										vidplayerHTML += '<param name="height" value="366" />\n';
-										vidplayerHTML += '<param name="playerID" value="3997547222001" />\n';
-										vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ" />\n';
-										vidplayerHTML += '<param name="isVid" value="true" />\n';
-										vidplayerHTML += '<param name="isUI" value="true" />\n';
-										vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
-										vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
-										vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
-										vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
-										vidplayerHTML += '<\/object>\n';
-										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
-										brightcove.createExperiences();
-									} else {
-										var vidplayerHTML = "";
-										vidplayerHTML += '<iframe id="myExperience" width="600" height="366" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=3997547222001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
-										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
-									};
-								</script>
-							</div>
-
-						</div>
-						<div id="rightColumn">
-							<div id="expandedBanner">
-								<div>
-									<a href="http://pubads.g.doubleclick.net/gampad/jump?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" target="_blank">
-
-										<img src="http://pubads.g.doubleclick.net/gampad/ad?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" border="0">
-									</a>
-								</div>
-							</div>
+                <h2>Latest Videos</h2>
+                <div id="playback">
+						
+							
 							<div id="related">
 
 									<ul class="tabs">
@@ -783,36 +715,10 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 										<ul id="nextUp" class="selected"></ul>
 
 									</div>
+
 							</div>
-						</div>
-					</div>
-
-					<div id="videoGrid">
-						<div id="videoGridHeader">
-							<span class="topLeft"></span>
-							<span class="topRight"></span>
-
-							<div class="container">
-								<h3 onclick="javascript:BCGannett.addVideosToGrid(true);"></h3>
-							</div>
-						</div>
-
-						<div id="videoGridPlaylists">
-							<ul class="playlists container"></ul>
-							<span class="bottomLeft"></span>
-						</div>
-						<div id="videoGridVideos"></div>
-
-						<div id="videoGridScrollbar">
-							<div id="gridHandle"></div>
-						</div>
-
-						<span class="bottomLeft"></span>
-					</div>
-					<div id="shortDescriptionOverlay"><p></p></div>
-					<div id="bcFooter"></div>
-				</div>
-			</div>
+						
+                </div>
             </div>
             
             <div class="aside-box">

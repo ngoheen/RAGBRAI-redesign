@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop/Tablet Video Front</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='http://admin.brightcove.com/js/BrightcoveExperiences.js?ver=4.5.2'></script>
+    <meta property="og:video:url" content="http://c.brightcove.com/services/viewer/federated_f9/?isVid=1&amp;isUI=1&amp;playerID=3449237176001&amp;autoStart=true&amp;videoId=4941279913001">
+
+	
+</head>
+<body>
+  <div class="main-container">
+    <div class="section-front-main"></div>
+    <div class="section-front-aside">
+        <div id="related">
+            <ul class="tabs">
+                <li class="nextUp selected" name="nextUp">
+                    <h3>Next Up</h3>
+                </li>
+            </ul>
+            <div class="videoList">
+
+                <!-- the IDs of these must match the name attributes of the tabs themselves -->
+                <ul id="nextUp" class="selected"></ul>
+
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <div id="images"></div>
+<script src="http://api.brightcove.com/services/library?callback=myFunction&amp;command=find_playlists_for_player_id&amp;playlist_fields=id,name,videos&amp;video_fields=id,name,shortDescription,length,tags,thumbnailURL&amp;player_id=2330618502001&amp;token=MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..&amp;"></script> 
+<script>
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
+
+
+</script>
+  <script>
+jQuery(document).ready(function($){
+  var myFunction;
+    $.getJSON(myFunction).done(function(data) {
+        $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+   /* var jqxhr = $.getJSON( "videos.json", function() {
+        console.log( "success" );
+    })
+    .done(function() {
+    console.log( "second success" );
+  })
+    .fail(function() {
+    console.log( "error" );
+  })
+    .always(function() {
+    console.log( "complete" );
+  });
+    */
+    
+});
+</script>
+
+
+<?php
+	$strReqBase = 'http://api.brightcove.com/services/library?command=find_playlist_by_id&token=MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..&media_delivery=http&playlist_fields=videos&video_fields=id,name,shortDescription,thumbnailURL,publishedDate,FLVURL&&playlist_id=';
+	$intQty = 3;
+	$ctx = stream_context_create(array(
+		'http' => array(
+			'timeout' => 5
+		)
+	));
+	$strJSON = @file_get_contents($strReqBase.'52759093001', false, $ctx);
+	if ($strJSON) {
+		$objVideos = json_decode($strJSON);
+		if (is_array($objVideos->videos) && count($objVideos->videos)) {
+			for($i = 0; $i < $intQty; $i++) {
+				?>
+				<div class="img-holder">
+					<a href="<?php echo  $objVideos->videos[$i]->FLVURL; ?>" class="video-btn"></a>
+					<div class="inner">
+						<img src="<?php echo $objVideos->videos[$i]->thumbnailURL; ?>">
+					</div>
+					<?php echo $objVideos->videos[$i]->name; ?>
+				</div>
+				<?php
+			}
+		}
+	}
+	
+</body>
+</html>
