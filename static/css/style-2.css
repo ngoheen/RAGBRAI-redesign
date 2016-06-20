@@ -860,9 +860,6 @@ h2.subhead4 {
     position: relative;
     width: calc( 100% - 40px );
 }
-
-
-
 .backgroundDiv {
     background-position: center center;
     background-repeat: no-repeat;
@@ -888,9 +885,7 @@ h2.subhead4 {
     position: relative;
     width: 100%;
 }
- .gallery-wrap .square {
-    border: none;
-}
+.gallery-wrap .square,
 #gallery-page .square {
     border: none;
 }
@@ -920,6 +915,31 @@ h2.subhead4 {
     margin: 1%;
     width: 23.5%;
 }
+
+/* ---------------------------------------------------- */
+/* GALLERY FRONTS */
+/* ---------------------------------------------------- */
+.responsive-container {
+    clear: both;
+    max-width: 100% !important;
+    padding-bottom: 75% !important;
+    /* for 4:3 aspect ratio. Use 56.25% for 16:9 ratio */  
+    padding-top: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.responsive-container iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+/*.top-gallery iframe {
+    width: 100%;
+    height: auto;
+}
+*/
 .top-video-gallery,
 .top-gallery {
     height: auto;
@@ -944,19 +964,35 @@ h2.subhead4 {
     margin: 0;
     width: 48%;
 }
+.top-video-wrap {
+    margin: 20px;
+    overflow: hidden;
+    width: calc(100% - 40px);
+}
 .bottom-video-wrap {
     overflow: hidden;
     margin-bottom: 20px;
     width: 100%;
 }
-.top-video-title,
+.video-caption-title,
 .top-gallery-title,
 .gallery-wrap .text h3 {
     font: bold 15px/21px helvetica, arial, sans-serif;
     margin: 5px 0;
 }
-.top-video-title {
+.video-post-title h1,
+.photo-post-title h1 {
+    font: bold 24px/30px helvetica, arial, sans-serif;
+    margin: 12px 0;
+}
+.video-caption-title {
     margin-top: 10px;
+}
+.video-caption {
+    clear:both;
+    float:left;
+    font:14px/20px helvetica, sans-serif;
+    margin: 10px 0;
 }
 .gallery-wrap {
     overflow: hidden;
@@ -1061,7 +1097,10 @@ h2.subhead4 {
     position: relative;
     width: calc( 50% - 30px );
 }
+
+/* ---------------------------------------------------- */
 /* PRODUCT GRID for MOBILE PORTRAIT */
+/* ---------------------------------------------------- */
 
 @media screen and (max-width: 414px ) {
   
@@ -1935,7 +1974,11 @@ input[type=submit]:focus {
 .shop-header {
     display: none;
 }
-
+@media screen and (min-width: 1024px) {
+    .sitemap_container.outer {
+        margin-left: 80px !important;
+    }
+}
 
 /* SECTION FRONTS
 ------------------------------------- */

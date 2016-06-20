@@ -128,7 +128,7 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 .responsive-container {
     clear: both;
     max-width: 100% !important;
-    padding-bottom: 75% !important;
+    padding-bottom: 56.25% !important;
     /* for 16:9 aspect ratio. Use 75% for 4:3 ratio */  
     padding-top: 35px;
     position: relative;
@@ -142,15 +142,23 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
     width: 100%
 }
 .vjs-big-play-button {
- height: 96px;
+    height: 96px;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 96px;
 }
 .top-content {
     border-bottom: 1px solid #ddd;
+}
+.section-front-main {
+    width: calc( 100% - 40px);
+}
+@media screen and (max-width:414p) {
+.section-front-main {
+    width: calc( 100% - 30px);
+}
 }
 </style>
 </head>
@@ -562,56 +570,19 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
             </div>
 		</div>
 
-        <div class="section-front-main">
-            <div class="section-header">
+        <div class="section-front-main video">
+            <div class="section-header bottom-video-wrap">
                 <h1 class="section-header-h1">latest videos</h1>
             </div>
             <div class="top-gallery">
                 <div class="responsive-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Nu9MDqGhIak" frameborder="0" allowfullscreen></iframe>
-                </div> 
-                <p style="float:left;clear:both;font:14px/20px helvetica, sans-serif;margin: 10px 0;">Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
+                </div>
+                
+                <p class="">Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
             </div> 
          </div>     
-        <div class="section-front-aside">
-            <div class="poster-ad">
-                <img src="images/poster-ad.png">
-            </div>
-            <div class="aside-box">
-                <h2>Latest Videos</h2>
-                <img src="http://bcdownload.gannett.edgesuite.net/desmoines/35546125001/201605/3715/35546125001_4908153823001_4908126427001-vs.jpg?pubId=35546125001" alt="RAGBRAI 2016 Jersey">
-                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
-            </div>
-            <div class="aside-box">
-                <h2>Latest Galleries</h2>
-                <img src="http://ragbrai.com/wp-content/uploads/2015/07/des.m0725RAGBRAIfriday.bh-573-335x217.jpg">
-                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
-            </div>
-            <div class="aside-box">
-                <h2>Email Signup</h2>
-                <div style="clear:both;">
-                    <div class="widget_wysija_cont php_wysija">
-                        <div id="msg-form-wysija-php574b88dac6dc1-1" class="wysija-msg ajax"></div>
-                        <form id="form-wysija-php574b88dac6dc1-1" method="post" action="#wysija" class="widget_wysija php_wysija">
-                            <p>Sign up for the latest RAGBRAI news and notes (if there is no news in a day, you won’t get an e-mail).</p>
-                            <p class="wysija-paragraph">
-                                <label style="display:none;">Email <span class="wysija-required">*</span></label>
-                                <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email" value="" placeholder="Email signup">
-                                <span class="abs-req" style="display:none;">
-                                    <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="">
-                                </span>
-                            </p>
-                            <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
-                            <input type="hidden" name="form_id" value="1">
-                            <input type="hidden" name="action" value="save">
-                            <input type="hidden" name="controller" value="subscribers">
-                            <input type="hidden" value="1" name="wysija-page">
-                            <input type="hidden" name="wysija[user_list][list_ids]" value="3">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> 
+       
         
 
  <!-- =========================================================== -->   
@@ -702,7 +673,7 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
         <div class="full-footer">
             <div class="leaderboard"><img src="images/leader-ad.png"></div>
             <div class="site-map clearfix"><!-- this div is deleted programmatically -->
-                <div class="sitemap_container">
+                <div class="sitemap_container outer">
                     <ul id="menu-sitemap" class="menu">
                         <li id="menu-item-503401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-503401">
                             <a href="#">The Ride</a>

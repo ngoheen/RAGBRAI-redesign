@@ -3,24 +3,230 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop/Tablet Gallery FRont</title>
-    <link rel="stylesheet" href="static/css/fonts.css">
+    <title>Desktop/Tablet Video Front</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--TRAFFIC & ADS PLUGIN OUTPUT BEGINS-->
+    <!--AD CODE BEGINS-->
+    <script>
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+				var gads = document.createElement("script");
+				gads.async = true;
+				gads.type = "text/javascript";
+				var useSSL = "https:" == document.location.protocol;
+				gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+				var node =document.getElementsByTagName("script")[0];
+				node.parentNode.insertBefore(gads, node);
+			})();
+		</script>
+    <script>
+			googletag.cmd.push(function() {				
+								
+				googletag.defineSlot('/7103/ia-desmoines-C1150/728x90_2/news_ragbrai', [728, 90], 'div-gpt-ad-bottom-leader').addService(googletag.pubads());
+								
+				googletag.defineSlot('/7103/ia-desmoines-C1150/poster_front/news/local/features_ragbrai_main', [[300, 250], [300, 600]], 'div-gpt-ad-front-page').addService(googletag.pubads());
+								
+				googletag.defineSlot('/7103/ia-desmoines-C1150/launchpad/news_ragbrai', [[75, 75], [960, 66], [970, 70], [1900, 1200], [940, 30], [970, 30], [1400, 900], [970, 66], [980, 66]], 'div-gpt-ad-launchpad').addService(googletag.pubads());
+								
+				googletag.defineSlot('/7103/ia-desmoines-C1150/leaderboard_btf/news/local/features_ragbrai', [728, 90], 'div-gpt-ad-leaderboard').addService(googletag.pubads());
+								
+				googletag.defineSlot('/7103/ia-desmoines-C1150/300x250_1/news_ragbrai', [300, 250], 'div-gpt-ad-sidebar-poster').addService(googletag.pubads());
+								googletag.enableServices();
+			});
+		</script>
+    <!-- AD CODE ENDS-->
+    <script>
+/* <![CDATA[ */
+var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+    <script src='http://ragbrai.com/wp-content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.5'></script>
+    <script src='http://admin.brightcove.com/js/BrightcoveExperiences.js?ver=4.5.2'></script>
+    <meta property="og:video:url" content="http://c.brightcove.com/services/viewer/federated_f9/?isVid=1&amp;isUI=1&amp;playerID=3449237176001&amp;autoStart=true&amp;videoId=4941279913001">
+   
+	<script>
+		var bcvidid = "";
+		if (window.location.hash!=0) {
+			var url = window.location.hash;
+			bcvidid = url.match(/videoid=([^&]+)/)[1];
+
+		}
+
+		function my_function(id) {
+			bcvidid = id;
+			var IE = /*@cc_on!@*/false;
+			var FF = !(window.mozInnerScreenX == null);
+			if (FF || IE) {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
+				vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
+				vidplayerHTML += '<param name="width" value="600" />\n';
+				vidplayerHTML += '<param name="height" value="620" />\n';
+				vidplayerHTML += '<param name="playerID" value="2338369759001" />\n';
+				vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw" />\n';
+				vidplayerHTML += '<param name="isVid" value="true" />\n';
+				vidplayerHTML += '<param name="isUI" value="true" />\n';
+				vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
+				vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
+				vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
+				vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
+				vidplayerHTML += '<\/object>\n';
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+				brightcove.createExperiences();
+			} else {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<iframe id="myExperience" width="600" height="620" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=2338369759001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+			}
+		}
+
+	</script>
+	<script>
+		var BCSetting={};
+		BCSetting.token="MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..";
+		BCSetting.navigationXMLFile="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/navigationragbrai.xml";
+		BCSetting.customPlaylistIDForTab=52759093001;
+		BCSetting.nextUpPlaylistIDForOverride=52759093001;
+		BCSetting.nextUpAutoAdvanceDelay=10;
+		BCSetting.descriptionOverlayDelay=10;
+		BCSetting.gridEnabled=false;
+		BCSetting.numberOfGridVideosToLoad=36;
+		BCSetting.staticsrcurl="static.gcion.net/video/latest";
+		BCSetting.trainingOn =true;
+		BCSetting.trainingTime = 10;
+		BCSetting.adsiteid="ia-desmoines.desmoinesregister.com/";
+		BCSetting.debug=false;
+	</script>
+	<script src="http://static.gcion.net/video/latest/gs/vorpal.js"></script>
+	<script src="http://admin.brightcove.com/js/APIModules_all.js"></script>
+	<script src="http://static.gcion.net/video/latest/gs/sizzle.js"></script>
+	<script src="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/js/bcplayer.js"></script>
+	
+	<link rel="stylesheet" href="http://static.gcion.net/video/latest/gc/brightcove.css" type="text/css" media="all">
+	<link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
     <link rel="stylesheet" href="static/css/style-2.css">
-</head>    
-<body class="tablet">
-    <div id="fb-root"></div>
     <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=198722363481114";
-                fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+	  (function() {
+	    var cx = '009237343847593634205:4am7s8lhr-8';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = 'http://cse.google.com/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+<style>
 
+
+.vjs-big-play-button {
+    height: 96px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 96px;
+}
+.top-content {
+    border-bottom: 1px solid #ddd;
+}
+#rightColumn #related ul.tabs li.selected span.topLeft,
+#rightColumn #related ul.tabs li.selected span.topRight {
+    background-image: none;
+}
+#pushDownContainer,
+#rightColumn #expandedBanner,
+#bcHeader,
+#bcImmersivePlayerContainer img.navigationBarBottom,
+#bcHeader #navigationTop span.rightArrow,
+#bcHeader #navigationTop span.leftArrow,
+#bcHeader #navigationTop span.left_deactivated,
+#leftColumn #player {
+    display: none !important;
+}
+#rightColumn #related ul.tabs li h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+#rightColumn #related ul.tabs li.selected {
+    background-color: #fff;
+}
+#rightColumn #related ul.tabs li {
+    border: none;
+    color: #000;
+}
+#rightColumn #related .videoList li {
+    width: 100%;
+}
+#rightColumn #related div.videoList {
+    background-color: #fff;
+    border: none;
+}
+#rightColumn #related ul.tabs li {
+    padding: 0;
+}
+#rightColumn #related #nextUp,
+#rightColumn #related #relatedVideos,
+#rightColumn #related #editorial {
+    margin: 2px 0 0 0;
+}
+#bcImmersivePlayerContainer,
+#playback {
+    height: 300px;
+    top: 0;
+    width: 300px;
+}
+#bcImmersivePlayerContainer {
+    display: block;
+    top: 0;
+    left: 0;
+}
+#rightColumn {
+    left: 0;
+    width: 270px !important;
+}
+#rightColumn #related {
+    margin-top: 0;
+}
+#rightColumn #related #nextUp,
+#rightColumn #related #relatedVideos,
+#rightColumn #related #editorial {
+    height: 270px;
+}
+#immersivePlayer {
+    margin-top: -5px;
+}
+.video-caption {
+    clear:both;
+    float:left;
+    font:14px/20px helvetica, sans-serif;
+    margin: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+    .sitemap_container.outer {
+        margin-left: 80px !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=198722363481114";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
     <div role="navigation" class="site-navigation main-navigation">
         <div class="menu-primary-container">
             <ul id="menu-primary" class="menu">
@@ -324,19 +530,19 @@
                 <!-- top FRIENDS carousel -->
                 <div class="list_carousel">
                     <div class="friends-of-ragbrai-top">Friends of RAGBRAI</div>
-                    <ul id="gci_sponsors-2">
-                        <li>
-                            <a href="http://www.michelobultra.com/">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/05/michelobultraweb.png" alt="Michelob Ultra" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.primalwear.com/">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/10/primalnewsmaller.png" alt="Primal" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.scheels.com">
+                        <ul id="gci_sponsors-2">
+                            <li>
+                                <a href="http://www.michelobultra.com/">
+                                    <img src="http://ragbrai.com/wp-content/uploads/2015/05/michelobultraweb.png" alt="Michelob Ultra" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.primalwear.com/">
+                                    <img src="http://ragbrai.com/wp-content/uploads/2015/10/primalnewsmaller.png" alt="Primal" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.scheels.com">
                                 <img src="http://ragbrai.com/wp-content/uploads/2014/01/Scheels-use1.gif" alt="Sheels" />
                             </a>
                         </li>
@@ -404,91 +610,34 @@
                 </div>
             </div>
         </div>
-        
- <!-- =========================================================== -->        
+
+ <!-- =========================================================== -->   
+         
         <div class="leader-ad">
-            <img src="images/leader-ad.png">
-        </div>
-        <div class="section-front-main">
-            <div class="section-header">
-                <h1 class="section-header-h1">photo galleries &ndash; 2015</h1>
+            <div id="div-gpt-ad-leaderboard" class="dfp-ad">
+    			<script type="text/javascript">
+                    googletag.cmd.push(function() {
+                        googletag.display("div-gpt-ad-leaderboard");
+                    });
+    			</script>
+            </div>
+		</div>
+
+        <div class="top-video-wrap" style="margin: 0 20px;">
+            <div class="video-post-title">
+                <h1>Yo Yo Ma on the BBC</h1>
             </div>
             <div class="top-gallery">
-                <img src="http://ragbrai.com/wp-content/uploads/2016/06/20160608_bp_PreRide_25.jpg">
-                <div class="top-gallery-title">
-                    20 RAGBRAI photos: Blue skies and countrysides 
+                <div class="responsive-container" style="padding-bottom:56.25% !important;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Nu9MDqGhIak" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">
+                    <p>Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
                 </div>
             </div>
-            <div class="gallery-wrap">   
-                <div class="wrapper">        
-                    <div class="square">
-                        <div class="content backgroundDiv">
-                            <div class="imageDiv">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Costumes_001-150x150.jpg" class="rs">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h3>15 RAGBRAI photos: The food</h3>
-                    </div>
-                </div>
-                <div class="wrapper"> 
-                    <div class="square">
-                        <div class="content backgroundDiv">
-                            <div class="imageDiv">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_TheBikes_001-150x150.jpg" class="rs">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h3>12 RAGBRAI photos: Wet and wild on the route</h3>
-                    </div>
-                </div>
-                <div class="wrapper">        
-                    <div class="square">
-                        <div class="content backgroundDiv">
-                            <div class="imageDiv">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_DanceMoves_001-150x150.jpg" class="rs">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h3>12 RAGBRAI photos: Dance it out</h3>
-                    </div>
-                </div>
-                <div class="wrapper">        
-                    <div class="square">
-                        <div class="content backgroundDiv">
-                            <div class="imageDiv">
-                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Sunrise_001-150x150.jpg" class="rs">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h3>15 RAGBRAI photos: Catching the sunrise</h3>
-                    </div>
-                </div>
-            </div>       
-            <nav class="woocommerce-pagination">
-                <div class="pagination-previous"><a href="">2014</a></div>
-                <div class="pagination-next"><a href="">2016</a></div>
-            </nav>
         </div>
-        <div class="section-front-aside">
-            <div class="poster-ad">
-                <img src="images/poster-ad.png">
-            </div>
-            <div class="aside-box">
-                <h2>Latest Videos</h2>
-                <img src="http://bcdownload.gannett.edgesuite.net/desmoines/35546125001/201605/3715/35546125001_4908153823001_4908126427001-vs.jpg?pubId=35546125001" alt="RAGBRAI 2016 Jersey">
-                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
-            </div>
-            <div class="aside-box">
-                <h2>Latest Galleries</h2>
-                <img src="http://ragbrai.com/wp-content/uploads/2015/07/des.m0725RAGBRAIfriday.bh-573-335x217.jpg">
-                <p>Watch the show: Kyle Munson, Michael Morain on RAGBRAI 2016</p>
-            </div>
-            <div class="aside-box">
+            <div class="section-front-main" style="margin-top:0;">
+                <div class="aside-box" style="float:right;width: calc(100% - 320px)">
                 <h2>Email Signup</h2>
                 <div style="clear:both;">
                     <div class="widget_wysija_cont php_wysija">
@@ -512,10 +661,152 @@
                     </div>
                 </div>
             </div>
-        </div>  
- <!-- =========================================================== -->             
+              <div class="aside-box" style="float: left;">
+                    <div id="immersivePlayer">
+				<div id="bcImmersivePlayerContainer">
+					<div id="bcHeader">
+						<div id="navigationTop">
+							<span class="leftArrow left_deactivated"></span>
+							<span class="leftEdge"></span>
+							<div id="navigationItems"></div>
+							<span class="rightEdge"></span>
+							<span class="rightArrow"></span>
+						</div>
+						<div id="search">
+							<form>
+								<input id="searchInputBox" type="text" value="Search Videos" />
+							</form>
+							<div id="searchSubmit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</div>
+					</div>
+
+					<div id="pushDownContainer" class="searched">
+						<div id="close">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div id="searchResults">
+
+							<div class="close">Clear Search Results<span class="button"></span></div>
+						</div>
+						<span class="numberOfResults"></span>
+						<div id="left" class="left"></div>
+						<div id="right" class="right"></div>
+
+						<div id="navigationLeft"></div>
+						<div id="slideContainer">
+							<div class="videos"></div>
+						</div>
+					</div>
+					<img class="navigationBarBottom" src="http://static.gcion.net/video/latest/gg/navigation-bar-bottom.png" />
+					<div id="playback">
+						<div id="leftColumn">
+							<div id="player">
+
+								<div id="bcplayercode" style="height:490px;overflow:hidden;">
+									
+								</div>
+								<script>
+									var IE = /*@cc_on!@*/false;
+									var FF = !(window.mozInnerScreenX == null);
+									if (FF || IE) {
+										var vidplayerHTML = "";
+										vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
+										vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
+										vidplayerHTML += '<param name="width" value="600" />\n';
+										vidplayerHTML += '<param name="height" value="366" />\n';
+										vidplayerHTML += '<param name="playerID" value="3997547222001" />\n';
+										vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ" />\n';
+										vidplayerHTML += '<param name="isVid" value="true" />\n';
+										vidplayerHTML += '<param name="isUI" value="true" />\n';
+										vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
+										vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
+										vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
+										vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
+										vidplayerHTML += '<\/object>\n';
+										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+										brightcove.createExperiences();
+									} else {
+										var vidplayerHTML = "";
+										vidplayerHTML += '<iframe id="myExperience" width="600" height="366" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=3997547222001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
+										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+									};
+								</script>
+							</div>
+
+						</div>
+						<div id="rightColumn">
+							<div id="expandedBanner">
+								<div>
+									<a href="http://pubads.g.doubleclick.net/gampad/jump?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" target="_blank">
+
+										<img src="http://pubads.g.doubleclick.net/gampad/ad?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" border="0">
+									</a>
+								</div>
+							</div>
+							<div id="related">
+
+									<ul class="tabs">
+										<li class="nextUp selected" name="nextUp">
+											<span class="corner topLeft"></span>
+
+											<span class="corner topRight"></span>
+
+											<h3>Next Up</h3>
+										</li>
+
+									</ul>
+									<div class="videoList">
+
+										<!-- the IDs of these must match the name attributes of the tabs themselves -->
+										<ul id="nextUp" class="selected"></ul>
+
+									</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="videoGrid">
+						<div id="videoGridHeader">
+							<span class="topLeft"></span>
+							<span class="topRight"></span>
+
+							<div class="container">
+								<h3 onclick="javascript:BCGannett.addVideosToGrid(true);"></h3>
+							</div>
+						</div>
+
+						<div id="videoGridPlaylists">
+							<ul class="playlists container"></ul>
+							<span class="bottomLeft"></span>
+						</div>
+						<div id="videoGridVideos"></div>
+
+						<div id="videoGridScrollbar">
+							<div id="gridHandle"></div>
+						</div>
+
+						<span class="bottomLeft"></span>
+					</div>
+					<div id="shortDescriptionOverlay"><p></p></div>
+					<div id="bcFooter"></div>
+				</div>
+			</div>
+                </div>   
+                       
+            
+            </div>
+            <div class="section-front-aside" style="margin-top:0">
+                 <div class="poster-ad" style="float:left;margin-top:0">
+                    <img src="images/poster-ad.png">
+                </div>
+              
+    
+            </div> 
+        </div>     
        
-         <!-- bottom FRIENDS carousel -->
+        
+
+ <!-- =========================================================== -->   
+ 
+        <!-- bottom FRIENDS carousel -->
         <div class="sponsor-bottom">
             <div class="list_carousel2">
                 <h2 class="subhead4">Friends of RAGBRAI</h2>
@@ -601,7 +892,7 @@
         <div class="full-footer">
             <div class="leaderboard"><img src="images/leader-ad.png"></div>
             <div class="site-map clearfix"><!-- this div is deleted programmatically -->
-                <div class="sitemap_container">
+                <div class="sitemap_container outer">
                     <ul id="menu-sitemap" class="menu">
                         <li id="menu-item-503401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-503401">
                             <a href="#">The Ride</a>
@@ -718,31 +1009,19 @@
             <p class="footer-terms">&copy; 2016 RAGBRAI<span class="separator"></span><a href="http://desmoinesregister.com/terms">Terms of Service</a><span class="separator"></span><a href="http://desmoinesregister.com/privacy">Privacy Policy</a></p>
         </div>
     </div>
-    
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+    <script type='text/javascript' src='http://ragbrai.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='http://ragbrai.com/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='http://ragbrai.com/wp-includes/js/wp-embed.min.js?ver=4.5.2'></script>
+
+   
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
     <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
     <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/trunk8.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
-    
-
-	<script>
-	    jQuery(document).ready(function($) {
-            $('.truncate-teaser').each(function() {
-                $(this).trunk8({
-                    lines: 3,
-                    fill: '&hellip;'
-                });
-            });
-            $(".blog-front-text").each(function() {
-                var title = $(this).children(".blog-front-title").detach();
-                var sibling = $(this).siblings('.blog-front-img');
-                title.insertBefore(sibling);
-            });
-        });
-    </script>
-
 </body>
 </html>

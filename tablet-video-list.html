@@ -118,36 +118,8 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 	  })();
 	</script>
 <style>
-.top-gallery iframe {
-    width: 100%;
-    height: auto;
-}
-.responsive-2-cont {
-    clear: both;
-    max-width: 100%;
-    padding-bottom: 56.25%;
-    /* for 16:9 aspect ratio. Use 75% for 4:3 ratio */  
-    position: relative;
-    overflow: hidden;
-    margin-bottom: -56.25%;
 
-}
-.responsive-container {
-    clear: both;
-    max-width: 100% !important;
-    padding-bottom: 75% !important;
-    /* for 16:9 aspect ratio. Use 75% for 4:3 ratio */  
-    padding-top: 35px;
-    position: relative;
-    overflow: hidden;
-}
-.responsive-container iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
+
 .vjs-big-play-button {
     height: 96px;
     position: absolute;
@@ -226,6 +198,17 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 }
 #immersivePlayer {
     margin-top: -5px;
+}
+.video-caption {
+    clear:both;
+    float:left;
+    font:14px/20px helvetica, sans-serif;
+    margin: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+    .sitemap_container.outer {
+        margin-left: 80px !important;
+    }
 }
 
 </style>
@@ -646,22 +629,22 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
                 <div class="responsive-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Nu9MDqGhIak" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <h2 class="top-video-title">Yo Yo Ma on the BBC</h2>
-                <p style="float:left;clear:both;font:14px/20px helvetica, sans-serif;margin: 0 0 10px 0;">Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
+                <h2 class="video-caption-title">Yo Yo Ma on the BBC</h2>
+                <p class="video-caption">Yo-Yo Ma plays the entire Six Unaccompanied Suites by Johann Sebastian Bach at the BBC Proms at the Royal Albert Hall on the 5th of September, 2015. He played for nearly three hours.</p>
             </div>
                <div class="bottom-video-wrap">
                     <div class="latest-video-left">
                         <div class="responsive-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/-fmVeYHKGIo" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <h2 class="top-video-title">Inside Ragbrai</h2>
+                        <h2 class="video-caption-title">Inside Ragbrai</h2>
                         <!-- <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
                     </div>
                     <div class="latest-video-right">
                         <div class="responsive-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/DXlABYoFbdQ" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <h2 class="top-video-title">Small Town Big Deal "RAGBRAI" with host Rodney Miller and Jann Carl</h2>
+                        <h2 class="video-caption-title">Small Town Big Deal "RAGBRAI" with host Rodney Miller and Jann Carl</h2>
                         <!--   <p>RAGBRAI: the world's largest organized bike tour captured on two bike mounted time lapse cameras. 7 days, 500 miles, 19,000 riders and 64,000 still images comprise this short video adventure across Iowa.</p>-->
                     </div>
                 </div>
@@ -670,13 +653,13 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
                         <div class="responsive-container">
                             <iframe width="420" height="315" src="https://www.youtube.com/embed/9kYJZoDrFeQ" frameborder="0" allowfullscreen></iframe>
                         </div>
-                         <h2 class="top-video-title">Beethoven, Triple Concierto y Fantasía Coral. Yo-Yo Ma, Perlman, Barenboim</h2>
+                         <h2 class="video-caption-title">Beethoven, Triple Concierto y Fantasía Coral. Yo-Yo Ma, Perlman, Barenboim</h2>
                     </div>
                     <div class="latest-video-right">
                         <div class="responsive-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/i_7feGF9TA8" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <h2 class="top-video-title">Mark Knopfler Showing his magic on an acoustic guitar</h2>
+                        <h2 class="video-caption-title">Mark Knopfler Showing his magic on an acoustic guitar</h2>
                     </div>
                 </div>
          </div>     
@@ -930,7 +913,7 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
         <div class="full-footer">
             <div class="leaderboard"><img src="images/leader-ad.png"></div>
             <div class="site-map clearfix"><!-- this div is deleted programmatically -->
-                <div class="sitemap_container">
+                <div class="sitemap_container outer">
                     <ul id="menu-sitemap" class="menu">
                         <li id="menu-item-503401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-503401">
                             <a href="#">The Ride</a>
