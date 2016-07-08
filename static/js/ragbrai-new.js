@@ -202,7 +202,7 @@ jQuery(document).ready(function($) {
             nav: false,
             timeout: 8000,
             speed: 1500,
-            namespace: "callbacks"
+            namespace: "shop_callbacks"
         });
     }
     
@@ -219,18 +219,8 @@ jQuery(document).ready(function($) {
                 fill: '&hellip;'
             });
         });
-        jQuery('.truncate-caption').resizable({
-            resize: function (event, ui) {
-            /* trunk8 on resize. */
-                jQuery('.truncate-caption').trunk8();
-            }
-        });
-        jQuery('.truncate-teaser').resizable({
-            resize: function (event, ui) {
-            /* trunk8 on resize. */
-                jQuery('.truncate-teaser').trunk8();
-            }
-        });
+       
+       
         jQuery(window).resize(function (event) {
             jQuery('.truncate-caption').trunk8();
             jQuery('.truncate-teaser').trunk8();

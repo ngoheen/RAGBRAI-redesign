@@ -1,17 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shop-mobile</title>
+    <title>Phone Menu/Footer</title>
     <meta charset="UTF-8" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes' />
-    
-    <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">   
-    <link rel="stylesheet" href="static/css/fly.css">
+   
+    <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
+    <link rel="stylesheet" href="static/css/fly.css"><!-- mobile menu -->
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/style-2.css">
-<style>
-.flypanels-content {
-    background: #fff;
+    
+        <script>
+/* <![CDATA[ */
+var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+    <script src='http://ragbrai.com/wp-content/plugins/login-with-ajax/widget/login-with-ajax.js?ver=3.1.5'></script>
+    <script src='http://admin.brightcove.com/js/BrightcoveExperiences.js?ver=4.5.2'></script>
+	<script>
+		var bcvidid = "";
+		if (window.location.hash!=0) {
+			var url = window.location.hash;
+			bcvidid = url.match(/videoid=([^&]+)/)[1];
+
+		}
+
+		function my_function(id) {
+			bcvidid = id;
+			var IE = /*@cc_on!@*/false;
+			var FF = !(window.mozInnerScreenX == null);
+			if (FF || IE) {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
+				vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
+				vidplayerHTML += '<param name="width" value="600" />\n';
+				vidplayerHTML += '<param name="height" value="620" />\n';
+				vidplayerHTML += '<param name="playerID" value="2338369759001" />\n';
+				vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw" />\n';
+				vidplayerHTML += '<param name="isVid" value="true" />\n';
+				vidplayerHTML += '<param name="isUI" value="true" />\n';
+				vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
+				vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
+				vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
+				vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
+				vidplayerHTML += '<\/object>\n';
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+				brightcove.createExperiences();
+			} else {
+				var vidplayerHTML = "";
+				vidplayerHTML += '<iframe id="myExperience" width="600" height="620" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=2338369759001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKmsPSEozoenhuZO7Hafpixw&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
+				document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+			}
+		}
+
+	</script>
+	<script>
+		var BCSetting={};
+		BCSetting.token="MYvU06zW9kgZdnh6dxsGsvZBQsRSC7icFTrpG3xbBILdJza7tRwsyQ..";
+		BCSetting.navigationXMLFile="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/navigationragbrai.xml";
+		BCSetting.customPlaylistIDForTab=52759093001;
+		BCSetting.nextUpPlaylistIDForOverride=52759093001;
+		BCSetting.nextUpAutoAdvanceDelay=10;
+		BCSetting.descriptionOverlayDelay=10;
+		BCSetting.gridEnabled=false;
+		BCSetting.numberOfGridVideosToLoad=36;
+		BCSetting.staticsrcurl="static.gcion.net/video/latest";
+		BCSetting.trainingOn =true;
+		BCSetting.trainingTime = 10;
+		BCSetting.adsiteid="ia-desmoines.desmoinesregister.com/";
+		BCSetting.debug=false;
+	</script>
+	<script src="http://static.gcion.net/video/latest/gs/vorpal.js"></script>
+	<script src="http://admin.brightcove.com/js/APIModules_all.js"></script>
+	<script src="http://static.gcion.net/video/latest/gs/sizzle.js"></script>
+	<script src="http://dev.desmoinesregister.com/rag/wp-content/themes/ragbrai/includes/js/bcplayer.js"></script>
+	
+	<link rel="stylesheet" href="http://static.gcion.net/video/latest/gc/brightcove.css" type="text/css" media="all">
+	<link rel="stylesheet" href="static/css/fonts.css">
+    <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
+    <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
+    <link rel="stylesheet" href="static/css/style-2.css">
+    <script>
+	  (function() {
+	    var cx = '009237343847593634205:4am7s8lhr-8';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = 'http://cse.google.com/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	
+    <style>
+
+
+.vjs-big-play-button {
+    height: 96px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 96px;
+}
+.top-content {
+    border-bottom: 1px solid #ddd;
+}
+#rightColumn #related ul.tabs li.selected span.topLeft,
+#rightColumn #related ul.tabs li.selected span.topRight {
+    background-image: none;
+}
+#pushDownContainer,
+#rightColumn #expandedBanner,
+#bcHeader,
+#bcImmersivePlayerContainer img.navigationBarBottom,
+#bcHeader #navigationTop span.rightArrow,
+#bcHeader #navigationTop span.leftArrow,
+#bcHeader #navigationTop span.left_deactivated,
+#leftColumn #player {
+    display: none !important;
+}
+#rightColumn #related ul.tabs li h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+#rightColumn #related ul.tabs li.selected {
+    background-color: #fff;
+}
+#rightColumn #related ul.tabs li {
+    border: none;
+    color: #000;
+}
+#rightColumn #related .videoList li {
+    width: 100%;
+}
+#rightColumn #related div.videoList {
+    background-color: #fff;
+    border: none;
+}
+#rightColumn #related ul.tabs li {
+    padding: 0;
+}
+#rightColumn #related #nextUp,
+#rightColumn #related #relatedVideos,
+#rightColumn #related #editorial {
+    margin: 2px 0 0 0;
+}
+#bcImmersivePlayerContainer,
+#playback {
+    height: 300px;
+    top: 0;
+    width: 300px;
+}
+#bcImmersivePlayerContainer {
+    display: block;
+    top: 0;
+    left: 0;
+}
+#rightColumn {
+    left: 0;
+    width: 270px !important;
+}
+#rightColumn #related {
+    margin-top: 0;
+}
+#rightColumn #related #nextUp,
+#rightColumn #related #relatedVideos,
+#rightColumn #related #editorial {
+    height: 270px;
+}
+#immersivePlayer {
+    margin-top: -5px;
+}
+.video-caption {
+    clear:both;
+    float:left;
+    font:14px/20px helvetica, sans-serif;
+    margin: 10px 0;
+}
+@media screen and (min-width: 1024px) {
+    .sitemap_container.outer {
+        margin-left: 80px !important;
+    }
+}
+.video-caption {
+    clear:both;
+    float:left;
+    font:14px/20px helvetica, sans-serif;
+    margin: 10px 0;
+}
+.aside-box.email {
+        display: none;
+}
+@media screen and (max-width: 600px) {
+   #bcImmersivePlayerContainer,
+    #playback {
+        height: 300px;
+        top: 0;
+        width: 100%;
+    }
+    #rightColumn {
+    left: 0;
+    width: 100% !important;
+    }
+    .top-gallery {
+        margin-bottom: 0;
+    }
+}
+.responsive-container.alt{
+    padding-bottom: 56.25% !important;
 }
 </style>
 </head>
@@ -21,7 +220,7 @@
             <div class="panelcontent" data-panel="treemenu">
                 <nav class="flypanels-treemenu" role="navigation">
                     <ul>
-                        <li class="main mobile-search" style="">
+                        <li class="main mobile-search">
                             <div>
                                 <form class="search-container" action="http://ragbrai.com/" method="get">
                                     <label for="search">
@@ -83,7 +282,7 @@
             </div>
         </div>
     </div>
-    <div class="flypanels-main woocommerce">
+    <div class="flypanels-main">
         <div class="flypanels-topbar" id="new-header">
             <div class="menu-btn">
                 <a class="flypanels-button-left icon-menu" data-panel="treemenu" href="#"><img src="static/img/menu_icon.png" class="menu"></a>
@@ -239,223 +438,168 @@
                 </div>
             </div>
         </div>
+        
         <div class="flypanels-content">
             <div class="main-container">
                 <div class="top-content">
                     <div class="countdown-wrap">
                         RAGBRAI XLIV COUNTDOWN – July 24-30, 2016
-                        <div id="gci_countdown-2" class=""></div>
+                        <div id="gci_countdown-2"></div>
                     </div>
                 </div>
-<!-- =========================================================== -->  
-                <div id="shop" class="woocommerce">
-                    <div class="callbacks_container">
-                    <ul class="rslides one" id="slider">
-                        <li>
-                            <img width="600" height="399" src="http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-600x399.jpg" 
-                            class="attachment-shop-carousel size-shop-carousel wp-post-image" alt="XLIV_Tees_1000x665" 
-                            srcset="http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-300x200.jpg 300w, http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-530x352.jpg 530w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-230x153.jpg 230w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-600x399.jpg 600w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-90x60.jpg 90w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-150x100.jpg 150w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-335x223.jpg 335w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-200x133.jpg 200w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-126x84.jpg 126w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-595x396.jpg 595w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-144x96.jpg 144w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-640x426.jpg 640w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-460x305.jpg 460w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665-900x599.jpg 900w,
-                            http://ragbrai.com/wp-content/uploads/2015/11/XLIV_Tees_1000x665.jpg 1000w" sizes="(max-width: 1000px) 100vw, 1000px" />
-                            <div class="slider_msg">
-                                <h1><a href="#sidebar-1">Chill for the Summer</a></h1>
-                                <p><a href="http://www.RAGBRAI.com/shop">July is always hot in Iowa, but that doesn't mean you can't be cool. Check out our new 2016 merchandise!</a></p>
-                            </div>
-                        </li>
-                        <li>
-                            <img width="320" height="200" src="http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-300x200.jpg" 
-                            class="attachment-shop-carousel size-shop-carousel wp-post-image" alt="XLIV_Jersey_1000x665" 
-                            srcset="http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-300x200.jpg 320w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-530x352.jpg 530w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-230x153.jpg 230w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-600x399.jpg 414w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-90x60.jpg 90w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-150x100.jpg 150w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-335x223.jpg 335w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-200x133.jpg 200w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-126x84.jpg 126w, 
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-595x396.jpg 595w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-144x96.jpg 144w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-640x426.jpg 640w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665-460x305.jpg 460w,
-                            http://ragbrai.com/wp-content/uploads/2015/02/XLIV_Jersey_1000x665.jpg 1000w" sizes="(max-width: 1000px) 100vw, 1000px" />
-                            <div class="slider_msg">
-                                <h1><a href="#sidebar-2">Get our Kit!</a></h1>
-                                <p>Don't forget our XLIV Kit by Primal Wear! Available during registration and at www.RAGBRAI.com/shop</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img width="320" height="200" src="http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed.jpg" 
-                            class="attachment-shop-carousel size-shop-carousel wp-post-image" alt="ShopClosed" 
-                            srcset="http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-300x199.jpg 300w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-530x352.jpg 530w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-200x133.jpg 200w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-126x84.jpg 126w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-595x395.jpg 595w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-640x425.jpg 640w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-460x305.jpg 460w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed-900x598.jpg 900w,
-                            http://ragbrai.com/wp-content/uploads/2014/07/ShopClosed.jpg 1000w" sizes="(max-width: 1000px) 100vw, 1000px" />
-                            <div class="slider_msg">
-                                <h1><a href="#sidebar-3">RETURNS and EXCHANGES</a></h1>
-                                <p><a href="http://ragbrai.com/2014/08/07/merchandise-returns-and-exchanges/">Want to exchange or return an item? We're happy to help! Click here to find out how.</a></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                    <div class="products-form-wrapper">
-                        <p class="woocommerce-result-count">Showing 1–10 of 198 results</p>       
-                        <form class="rls-form" method="get">
-                    <div class="select_wrapper">
-                        <select name="orderby" class="featured-products" tabindex="7">
-                            <option value="popularity">Sort by popularity</option>
-                            <option value="rating">Sort by average rating</option>
-                            <option value="date" selected="selected">Sort by newness</option>
-                            <option value="price">Sort by price: low to high</option>
-                            <option value="price-desc">Sort by price: high to low</option>
-                        </select>
+                
+ <!-- =========================================================== -->                  
+                <div class="section-front-main">
+                    <div class="section-header">
+                        <h1 class="section-header-h1">latest videos</h1>
                     </div>
-                    <input type="hidden" name="nocache" value="1">
-                </form>
-                    </div>
-                    <div class="products">
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img src="images/mug.png" class="rs">
-                                </div>
-                            </div>  
+                    <div class="top-gallery">
+                        <div class="responsive-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nu9MDqGhIak" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <div class="text">
-                            <h3>2016 RMug</h3>
-                            <h4>$10</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img src="images/ss-tee.jpg" class="rs">      
-                                </div>
-                            </div>
-                        </div>
-                         <div class="text">
-                            <h3>2016 XLIV men's Logo Tee</h3>
-                            <h4>$25</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img src="images/cap.png" class="rs">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <h3>2016 XLIV Logo Cap</h3>
-                            <h4>$20</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                        <div class="content backgroundDiv">
-                            <div class="imageDiv">
-                                <img src="images/ls-tee.jpg" class="rs">
-                            </div>
-                        </div>
-                    </div>
-                            <div class="text">
-                            <h3>2016 XLIV Long Sleeve Logo Tee</h3>
-                            <h4>$20</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img src="images/shorts.jpg" class="rs">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <h3>2016 RAGBRAI XLIV Shorts</h3>
-                            <h4>$65</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <a href="http://ragbrai.com/shop/collectibles/2016-xliv-magnet/">
-                                        <img width="150" height="150" src="http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-640x640.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="XLIV_StandardMagnet" srcset="http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-150x150.jpg 150w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-300x300.jpg 300w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-530x530.jpg 530w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-175x175.jpg 175w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-230x230.jpg 230w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-600x600.jpg 600w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-90x90.jpg 90w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-144x144.jpg 144w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-250x250.jpg 250w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-200x200.jpg 200w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-84x84.jpg 84w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-595x595.jpg 595w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-140x140.jpg 140w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-665x665.jpg 665w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-640x640.jpg 640w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet-305x305.jpg 305w, http://ragbrai.com/wp-content/uploads/2016/05/XLIV_StandardMagnet.jpg 700w" sizes="(max-width: 150px) 100vw, 150px">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <h3>2016 XLIV Magnet</h3>
-                            <h4>$65</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img width="120" height="150" src="http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-532x665.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="Ragbrai Hood" srcset="http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-240x300.jpg 240w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-424x530.jpg 424w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-175x219.jpg 175w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-72x90.jpg 72w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-120x150.jpg 120w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-200x250.jpg 200w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-532x665.jpg 532w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood-244x305.jpg 244w, http://ragbrai.com/wp-content/uploads/2015/10/Ragbrai-Hood.jpg 560w" sizes="(max-width: 120px) 100vw, 120px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text" style="float:left;clear:both;">
-                            <h3>2016 XLIV Hooded Sweatshirt</h3>
-                            <h4>$45</h4>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="square">
-                            <div class="content backgroundDiv">
-                                <div class="imageDiv">
-                                    <img width="150" height="150" src="http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-640x640.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="2016 Bibs" srcset="http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-150x150.jpg 150w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-300x300.jpg 300w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-530x530.jpg 530w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-175x175.jpg 175w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-230x230.jpg 230w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-600x600.jpg 600w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-90x90.jpg 90w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-144x144.jpg 144w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-250x250.jpg 250w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-200x200.jpg 200w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-84x84.jpg 84w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-595x595.jpg 595w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-140x140.jpg 140w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-665x665.jpg 665w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-640x640.jpg 640w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs-305x305.jpg 305w, http://ragbrai.com/wp-content/uploads/2015/11/2016-Bibs.jpg 700w" sizes="(max-width: 150px) 100vw, 150px">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <h3>2016 RAGBRAI XLIV Men's Bibs</h3>
-                            <h4>$75</h4>
-                        </div>
+                        <h2 class="video-caption-title">Yo Yo Ma on the BBC</h2>
                     </div>
                 </div>
-                    <nav class="woocommerce-pagination">
-	                <div class="pagination-previous"><a href="">Previous</a></div>
-	                <ul class="page-numbers">
-	                    <li><span class="page-numbers current">1</span></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/2/">2</a></li>
-                        <!--<li><a class="page-numbers" href="http://ragbrai.com/shop/page/3/">3</a></li>
-                        <li><a class="page-numbers" href="http://ragbrai.com/shop/page/4/">4</a></li>-->
-	                    <li><span class="page-numbers dots">…</span></li>
-	                   <!-- <li><a class="page-numbers" href="http://ragbrai.com/shop/page/18/">18</a></li>-->
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/19/">19</a></li>
-	                    <li><a class="page-numbers" href="http://ragbrai.com/shop/page/20/">20</a></li>
-                    </ul>
-                    <div class="pagination-next"><a href="">Next</a></div>
-                </nav>
+                  <div class="section-front-aside" style="margin-top:0">
+            <div class="poster-ad">
+                    <img src="images/poster-ad.png">
                 </div>
- <!-- ========================================================== -->                            
+           
+            <div class="aside-box">
+                <div id="immersivePlayer">
+				    <div id="bcImmersivePlayerContainer">
+					<div id="bcHeader">
+						<div id="navigationTop">
+							<span class="leftArrow left_deactivated"></span>
+							<span class="leftEdge"></span>
+							<div id="navigationItems"></div>
+							<span class="rightEdge"></span>
+							<span class="rightArrow"></span>
+						</div>
+						<div id="search">
+							<form>
+								<input id="searchInputBox" type="text" value="Search Videos" />
+							</form>
+							<div id="searchSubmit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</div>
+					</div>
+
+					<div id="pushDownContainer" class="searched">
+						<div id="close">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div id="searchResults">
+
+							<div class="close">Clear Search Results<span class="button"></span></div>
+						</div>
+						<span class="numberOfResults"></span>
+						<div id="left" class="left"></div>
+						<div id="right" class="right"></div>
+
+						<div id="navigationLeft"></div>
+						<div id="slideContainer">
+							<div class="videos"></div>
+						</div>
+					</div>
+					<img class="navigationBarBottom" src="http://static.gcion.net/video/latest/gg/navigation-bar-bottom.png" />
+					<div id="playback">
+						<div id="leftColumn">
+							<div id="player">
+
+								<div id="bcplayercode" style="height:490px;overflow:hidden;">
+									
+								</div>
+								<script>
+									var IE = /*@cc_on!@*/false;
+									var FF = !(window.mozInnerScreenX == null);
+									if (FF || IE) {
+										var vidplayerHTML = "";
+										vidplayerHTML += '<object id="myExperience" class="BrightcoveExperience">\n';
+										vidplayerHTML += '<param name="bgcolor" value="#FFFFFF" />\n';
+										vidplayerHTML += '<param name="width" value="600" />\n';
+										vidplayerHTML += '<param name="height" value="366" />\n';
+										vidplayerHTML += '<param name="playerID" value="3997547222001" />\n';
+										vidplayerHTML += '<param name="playerKey" value="AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ" />\n';
+										vidplayerHTML += '<param name="isVid" value="true" />\n';
+										vidplayerHTML += '<param name="isUI" value="true" />\n';
+										vidplayerHTML += '<param name="dynamicStreaming" value="true" />\n';
+										vidplayerHTML += '<param name="htmlFallback" value="true" />\n';
+										vidplayerHTML += '<param name="@videoList" value="52759093001" />\n';
+										vidplayerHTML += '<param name="@videoList.featured" value="' + bcvidid + '" />\n';
+										vidplayerHTML += '<\/object>\n';
+										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+										brightcove.createExperiences();
+									} else {
+										var vidplayerHTML = "";
+										vidplayerHTML += '<iframe id="myExperience" width="600" height="366" class="BrightcoveExperience" scrolling="no" style="border-style: none;" src="http://c.brightcove.com/services/viewer/htmlFederated?&amp;width=600&amp;height=620&amp;flashID=myExperience&amp;bgcolor=%23FFFFFF&amp;playerID=3997547222001&amp;playerKey=AQ~~,AAAACEa20sk~,awHVm72MyKkzuRvltKGjuhUBl4adNnEJ&amp;isVid=true&amp;isUI=true&amp;dynamicStreaming=true&amp;htmlFallback=true&amp;%40videoList=52759093001&amp;%40videoPlayer=' + bcvidid + '&amp;%40videoList.featured=' + bcvidid + '&amp;autoStart=&amp;debuggerID=&amp;startTime=1367425700624&amp;refURL=not available"><\/iframe>;'
+										document.getElementById('bcplayercode').innerHTML = vidplayerHTML;
+									};
+								</script>
+							</div>
+
+						</div>
+						<div id="rightColumn">
+							<div id="expandedBanner">
+								<div>
+									<a href="http://pubads.g.doubleclick.net/gampad/jump?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" target="_blank">
+
+										<img src="http://pubads.g.doubleclick.net/gampad/ad?id=787786&iu=7103/ia-desmoines-C1150/300x250_1/news_ragbrai_0/&sz=300x250&c=" border="0">
+									</a>
+								</div>
+							</div>
+							<div id="related">
+
+									<ul class="tabs">
+										<li class="nextUp selected" name="nextUp">
+											<span class="corner topLeft"></span>
+
+											<span class="corner topRight"></span>
+
+											<h3>Next Up</h3>
+										</li>
+
+									</ul>
+									<div class="videoList">
+
+										<!-- the IDs of these must match the name attributes of the tabs themselves -->
+										<ul id="nextUp" class="selected"></ul>
+
+									</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="videoGrid">
+						<div id="videoGridHeader">
+							<span class="topLeft"></span>
+							<span class="topRight"></span>
+
+							<div class="container">
+								<h3 onclick="javascript:BCGannett.addVideosToGrid(true);"></h3>
+							</div>
+						</div>
+
+						<div id="videoGridPlaylists">
+							<ul class="playlists container"></ul>
+							<span class="bottomLeft"></span>
+						</div>
+						<div id="videoGridVideos"></div>
+
+						<div id="videoGridScrollbar">
+							<div id="gridHandle"></div>
+						</div>
+
+						<span class="bottomLeft"></span>
+					</div>
+					<div id="shortDescriptionOverlay"><p></p></div>
+					<div id="bcFooter"></div>
+				</div>
+                </div>
+            </div>   
+            </div>
+ <!-- =========================================================== -->               
+
                 <div class="sponsor-bottom">
-                    <h2 class="subhead4">Friends of RAGBRAI</h2>
-                    <div class="clearfix white_back">
+                <h2 class="subhead4">Friends of RAGBRAI</h2>
+                <div class="clearfix white_back">
                     <ul id="gci_sponsors-3" class="ticker">
                             <li>
 						        <a href="http://www.iowaeconomicdevelopment.com/">
@@ -534,7 +678,7 @@
 					        </li>
 					    </ul>
                 </div>
-                </div>
+           </div>
                 <div class="mobile-ad-wrap">
                     <img src="images/mobile-ad.png">
                 </div>
@@ -544,27 +688,25 @@
             </div>
         </div>
     </div>
-    
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
-    <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/kitUtils.js"></script>
-    <script src="static/js/jquery-ui.min.js"></script>
     <script src="static/js/jquery.flypanels.js"></script>
-    <script src="static/js/responsive_slides.js"></script>
     <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
+    <script src="static/js/jquery.matchHeight.js"></script>
     <script>
-            var touchJS = jQuery.noConflict();            
-            touchJS(document).ready(function($){
-               
-                // OFF CANVAS MAIN MENU
+    
+        var touchJS = jQuery.noConflict();
+        touchJS(document).ready(function($){
+
+             // OFF CANVAS MAIN MENU
                 $('.flypanels-container').flyPanels({
                     treeMenu: {
                         init: true
-                    },
-                });
+                },
             });
+         });
     </script>
   
 </body>

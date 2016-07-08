@@ -30,7 +30,9 @@ body.flypanels-open {
     padding: 5px;
     width: 218px;
 }
-
+.mobile-search div input:focus {
+    border-width: 0px;
+}
 .flypanels-container {
     position: absolute !important;
     z-index: 4000 !important;

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop-mobile</title>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes' />
+    
+    <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">   
+    <link rel="stylesheet" href="static/css/fly.css">
+    <link rel="stylesheet" href="static/css/fonts.css">
+    <link rel="stylesheet" href="static/css/style-2.css">
+    <style>
+        div.flypanels-content {
+            background: #fff;
+        }
+    </style>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="gallery/galleria/galleria-1.4.2.js"></script>
+    <link rel="stylesheet" href="gallery/galleria.inky.css">
+    <script src="gallery/galleria.inky.js"></script>
+</head>    
+<body>
+    <div class="flypanels-container">
+        <div class="offcanvas flypanels-left">
+            <div class="panelcontent" data-panel="treemenu">
+                <nav class="flypanels-treemenu" role="navigation">
+                    <ul>
+                        <li class="main mobile-search">
+                            <div>
+                                <form class="search-container" action="http://ragbrai.com/" method="get">
+                                    <label for="search">
+				                        <input type="text" name="s" id="search" value="">
+			                        </label>
+	                            </form>
+	                        </div>
+                        </li>
+                        <li class="haschildren main">
+                            <div><a href="#" class="link">The Ride</a> <a href="#" class="expand"><i class="fa icon"></i></a></div>
+                            <ul>
+                                <li class="active haschildren">
+                                    <div>
+                                        <a class="link" href="http://ragbrai.com/about/general-information/">General</a>
+                                        <a href="#" class="expand"><i class="fa icon"></i></a>
+                                    </div>
+
+                                    <ul style="background:#555">
+                                        <li><div><a class="link" href="http://ragbrai.com/about/faqs/">General Information</a></div></li>
+                                         <li><div><a class="link" href="http://ragbrai.com/about/faqs/">FAQs</a></div></li>
+                                        <li><div><a class="link" href="http://ragbrai.com/expo-2/">RAGBRAI Expo</a></div></li>
+                                        <li><div><a class="link" href="http://ragbrai.com/contact-us/">Contact us</a></div></li>
+                                    </ul>
+                                </li>
+                                <li><div><a class="link" href="http://ragbrai.com/about/faqs/">Route</a></div></li>
+                                <li><div><a class="link" href="http://ragbrai.com/expo-2/">Services</a></div></li>
+                                <li><div><a class="link" href="http://ragbrai.com/contact-us/">Training</a></div></li>
+                                <li><div><a class="link" href="http://ragbrai.com/contact-us/">Safety</a></div></li>
+                            </ul>
+                        </li>
+                        <li class="main"><div class="link"><a href="#" class="link">Registration</a></div></li>
+                        <li class="main"><div class="link"><a href="#" class="link">Latest Blogs</a></div></li>
+                        <li class="main"><div><a href="#" class="link">Forums</a></div></li>
+                        <li class="main"><div><a href="#" class="link">Photo Galleries</a></div></li>
+                        <li class="main"><div><a href="#" class="link">Videos</a></div></li>
+                        <li class="haschildren main">
+                            <div class="link"><a href="#" class="link">RAGBRAI Expo</a> <a href="#" class="expand"><i class="fa icon"></i></a></div>
+                            <ul>
+                                <li><div><a class="link" href="http://ragbrai.com/expo-2/expo-exhibitors/">Expo Exhibitors</a></div></li>
+                                <li><div><a class="link" href="http://ragbrai.com/expo-2/exhibitor-information/">Exhibitor Information</a></div></li>
+                            </ul>
+                        </li>
+                        <li class="haschildren main">
+                            <div><a href="#" class="link">Shop</a> <a href="#" class="expand"><i class="fa icon"></i></a></div>
+                            <ul>
+                                <li><div><a href="" class="link">RAGBRAI XLIV</a></div></li>
+                                <li><div><a href="" class="link">RAGBRAI XLIII</a></div></li>
+                                <li><div><a href="" class="link">RAGBRAI XLII</a></div></li>
+                                <li><div><a href="" class="link">Collectibles</a></div></li>
+                                <li><div><a href="" class="link">Casual Apparel</a></div></li>
+                                <li><div><a href="" class="link">Cycling Apparel</a></div></li>
+                                <li><div><a href="" class="link">Accessories</a></div></li>
+                                <li><div><a href="" class="link">Clearance</a></div></li>
+                            </ul>
+                        </li>
+                        <li class="main"><div><a href="#" class="link">Contact Us</a></div></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="flypanels-main">
+        <div class="flypanels-topbar" id="new-header">
+            <div class="menu-btn">
+                <a class="flypanels-button-left icon-menu" data-panel="treemenu" href="#"><img src="static/img/menu_icon.png" class="menu"></a>
+            </div>
+            <div class="shop-logo">
+                <a href="http://ragbrai.com/" title="RAGBRAI.com">
+                    <img src="static/img/ClassicRAGBRAI.png" alt="RAGBRAI.com">
+                </a>
+            </div>
+            <div class="right">
+                <img src="static/img/cart_icon.png" class="cart">
+                <div id="login">
+                    <img src="static/img/profile_icon.png">
+                    <div class="dropdown">
+                        <div class="lwa lwa-default">
+                            <form class="lwa-form" action="https://ragbrai.com/wp-login.php" method="post">
+                                <span class="lwa-status">LOG IN</span>
+                                <table>
+                                    <tr class="lwa-username">
+                                        <td class="lwa-username-label">
+                                            <label>Username</label>
+                                        </td>
+                                        <td class="lwa-username-input">
+                                            <input type="text" name="log" class="plain-input">
+                                        </td>
+                                    </tr>
+                                    <tr class="lwa-password">
+                                        <td class="lwa-password-label">
+                                            <label>Password</label>
+                                        </td>
+                                        <td class="lwa-password-input">
+                                            <input type="password" name="pwd" class="plain-input">
+                                        </td>
+                                    </tr>
+                                    <tr class="lwa-submit">
+                                        <td></td>
+                                        <td class="lwa-submit-button">
+                                            <input type="submit" name="wp-submit" id="lwa_wp-submit" value="Log In" tabindex="100">
+                                            <input type="hidden" name="lwa_profile_link" value="1">
+                                            <input type="hidden" name="login-with-ajax" value="login">
+                                            <input name="rememberme" type="checkbox" class="lwa-rememberme" value="forever"> <label>Remember Me</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a class="lwa-links-remember button changes" href="http://ragbrai.com/my-account/lost-password/" title="Password Lost and Found">Forgot password?</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="horiz-rule"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="lwa-heading">Get started</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <a href="https://ragbrai.com/ride-registration/" id="my-ragbrai-loggedout-register" class="button changes">Register for the Ride</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <a href="https://ragbrai.com/register/" class="lwa-links-register lwa-links-modal button changes">Create user account</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="lwa-register lwa-register-default lwa-modal" style="display:none;">
+                            <form class="lwa-register-form" action="https://ragbrai.com/register/" method="post">
+                                <span class="lwa-create-account">Create RAGBRAI.com user account</span>
+                                <p><em class="lwa-register-tip">A password will be e-mailed to you.</em></p>
+                                <table>
+                                    <tr class="lwa-username">
+                                        <td class="lwa-username-label">
+                                            <label>Username</label>
+                                        </td>
+                                        <td class="lwa-username-input">
+                                            <input type="text" name="user_login" id="user_login" class="plain-input" tabindex="10">
+                                        </td>
+                                    </tr>
+                                    <tr class="lwa-email">
+                                        <td class="lwa-email-label">
+                                            <label>E-mail</label>
+                                        </td>
+                                        <td class="lwa-email-input">
+                                            <input type="text" name="user_email" id="user_email" class="plain-input" tabindex="20">
+                                        </td>
+                                    </tr>
+                                     <tr class="lwa-submit">
+                                        <td></td>
+                                        <td class="lwa-submit-button">
+                                            <input type="submit" name="wp-submit" id="wp-submit" value="Register" tabindex="100">
+                                            <input type="hidden" name="login-with-ajax" value="register">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="lwa-logged-in" style="display:none;">
+                            <table>
+		                        <tr>
+			                        <td>
+				                        <a href="http://ragbrai.com/members/ngoheen/" title="Link to profile page">My Profile</a>
+							          </td>
+							        <tr>
+                                        <td>
+                                            <div class="horiz-rule"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://ragbrai.com/groups/">Create/Join a Group</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="horiz-rule"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://ragbrai.com/registration-payment/">Pay For Ride</a>
+                                        </td>
+                                    </tr>
+                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="horiz-rule"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+							                <a id="wp-logout" href="http://ragbrai.com/wp-login.php?action=logout&amp;_wpnonce=c27c808508&amp;redirect_to=http%3A%2F%2Fragbrai.com%2Fwp-admin%2Fadmin-ajax.php%3Floggedout%3Dtrue">Log Out</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="horiz-rule"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="register">Registration is open, but only day passes are being accepted.</p>
+                                            <input type="submit" name="wp-submit" id="lwa_wp-register" value="Register" tabindex="100">
+                                        </td>
+                                    </tr>
+				            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flypanels-content">
+            <div class="main-container">
+                <div class="top-content">
+                    <div class="countdown-wrap">
+                        RAGBRAI XLIV COUNTDOWN – July 24-30, 2016
+                        <div id="gci_countdown-2"></div>
+                    </div>
+                </div>
+        
+ <!-- =========================================================== -->        
+       
+                <div id="gallery-page">
+                    <div class="photo-post-title">
+                        <h1>54 photos: Thursday RAGBRAI Route Preview</h1>
+                    </div>
+                    <div id="galleria"></div>
+                    <script>
+				Galleria.loadTheme('gallery/galleria.inky.js');
+				var data = [{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_02.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_02.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_02.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_02.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+roll+out+of+out+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride roll out of out of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_03.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_03.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_03.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_03.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Luke+Eustice+rides+with+members+of+the+RAGBRAI+preride+team+out+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Luke Eustice rides with members of the RAGBRAI preride team out of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_04.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_04.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_04.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_04.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Scenes+along+the+route+outside+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Scenes along the route outside of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_05.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_05.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_05.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_05.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Scenes+along+the+route+outside+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Scenes along the route outside of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_06.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_06.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_06.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_06.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+make+it+to+Tackle+This%2C+a+live+bait+and+grocery+store+in+Rathbun+along+the+route+in+southwestern+Iowa+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team make it to Tackle This, a live bait and grocery store in Rathbun along the route in southwestern Iowa on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_07.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_07.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_07.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_07.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Normally+not+allowed+on+the+The+Rathbun+Dam%2C+the+Army+Corps+of+Engineers+allowed+cyclists+with+the+RAGBRAI+preride+team+to+ride+across+on+Thursday%2C+June+9%2C+2016.+The+dam+will+be+closed+to+vehicles+and+only+allow+bicycles+for+RAGBRAI.\" target=\"_blank\">PURCHASE<\/a>","description":"Normally not allowed on the The Rathbun Dam, the Army Corps of Engineers allowed cyclists with the RAGBRAI preride team to ride across on Thursday, June 9, 2016. The dam will be closed to vehicles and only allow bicycles for RAGBRAI. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_08.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_08.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_08.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_08.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Normally+not+allowed+on+the+The+Rathbun+Dam%2C+the+Army+Corps+of+Engineers+allowed+cyclists+with+the+RAGBRAI+preride+team+to+ride+across+on+Thursday%2C+June+9%2C+2016.+The+dam+will+be+closed+to+vehicles+and+only+allow+bicycles+for+RAGBRAI.\" target=\"_blank\">PURCHASE<\/a>","description":"Normally not allowed on the The Rathbun Dam, the Army Corps of Engineers allowed cyclists with the RAGBRAI preride team to ride across on Thursday, June 9, 2016. The dam will be closed to vehicles and only allow bicycles for RAGBRAI. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_09.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_09.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_09.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_09.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+pull+up+a+long+hill+along+the+route+outside+of+Rathbun+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team pull up a long hill along the route outside of Rathbun on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_10.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_10.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_10.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_10.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+head+to+the+meeting+town+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team head to the meeting town of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_11.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_11.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_11.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_11.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+head+to+the+meeting+town+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team head to the meeting town of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_12.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_12.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_12.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_12.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+make+it+to+the+meeting+town+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team make it to the meeting town of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_13.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_13.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_13.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_13.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Spencer%27s+grocery+was+opened+in+1940+and+will+be+open+during+RAGBRAI+for+riders+to+refuel+and+restock+supplies.+Here+it+is+seen+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Spencer's grocery was opened in 1940 and will be open during RAGBRAI for riders to refuel and restock supplies. Here it is seen on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_14.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_14.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_14.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_14.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+meets+with+the+planning+team+in+Moravia+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz meets with the planning team in Moravia during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_15.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_15.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_15.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_15.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=A+farmer+works+his+field+outside+of+Moravia+along+the+RABGRAI+route+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"A farmer works his field outside of Moravia along the RABGRAI route during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_16.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_16.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_16.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_16.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+along+the+route+outside+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride along the route outside of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_17.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_17.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_17.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_17.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Rolling+hills+and+beautiful+scenery+line+the+road+along+the+RAGBRAI+route+outside+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Rolling hills and beautiful scenery line the road along the RAGBRAI route outside of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_18.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_18.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_18.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_18.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Rolling+hills+and+beautiful+scenery+line+the+road+along+the+RAGBRAI+route+outside+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Rolling hills and beautiful scenery line the road along the RAGBRAI route outside of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_19.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_19.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_19.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_19.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+preride+team+member+Dan+McKay+rides+along+the+route+outside+of+Moravia+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI preride team member Dan McKay rides along the route outside of Moravia on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_20.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_20.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_20.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_20.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+down+a+hill+on+the+way+to+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride down a hill on the way to Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_21.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_21.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_21.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_21.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+push+up+a+hill+on+the+way+to+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team push up a hill on the way to Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_22.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_22.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_22.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_22.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=A+roadside+attraction+in+Unionville+along+the+RAGBRAI+route+in+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"A roadside attraction in Unionville along the RAGBRAI route in Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_23.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_23.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_23.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_23.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+along+the+route+outside+of+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride along the route outside of Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_24.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_24.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_24.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_24.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+along+the+route+outside+of+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride along the route outside of Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_25.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_25.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_25.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_25.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+along+the+route+outside+of+Unionville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride along the route outside of Unionville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_26.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_26.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_26.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_26.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+ride+along+the+route+make+their+way+to+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team ride along the route make their way to Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_27.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_27.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_27.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_27.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Met+by+the+Iowa+Beer+Bus%2C+Members+of+the+RAGBRAI+preride+team+take+a+break+on+their+way+into+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Met by the Iowa Beer Bus, Members of the RAGBRAI preride team take a break on their way into Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_28.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_28.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_28.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_28.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Rolling+hills+and+beautiful+scenery+line+the+road+along+the+RAGBRAI+route+outside+of+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Rolling hills and beautiful scenery line the road along the RAGBRAI route outside of Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_29.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_29.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_29.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_29.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Downtown+Blakesburg+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Downtown Blakesburg during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_30.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_30.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_30.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_30.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Downtown+Blakesburg+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Downtown Blakesburg during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_31.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_31.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_31.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_31.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=The+Blakesburg+C-Store+in+Downtown+Blakesburg+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"The Blakesburg C-Store in Downtown Blakesburg during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_32.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_32.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_32.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_32.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+conducts+and+interview+with+local+media+in+Blakesburg+before+eating+lunch+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz conducts and interview with local media in Blakesburg before eating lunch during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_33.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_33.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_33.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_33.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+roll+out+of+Blakesburg+after+eating+lunch+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team roll out of Blakesburg after eating lunch on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_34.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_34.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_34.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_34.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+roll+out+of+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team roll out of Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_35.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_35.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_35.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_35.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+roll+out+of+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team roll out of Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_36.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_36.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_36.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_36.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+takes+a+photo+of+the+Airpower+Museum+outside+of+Blakesburg+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz takes a photo of the Airpower Museum outside of Blakesburg during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_37.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_37.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_37.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_37.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=The+Airpower+Museum+outside+of+Blakesburg+is+home+to+many+old+aircraft.+Here+it+is+seen+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"The Airpower Museum outside of Blakesburg is home to many old aircraft. Here it is seen during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_38.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_38.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_38.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_38.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Rolling+hills+and+beautiful+scenery+line+the+road+along+the+RAGBRAI+route+outside+of+Ottumwa+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Rolling hills and beautiful scenery line the road along the RAGBRAI route outside of Ottumwa on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_39.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_39.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_39.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_39.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=The+teepee+in+Ottumwa+Park+was+built+in+the+1980%27s+and+marks+the+head+of+the+Chief+Wapello+Trail%2C+which+runs+from+the+park+to+Chief+Wapello%E2%80%99s+grave+near+Agency.+Here+it+is+seen+during+the+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"The teepee in Ottumwa Park was built in the 1980's and marks the head of the Chief Wapello Trail, which runs from the park to Chief Wapello's grave near Agency. Here it is seen during the RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_40.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_40.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_40.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_40.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+make+their+way+to+downtown+Ottumwa+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team make their way to downtown Ottumwa on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_41.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_41.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_41.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_41.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+make+their+way+to+downtown+Ottumwa+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team make their way to downtown Ottumwa on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_42.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_42.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_42.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_42.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Downtown+Ottumwa+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Downtown Ottumwa during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_43.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_43.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_43.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_43.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Downtown+Ottumwa+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Downtown Ottumwa during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_44.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_44.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_44.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_44.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Downtown+Ottumwa+during+RAGBRAI+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Downtown Ottumwa during RAGBRAI preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_45.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_45.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_45.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_45.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Randy+Hecht+loads+up+the+trailer+hauling+the+bags+of+preride+members+in+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Randy Hecht loads up the trailer hauling the bags of preride members in Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_46.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_46.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_46.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_46.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Jack+Stubbe+rings+a+bell+letting+riders+know+they+can+start+riding+out+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Jack Stubbe rings a bell letting riders know they can start riding out of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_47.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_47.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_47.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_47.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Preride+member+Julie+Davis+rides+along+the+route+outside+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Preride member Julie Davis rides along the route outside of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_48.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_48.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_48.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_48.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+Assistant+Director+Scott+Garner+laughs+with+other+riders+on+preride+at+the+Iowa+Beer+bus+outside+of+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI Assistant Director Scott Garner laughs with other riders on preride at the Iowa Beer bus outside of Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_49.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_49.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_49.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_49.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Rich+Ketcham+takes+a+break+in+the+shade+outside+of+Blakesburg+during+preride+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Rich Ketcham takes a break in the shade outside of Blakesburg during preride on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_50.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_50.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_50.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_50.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+preride+team+member+Brian+Brinkema+helps+out+serving+lunch+to+the+riders+in+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI preride team member Brian Brinkema helps out serving lunch to the riders in Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_51.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_51.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_51.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_51.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+and+Route+inspection+team+member+John+Dale+go+over+the+route+before+leaving+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz and Route inspection team member John Dale go over the route before leaving Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_52.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_52.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_52.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_52.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+and+Route+inspection+team+member+John+Dale+go+over+the+route+before+leaving+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz and Route inspection team member John Dale go over the route before leaving Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_53.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_53.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_53.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_53.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=RAGBRAI+director+TJ+Juskiewicz+and+Route+inspection+team+member+John+Dale+go+over+the+route+before+leaving+Blakesburg+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"RAGBRAI director TJ Juskiewicz and Route inspection team member John Dale go over the route before leaving Blakesburg on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_54.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_54.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_54.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_54.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Preride+team+member+Randy+Hecht+rides+along+the+route+on+the+way+to+Ottumwa+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Preride team member Randy Hecht rides along the route on the way to Ottumwa on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"},{"thumb":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/thumbs\/thumbs_20160609_bp_preride_01.jpg","image":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_01.jpg","big":"http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_01.jpg","title":"<a href=\"http:\/\/ragbrai.mycapture.com\/mycapture\/remoteimage.asp?backtext=Return to Gallery&backurl=http%3A%2F%2Fragbrai.com%2F2016%2F06%2F09%2F54-photos-thursday-ragbrai-route-preview%2F&image=http:\/\/ragbrai.com\/wp-content\/gallery\/54-photos-thursday-ragbrai-route-preview\/20160609_bp_preride_01.jpg&credit=BRIAN+POWERS%2FTHE+DES+MOINES+REGI&caption=Members+of+the+RAGBRAI+preride+team+pose+for+a+photo+before+pulling+out+of+Centerville+on+Thursday%2C+June+9%2C+2016.\" target=\"_blank\">PURCHASE<\/a>","description":"Members of the RAGBRAI preride team pose for a photo before pulling out of Centerville on Thursday, June 9, 2016. BRIAN POWERS\/THE DES MOINES REGI"}];
+                    Galleria.run('#galleria', {
+					    dataSource: data,
+					    responsive: true,
+					    //height: 0.5625
+					    height: 0.75
+				    });
+
+            </script>
+            
+                    <h2 class="subhead4">Browse Galleries</h2>
+                    <div class="section-front-main">
+                    <form class="rls-form photos" method="get">
+                    <div class="select_wrapper">
+                        <select id="photo-galleries" name="orderby" class="featured-products" tabindex="7">
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/">2016 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2015">2015 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2014">2014 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2013">2013 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2012">2012 Galleries</option>
+                            
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2011">2011 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2010">2010 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2009">2009 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2008">2008 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2007">2007 Galleries</option>
+                            <option value="http://dev.desmoinesregister.com/rag/category/photo-galleries/?postyear=2006">2006 Galleries</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="nocache" value="1">
+                </form> 
+                        <!--<div class="wrapper">        
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Costumes_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>15 RAGBRAI photos: The food</h3>
+                    </div>
+                </div>
+                        <div class="wrapper"> 
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_TheBikes_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>12 RAGBRAI photos: Wet and wild on the route</h3>
+                    </div>
+                </div>
+                        <div class="wrapper">        
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_DanceMoves_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>12 RAGBRAI photos: Dance it out</h3>
+                    </div>
+                </div>
+                        <div class="wrapper">        
+                    <div class="square">
+                        <div class="content backgroundDiv">
+                            <div class="imageDiv">
+                                <img src="http://ragbrai.com/wp-content/uploads/2015/07/RAGBRAI_Sunrise_001-150x150.jpg" class="rs">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>15 RAGBRAI photos: Catching the sunrise</h3>
+                    </div>
+                </div>-->
+                    </div>
+            
+                    <div class="section-front-aside">
+                        <div class="poster-ad">
+                            <img src="images/poster-ad.png">
+                        </div>
+                    </div> 
+                </div>
+        
+ <!-- =========================================================== -->             
+       
+                <!-- bottom FRIENDS carousel -->
+                <div class="sponsor-bottom">
+            <div class="list_carousel2">
+                <h2 class="subhead4">Friends of RAGBRAI</h2>
+                <ul id="gci_sponsors-3">
+                    <li>
+                        <a href="http://www.michelobultra.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/05/michelobultraweb.png" alt="Michelob Ultra" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.primalwear.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/10/primalnewsmaller.png" alt="Primal" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.scheels.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/01/Scheels-use1.gif" alt="Sheels" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://nuun.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/01/web-nuun-makeyourwatercount_logo.png" alt="nuun" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.bikelaw.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/02/BikeLawLogosmaller.jpg" alt="BikeLaw" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.macqueeneq.com/trans-iowa-equipment-llc/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/TI_Horizontal-smaller.png" alt="TransIowa" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.peopleforbikes.org/ ">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/04/peoplebikes1.png" alt="People for Bikes" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.gdit.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/02/HealthSolutions-logo2col-smaller.png" alt="General Dynamics" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.heartlandexpress.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2013/05/heart.gif" alt="Heartland Express" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.bestwesterniowa.com/ragbrai">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/BW-Smallest2-Master-Brand_Vert_SocialMedia_800x800-1.png" alt="Best Western" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.desmoinesregister.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/01/RM_USATNendorsed_secondary-13-150x45.png" alt="The Des Moines Register" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elitecartography.com/2014-ragbraireg-xlii.html">
+                            <img src="http://ragbrai.com/wp-content/uploads/2015/05/elitecartographylogo.png" alt="Elite Cartography" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://feedbacksports.com">
+                            <img src="http://ragbrai.com/wp-content/uploads/2014/01/feedback.jpg" alt="Feedback Sports" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.iowaeconomicdevelopment.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2013/05/dev.gif" alt="Iowa Economic Development" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.davidsfamous.com/">
+                            <img src="http://ragbrai.com/wp-content/uploads/2016/03/Davids-Smallest2-bowtie-logo.png" alt="David\\\'s Famous" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                <div class="mobile-ad-wrap">
+                    <img src="images/mobile-ad.png">
+                </div>
+                <div class="full-footer">
+                    <p class="footer-terms">&copy; 2016 RAGBRAI<span class="separator"></span><a href="http://desmoinesregister.com/terms">Terms of Service</a><span class="separator"></span><a href="http://desmoinesregister.com/privacy">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
+    <script src="static/js/jquery.matchHeight.js"></script>
+    <script src="static/js/kitUtils.js"></script>
+    <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
+    <script src="static/js/trunk8.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+    <script src="static/js/jquery.flypanels.js"></script>
+    <script src="static/js/ragbrai-new.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            var howhigh = $('.galleria-container').height();
+            console.log(howhigh);
+       
+            // OFF CANVAS MAIN MENU
+                $('.flypanels-container').flyPanels({
+                    treeMenu: {
+                        init: true
+                },
+            });
+        });
+    </script>
+    <script>
+        jQuery(document).ready( function($){
+            $('#photo-galleries').change(function(){
+                location.href = jQuery(this).val();
+            });
+        });      
+</script>
+
+</body>
+</html>

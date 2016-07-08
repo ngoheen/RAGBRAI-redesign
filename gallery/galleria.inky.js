@@ -40,8 +40,8 @@ Galleria.addTheme({
 
         // some stuff for non-touch browsers
         if (! touch ) {
-            this.addIdleState( this.get('galleria-image-nav-left'), { left:35 });
-            this.addIdleState( this.get('galleria-image-nav-right'), { right:35 });
+            this.addIdleState( this.get('galleria-image-nav-left'), { left:20 });
+            this.addIdleState( this.get('galleria-image-nav-right'), { right:20 });
             this.addIdleState( this.get('counter'), { opacity:1 });
         }
 
@@ -134,7 +134,7 @@ Galleria.ready(function() {
 		}
 	    /* determines height of caption */
 	    var trueHeight = ( this.$('info-text').height() );
-	    var stageHeight = -140;
+	    var stageHeight = -150;
 	    var infoTop = stageHeight - trueHeight;
 	    jQuery('.galleria-info').css({'top' : infoTop});
     });

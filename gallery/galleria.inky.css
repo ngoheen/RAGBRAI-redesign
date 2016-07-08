@@ -1,4 +1,9 @@
 /* Galleria Classic Theme 2012-08-07 | https://raw.github.com/aino/galleria/master/LICENSE | (c) Aino */
+
+.galleria-container {
+    position: relative;
+}
+
 /* desktop 
 ---------------------------------------------------------- */
 @media screen and (min-width: 769px)
@@ -24,9 +29,9 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
-#gallery-page {
-    width: calc( 100% - 40px );
-    margin-left: 20px;
+    #gallery-page {
+        margin-left: 20px;
+        width: calc( 100% - 40px );
     }
     .galleria-image-nav {     
         left: 0;
@@ -49,19 +54,6 @@
         width: 880px;
     }
 }
-
-
-/*Tablet
-only screen and (min-width:321px) and (max-width:768px)*/
-/* portrait Tablet
----------------------------------------------------------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-	.shadowbox h1 { color: red;}
-}
-
 
 /* mobile portrait 
 ---------------------------------------------------------- */
@@ -172,7 +164,7 @@ and (orientation : portrait) {
 /*---------------------------------- */
 
 .galleria-info {
-	background: rgba(224,1,18,0.7);
+	background: rgba(0,0,0,0.7);
 	float: left;
 	position: relative;
     width: 100%;
@@ -476,9 +468,8 @@ and (orientation : portrait) {
 .galleria-play {
     width: 19px;
     cursor: pointer;
-
     position: absolute;
-    left: 14px;
+    left: 20px;
 }
 .galleria-fullscreen, .galleria-popout {
     background-image: url("fullscreen.png");
@@ -583,21 +574,19 @@ and (orientation : portrait) {
 	width: 50%;
 }
 
+
 /* tablet 15 22 15 = 52
 ---------------------------------------------------------- */
-@media screen and (min-width: 321px) and (max-width: 768px)
-{
+@media screen and (min-width: 321px) and (max-width: 768px) {
 	#galleria {
-	background: blue;
 	    height: auto;
 		width: 100%;
 		margin-left: 0;
-		
 	}
 	.galleria-stage {
-	width: 100%;
-	height:560px;
+	    height: 560px;
 		overflow: hidden;
+		width: 100%;
 	}
 	
 	.galleria-info-link {
@@ -612,6 +601,68 @@ and (orientation : portrait) {
 	.gallery-tools {
 	    bottom: 60px;
 	}
+}
+/* mobile portrait 300 - 414
+---------------------------------------------------------- */
+@media screen and (max-width: 414px) {
+    .galleria-stage {
+	    height: 370px !important;
+	    margin-bottom: 20px;
+		overflow: hidden;
+		width: 100%;
+	}
+	.galleria-layer {
+        left: 0 !important;
+        right: 0 !important;
+        width: 414px !important;
+    }
+    .galleria-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .gallery-tools {
+        width: 100% !important;
+        bottom: -2px !important;
+        margin-left: 0 !important;
+    }
+    .galleria-thumbnails-container {
+        bottom: -60px !important;
+    }
+    .galleria-image-nav {
+        margin-top: -30px; !important; 
+    }
+    .galleria-image-nav-left,
+    .galleria-image-nav-right {
+        background-image: none;
+        margin-right: 0;
+    }
+    .galleria-image-nav-left:after,
+    .galleria-image-nav-right:after {
+        content: '\f105';
+        color: rgba(255,255,255,.35);
+        font-size: 48px;
+        position: absolute;
+        right: 0;
+        font-family: 'FontAwesome';
+        z-index: 50;
+    }
+    .galleria-image-nav-left {
+        left: 0;
+    }
+    .galleria-image-nav-left:after {
+        content: '\f104';
+    }
+    .galleria-image-nav-left:hover:after,
+    .galleria-image-nav-right:hover:after {
+        color: rgba(255,255,255,1);
+    }
+    .galleria-play {
+        left: 14px;
+    }
+    .galleria-info {
+        position: absolute;
+        top: 0 !important;
+    }
 }
 @media screen and (min-width: 1025px) {
     #gallery-page {
@@ -628,7 +679,7 @@ and (orientation : portrait) {
         width: 960px !important;
     }
     .gallery-tools {
-        bottom: 60px;
+        bottom: 65px;
     }
     .galleria-image-nav {
         width: 100%;
@@ -637,6 +688,6 @@ and (orientation : portrait) {
         margin-right: auto;
     }
     .galleria-container {
-        height: 695px !important;
+        height: 715px !important;
     }
 }

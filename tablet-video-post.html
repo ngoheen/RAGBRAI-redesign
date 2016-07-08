@@ -207,12 +207,20 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
     font:14px/20px helvetica, sans-serif;
     margin: 10px 0;
 }
+.aside-box.email {
+        display: none;
+}
 @media screen and (min-width: 1024px) {
     .sitemap_container.outer {
         margin-left: 80px !important;
     }
+    .aside-box.email {
+        display: block;
+    }
 }
-
+.responsive-container.alt{
+    padding-bottom: 56.25% !important;
+}
 </style>
 </head>
 
@@ -622,7 +630,6 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
     			</script>
             </div>
 		</div>
-
         <div class="top-video-wrap" style="margin: 0 20px;">
             <div class="video-post-title">
                 <h1>Yo Yo Ma on the BBC</h1>
@@ -636,34 +643,26 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
                 </div>
             </div>
         </div>
-            <div class="section-front-main" style="margin-top:0;">
-                <div class="aside-box" style="float:right;width: calc(100% - 320px)">
-                <h2>Email Signup</h2>
-                <div style="clear:both;">
-                    <div class="widget_wysija_cont php_wysija">
-                        <div id="msg-form-wysija-php574b88dac6dc1-1" class="wysija-msg ajax"></div>
-                        <form id="form-wysija-php574b88dac6dc1-1" method="post" action="#wysija" class="widget_wysija php_wysija">
-                            <p>Sign up for the latest RAGBRAI news and notes (if there is no news in a day, you won’t get an e-mail).</p>
-                            <p class="wysija-paragraph">
-                                <label style="display:none;">Email <span class="wysija-required">*</span></label>
-                                <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email" value="" placeholder="Email signup">
-                                <span class="abs-req" style="display:none;">
-                                    <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="">
-                                </span>
-                            </p>
-                            <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
-                            <input type="hidden" name="form_id" value="1">
-                            <input type="hidden" name="action" value="save">
-                            <input type="hidden" name="controller" value="subscribers">
-                            <input type="hidden" value="1" name="wysija-page">
-                            <input type="hidden" name="wysija[user_list][list_ids]" value="3">
-                        </form>
-                    </div>
-                </div>
+        <div class="section-front-main" style="margin-top:0;margin-bottom: 30px;">
+           
+            <div class="responsive-container alt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-fmVeYHKGIo" frameborder="0" allowfullscreen></iframe>
             </div>
-              <div class="aside-box" style="float: left;">
-                    <div id="immersivePlayer">
-				<div id="bcImmersivePlayerContainer">
+            <h2 class="top-gallery-title">Small Town Big Deal "RAGBRAI" with host Rodney Miller and Jann Carl</h2>
+          
+            <div class="responsive-container alt" style="margin-top: 20px;">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DXlABYoFbdQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <h2 class="top-gallery-title">Inside Ragbrai</h2>
+        </div>
+        <div class="section-front-aside" style="margin-top:0">
+            <div class="poster-ad">
+                    <img src="images/poster-ad.png">
+                </div>
+           
+            <div class="aside-box">
+                <div id="immersivePlayer">
+				    <div id="bcImmersivePlayerContainer">
 					<div id="bcHeader">
 						<div id="navigationTop">
 							<span class="leftArrow left_deactivated"></span>
@@ -788,19 +787,34 @@ var LWA = {"ajaxurl":"http:\/\/ragbrai.com\/wp-admin\/admin-ajax.php"};
 					<div id="shortDescriptionOverlay"><p></p></div>
 					<div id="bcFooter"></div>
 				</div>
-			</div>
-                </div>   
-                       
-            
-            </div>
-            <div class="section-front-aside" style="margin-top:0">
-                 <div class="poster-ad" style="float:left;margin-top:0">
-                    <img src="images/poster-ad.png">
                 </div>
-              
-    
-            </div> 
-        </div>     
+            </div>   
+            <div class="aside-box email">
+                <h2>Email Signup</h2>
+                <div style="clear:both;">
+                    <div class="widget_wysija_cont php_wysija">
+                        <div id="msg-form-wysija-php574b88dac6dc1-1" class="wysija-msg ajax"></div>
+                        <form id="form-wysija-php574b88dac6dc1-1" method="post" action="#wysija" class="widget_wysija php_wysija">
+                            <p>Sign up for the latest RAGBRAI news and notes (if there is no news in a day, you won’t get an e-mail).</p>
+                            <p class="wysija-paragraph">
+                                <label style="display:none;">Email <span class="wysija-required">*</span></label>
+                                <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email" value="" placeholder="Email signup">
+                                <span class="abs-req" style="display:none;">
+                                    <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="">
+                                </span>
+                            </p>
+                            <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
+                            <input type="hidden" name="form_id" value="1">
+                            <input type="hidden" name="action" value="save">
+                            <input type="hidden" name="controller" value="subscribers">
+                            <input type="hidden" value="1" name="wysija-page">
+                            <input type="hidden" name="wysija[user_list][list_ids]" value="3">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+       
        
         
 
