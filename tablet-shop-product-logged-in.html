@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/desk-menu.css"><!-- this is for the desk/tablet menu -->
     <link rel="stylesheet" href="http://ragbrai.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.4.13">
-    <link rel="stylesheet" href="static/css/style.css">    
+    <link rel="stylesheet" href="static/css/style-2.css">    
 </head>    
 <body class="tablet">
     <div id="fb-root"></div>
@@ -149,7 +149,7 @@
                     <h3><a href="http://ragbrai.com/contact-us/">Contact</a></h3>
                 </li>
             </ul> 
-            <ul class="menu-second">
+            <ul id="menu-second">
                 <li id="menu-item-search" class="menu-item menu-item-has-children">
                     <img src="static/img/search.png" class="nav-icon">
                     <div class="dropdown search-dropdown">
@@ -310,7 +310,7 @@
 			    </li>
 		    </ul>
         </div>
-    </div>  
+    </div>   
     <div class="main-container">
         <div class="top-content">
             <div class="top-left-content">
@@ -488,20 +488,20 @@
 	                    </form>
                        
                     <div class="product-review">
-                            <div class="product-review-header">
-                                <h2 class="subhead2">REVIEWS</h2>
-                            </div>
-                            <div class="woocommerce-tabs wc-tabs-wrapper">
-		                        <ul class="tabs wc-tabs">
+                        <div class="product-review-header">
+                            <h1 class="subhead">REVIEWS</h1>
+                        </div>
+                        <div class="woocommerce-tabs wc-tabs-wrapper">
+                            <ul class="tabs wc-tabs">
 							        <li class="reviews_tab">
 					                    <a href="#tab-reviews">Reviews (3)</a>
 				                    </li>
 					            </ul>
-					            <div class="panel entry-content wc-tab" id="tab-reviews">
-				                    <div id="reviews">
-	                                    <div id="comments">
-		                                    <h2>3 reviews for 2016 RAGBRAI XLIV Jersey</h2>		
-			                                <ol class="commentlist">
+                            <div class="panel entry-content wc-tab" id="tab-reviews">
+                                <div id="reviews">
+                                    <div id="comments">
+                                        <h2>3 reviews for 2016 RAGBRAI XLIV Jersey</h2>		
+			                            <ol class="commentlist">
 				                                <li itemprop="review" itemscope itemtype="http://schema.org/Review" class="comment byuser comment-author-aminton even thread-even depth-1" id="li-comment-724738">
 	                                                <div id="comment-724738" class="comment_container">
 		                                                <img src="http://www.gravatar.com/avatar/1a5035526910d8e25a8e092e7aa5ceb7?s=60&#038;r=pg&#038;d=mm" class="avatar user-404907-avatar avatar-60 photo" width="60" height="60" alt="Profile photo of Anne" />
@@ -569,29 +569,29 @@
 	                                                </div>
                                                 </li>
 			                                </ol>
-                                        </div>
+                                    </div>
                                         
-		                                <div id="review_form_wrapper">
-			                                <div id="review_form">
-								                <div id="respond" class="comment-respond">
-			                                        <h3 id="reply-title" class="comment-reply-title">Add a review <small><a rel="nofollow" id="cancel-comment-reply-link" href="/shop/cycling-apparel/2016-ragbrai-xliv-jersey-preorder/#respond" style="display:none;">Cancel reply</a></small></h3>
-			                                        <p class="must-log-in" style="display: none;">You must be <a href="http://ragbrai.com/my-account/">logged in</a> to post a review.</p>
+                                    <div id="review_form_wrapper">
+                                        <div id="review_form">
+                                            <div id="respond" class="comment-respond">
+                                                <h3 id="reply-title" class="comment-reply-title">Add a review <small><a rel="nofollow" id="cancel-comment-reply-link" href="/shop/cycling-apparel/2016-ragbrai-xliv-jersey-preorder/#respond" style="display:none;">Cancel reply</a></small></h3>
+                                                <p class="must-log-in" style="display: none;">You must be <a href="http://ragbrai.com/my-account/">logged in</a> to post a review.</p>
 			                                        
-			                                        <form action="http://ragbrai.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
-					                                    <p class="comment-form-rating">
-					                                        <label for="rating">Your Rating</label>
-					                                        <p class="stars">
-					                                            <span><a class="star-1" href="#">1</a><a class="star-2" href="#">2</a><a class="star-3" href="#">3</a><a class="star-4" href="#">4</a><a class="star-5" href="#">5</a></span>
-					                                        </p>
-					                                        <select name="rating" id="rating" style="display: none;">
+			                                    <form action="http://ragbrai.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					                                <p class="comment-form-rating">
+					                                    <label for="rating">Your Rating</label>
+					                                    <p class="stars">
+					                                        <span><a class="star-1" href="#">1</a><a class="star-2" href="#">2</a><a class="star-3" href="#">3</a><a class="star-4" href="#">4</a><a class="star-5" href="#">5</a></span>
+					                                    </p>
+					                                    <select name="rating" id="rating" style="display: none;">
 							                                    <option value="">Rate…</option>
 							                                    <option value="5">Perfect</option>
 							                                    <option value="4">Good</option>
 							                                    <option value="3">Average</option>
 							                                    <option value="2">Not that bad</option>
 							                                    <option value="1">Very Poor</option>
-						                                    </select>
-						                                </p>
+						                                </select>
+                                                    </p>
 						                        
 						                                <p class="comment-form-comment">
 						                                    <label for="comment">Your Review</label>
@@ -891,10 +891,10 @@
     </div>
     
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://ragbrai.com/wp-content/plugins/gci-countdown/includes/js/jquery.simple.countdown.js?ver=4.4.1"></script>
     <script src="static/js/jquery.matchHeight.js"></script>
     <script src="static/js/kitUtils.js"></script>
-    <script src="static/js/jquery.flypanels.js"></script>
     <script src="static/js/responsive_slides.js"></script>
     <script src="static/js/jquery.carouFredSel-6.0.0.js"></script>
     <script src="static/js/ragbrai-new.js"></script>
